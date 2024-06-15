@@ -1,3 +1,6 @@
 node_modules
 packages/*/node_modules
 local-devnet
+
+!.yarn
+!.yarnrc
