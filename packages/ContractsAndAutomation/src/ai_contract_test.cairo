@@ -1,4 +1,4 @@
-// melbin.cairo
+
 
 use starknet::ContractAddress;
  
@@ -77,7 +77,7 @@ use starknet::ContractAddress;
              self.user_gretting_counter.write(get_caller_address(), user_counter + 1);
  
              if amount_eth > 0 {
-                 // call approve on UI
+                 
                  self
                      .eth_token
                      .read()
