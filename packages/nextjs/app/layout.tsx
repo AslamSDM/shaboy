@@ -5,7 +5,9 @@ import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
 import "~~/styles/createForm.css";
 import "~~/styles/emulator.css";
-
+import "~~/styles/homepage.css";
+import "~~/styles/BannerArea.css"
+import '~~/node_modules/sal.js/dist/sal.css'
 
 export const metadata: Metadata = {
   title: "Scaffold-Stark",

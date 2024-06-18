@@ -1,6 +1,5 @@
 "use client";
-import BannerArea from "~~/components/homepage/BannerArea";
-import NewGames from "~~/components/homepage/NewItems";
+import ProfilePage from "../../components/profile/Profile";
 
 import sal from "sal.js";
 import { useEffect } from "react";
@@ -14,8 +13,7 @@ const Home = () => {
 
   return (
     <>
-      <BannerArea />
-      <NewGames />
+      <ProfilePage />
     </>
   );
 };
