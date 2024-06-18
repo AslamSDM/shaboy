@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"cssj6m9nsucrk","package_name":"starknet_testing","contract_name":"ShaboyStorageContract","module_path":"starknet_testing::storageCairoArray::ShaboyStorageContract","artifacts":{"sierra":"starknet_testing_ShaboyStorageContract.contract_class.json","casm":"starknet_testing_ShaboyStorageContract.compiled_contract_class.json"}}]}

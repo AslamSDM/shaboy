@@ -25,6 +25,8 @@
     "vercel:yolo": "yarn workspace @ss-2/nextjs vercel:yolo"
   },
   "dependencies": {
+    "@pinata/sdk": "^2.1.0",
+    "axios": "^1.7.2",
     "postcss": "^8.4.38"
   },
   "devDependencies": {
