@@ -19,6 +19,7 @@
     "@radix-ui/themes": "2.0.3",
     "@starknet-react/chains": "^0.1.7",
     "@starknet-react/core": "^2.3.0",
+    "@supabase/supabase-js": "^2.43.5",
     "abi-wan-kanabi": "^2.2.2",
     "axios": "^1.7.2",
     "blo": "^1.1.1",
