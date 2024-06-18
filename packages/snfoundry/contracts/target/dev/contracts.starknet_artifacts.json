@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"9tpaf20r9kmjg","package_name":"contracts","contract_name":"ShaboyStorageContract","module_path":"contracts::storageCairoArray::ShaboyStorageContract","artifacts":{"sierra":"contracts_ShaboyStorageContract.contract_class.json","casm":"contracts_ShaboyStorageContract.compiled_contract_class.json"}}]}

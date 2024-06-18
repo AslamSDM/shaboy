@@ -89,7 +89,7 @@ const ConnectModal = ({ isOpen, onClose }: Props) => {
               closeModal(e);
               e.stopPropagation();
             }}
-            className="w-8 h-8  grid place-content-center rounded-full  text-base-100"
+            className="w-8 h-8 grid place-content-center rounded-full  text-base-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -2,10 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-:root,
+/* :root,
 [data-theme] {
   background: oklch(var(--b2));
-}
+} */
 
 body {
   min-height: 100vh;
@@ -29,4 +29,33 @@ p {
 
 .btn.btn-ghost {
   @apply shadow-none;
+}
+
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-image: url("../components/assets/noise.gif");
+  z-index: -1;
+  background-color: #663399;
+  opacity: 0.05;
+}
+
+
+:root {
+  /* CREATE GAME FORM */
+  --form-bg: #24243557;
+  --form-border: #ffffff14;
+  --input-bg: #242435;
+  --label-color: #acacac;
+  --submit-btn-bg: #00a3ff;
+  --submit-btn-color: #fff;
+}
+
+.gameEmulator canvas {
+  width: 100%;
 }

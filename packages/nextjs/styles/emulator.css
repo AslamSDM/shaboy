@@ -1,0 +1,74 @@
+.gameEmulator {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.gameEmulator canvas {
+    transform-origin: 50% 50%;
+    transform: scale(2.5);
+
+    border: 3px #2b3440 solid;
+    border-radius: 5px;
+
+    backdrop-filter: blur(10px);
+}
+
+.fullscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.fullscreen-enabled canvas {
+    border: none;
+    border-radius: 0;
+}
+
+.display-control {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+}
+
+.display-control-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212638;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.display-control-icons:hover {
+    border: 3px solid #2e4089;
+}
+
+.display-control-icons svg {
+    width: 30px;
+    height: 30px;
+}
+
+.rom-loading > div> div::before {
+    position: absolute;
+    content: "Loading ...";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}

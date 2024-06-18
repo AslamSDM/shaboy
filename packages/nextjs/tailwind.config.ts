@@ -42,6 +42,8 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
 };
+
+
 export default config;
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -91,13 +93,13 @@ module.exports = {
         dark: {
           primary: "#212638",
           "primary-content": "#DAE8FF",
-          secondary: "#323f61",
-          "secondary-content": "#F9FBFF",
+          secondary: "oklch(0.272348 0.034323 272.018)",
+          "secondary-content": "#000000",
           accent: "#4969A6",
           "accent-content": "#F9FBFF",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
-          "base-100": "#385183",
+          "base-100": "#13131d",
           "base-200": "#2A3655",
           "base-300": "#212638",
           "base-content": "#F9FBFF",
