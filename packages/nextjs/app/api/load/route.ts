@@ -21,10 +21,10 @@ export async function GET(req: Request) {
 }
 
 export async function POST(req: Request) {
-  const formdata = await req.formData();
-  const contract_address = formdata.get("contract_address");
-  const metadata = formdata.get("metadata");
-  if (!(contract_address instanceof String) || !(metadata instanceof String)) {
+    const requst = await req.json();
+    const contract_address = requst.contract_address;
+
+  if (!(contract_address instanceof String)) {
     return Response.json({ error: "Invalid input" });
   }
   const game = await supabase
