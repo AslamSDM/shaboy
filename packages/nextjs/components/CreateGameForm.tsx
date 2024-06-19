@@ -54,12 +54,22 @@ export default function CreateGameForm() {
       console.log(error);
     }
   };
- const handleClick =async (event:React.FormEvent)=>{
+  const uploadImage = async (game_image_file:File,game_name:String) => {
+    try {
+      const res =  await axios.post("/api/upload/image", {
+        game_image_file,
+        game_name,
+      });
+
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const handleClick =async (event:React.FormEvent)=>{
     setLoading(true)
     event.preventDefault();
     if (gameFile && gameName) {
-      await pinFileToIPFS(gameFile, gameName);
-      // uploadToCdn(game_file_gba) // Implement this function
 
 
       // mintNFT
@@ -96,7 +106,7 @@ export default function CreateGameForm() {
       <div className="createGameForm flex flex-col mx-[15px]">
         <div className="input-box">
           <label htmlFor="name" className="mb-[0.5rem]">
-            Produnction name
+            Production name
           </label>
           <input id="name" type="text" placeholder="Digital Awesome game" onChange={(e)=>{setGameName(e.target.value)}} />
         </div>
