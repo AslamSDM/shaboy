@@ -82,7 +82,8 @@ export default function CreateGameForm() {
  }
   return (
     <div className="createGame flex bg-yellow justify-center flex-col md:flex-row mx-[30px] my-[50px] md:my-[100px]">
-      {/* UPLOAD FILE */}
+      {/* UPLOAD FILE */,}
+      <Form>
       <div className="file-upload-wrapper">
         <h6 className="title">Upload file</h6>
         <p className="">Drag or choose your file to upload</p>
@@ -112,7 +113,7 @@ export default function CreateGameForm() {
         </div>
         <div className="input-box">
           <label htmlFor="description" className="mb-[0.5rem]">
-            Discription
+            Description
           </label>
           <textarea id="description" placeholder="Description Here" onChange={(e)=>{setDescription(e.target.value)}}></textarea>
         </div>
@@ -131,6 +132,7 @@ export default function CreateGameForm() {
 
         <button className="submit-button" onClick={ handleClick}>Submit</button>
       </div>
+      </Form>
     </div>
   );
 }
