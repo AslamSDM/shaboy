@@ -1,126 +1,46 @@
 "use client";
-// Use the api keys by providing the strings directly
-import fs from "fs";
-import axios from "axios";
-import {useAccount} from "@starknet-react/core"
-import { useState } from "react";
-import { stringify } from "querystring";
-import { flushSync } from "react-dom";
-import  {createContractCall, useScaffoldMultiWriteContract}  from "~~/hooks/scaffold-stark/useScaffoldMultiWriteContract";
-import {Address as AddressType} from "@starknet-react/chains"
-import {Address} from "~~/components/scaffold-stark"
-import { useDeployedContractInfo } from "~~/hooks/scaffold-stark";
+
 export default function CreateGameForm() {
+    return (
+        <div className="createGame flex bg-yellow justify-center flex-col md:flex-row mx-[30px] my-[50px] md:my-[100px]">
+            {/* UPLOAD FILE */}
+            <div className="file-upload-wrapper">
+                <h6 className="title">Upload file</h6>
+                <p className="">Drag or choose your file to upload</p>
+                <div className="file-upload-inputs">
+                    <div className="filex-input">
+                        <label htmlFor="gameImage" className="mb-[0.5rem] block">Game NFT Image</label>
+                        <input id="gameImage" type="file"></input>
+                    </div>
+                    <div className="filex-input">
+                        <label htmlFor="game" className="mb-[0.5rem] block">Game File</label>
+                        <input type="file"></input>
+                    </div>
+                </div>
+            </div>
 
-  const [gameFile, setGameFile] = useState<File | null>(null);
-  const [gameImage, setGameImage] = useState<File | null>(null);
-  const [gameName, setGameName] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState(Number);
-  const [supply, setSupply] = useState(Number);
-  const [loading,setLoading]=useState(false)
-  const [mintedNFTContractAddress,setContractAddress]=useState("")
-  const [NFTminting,setNftminting]=useState(false)
-    const connectedAddress = useAccount()
-  const JWT = process.env.PINATA_JWT;
+            {/* FORM FIELDS */}
+            <div className="createGameForm flex flex-col mx-[15px]">
+                <div className="input-box">
+                    <label htmlFor="name" className="mb-[0.5rem]">Produnction name</label>
+                    <input id="name" type="text" placeholder="Digital Awesome game" />
+                </div>
+                <div className="input-box">
+                    <label htmlFor="description" className="mb-[0.5rem]">Discription</label>
+                    <textarea id="description" placeholder="Description Here"></textarea>
+                </div>
+                <div className="input-box">
+                    <label htmlFor="price" className="mb-[0.5rem]">Item Price</label>
+                    <input id="price" type="text" placeholder="Digital Awesome game" />
+                </div>
+                <div className="input-box">
+                    <label htmlFor="size" className="mb-[0.5rem]">Size</label>
+                    <input id="size" type="text" placeholder="Digital Awesome game" />
+                </div>
 
-  const pinFileToIPFS = async (game_image_file:File,game_name:String) => {
-
-    
-
-    const formData = new FormData();
-    formData.append("file", game_image_file);
-
-    const pinataMetadata = JSON.stringify({ name: game_name });
-    formData.append("pinataMetadata", pinataMetadata);
-
-    const pinataOptions = JSON.stringify({ cidVersion: 0 });
-    formData.append("pinataOptions", pinataOptions);
-
-   try {
-      const res = await axios.post(
-        "https://api.pinata.cloud/pinning/pinFileToIPFS",
-        formData,
-        {
-          maxBodyLength: Infinity,
-          headers: {
-            "Content-Type": `multipart/form-data`,
-            Authorization: `Bearer ${JWT}`,
-          },
-        }
-      );
-      console.log(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
- const handleClick =async (event:React.FormEvent)=>{
-    setLoading(true)
-    event.preventDefault();
-    if (gameFile && gameName) {
-      await pinFileToIPFS(gameFile, gameName);
-      // uploadToCdn(game_file_gba) // Implement this function
-
-
-      // mintNFT
-        
-
-      //update supabase
-
-    }
-    setLoading(false)
- }
-  return (
-    <div className="createGame flex bg-yellow justify-center flex-col md:flex-row mx-[30px] my-[50px] md:my-[100px]">
-      {/* UPLOAD FILE */}
-      <div className="file-upload-wrapper">
-        <h6 className="title">Upload file</h6>
-        <p className="">Drag or choose your file to upload</p>
-        <div className="file-upload-inputs">
-          <div className="filex-input">
-            <label htmlFor="gameImage" className="mb-[0.5rem] block">
-              Game NFT Image
-            </label>
-            <input id="gameImage" type="file" onChange={(e)=>{setGameImage(e.target.files?.[0] || null)}}></input>
-          </div>
-          <div className="filex-input">
-            <label htmlFor="game" className="mb-[0.5rem] block">
-              Game File
-            </label>
-            <input type="file" onChange={(e)=>{setGameFile(e.target.files?.[0] || null)}}></input>
-          </div>
-        </div>
-      </div>
-
-      {/* FORM FIELDS */}
-      <div className="createGameForm flex flex-col mx-[15px]">
-        <div className="input-box">
-          <label htmlFor="name" className="mb-[0.5rem]">
-            Produnction name
-          </label>
-          <input id="name" type="text" placeholder="Digital Awesome game" onChange={(e)=>{setGameName(e.target.value)}} />
-        </div>
-        <div className="input-box">
-          <label htmlFor="description" className="mb-[0.5rem]">
-            Discription
-          </label>
-          <textarea id="description" placeholder="Description Here" onChange={(e)=>{setDescription(e.target.value)}}></textarea>
-        </div>
-        <div className="input-box">
-          <label htmlFor="price" className="mb-[0.5rem]">
-            Item Price
-          </label>
-          <input id="price" type="text" placeholder="Digital Awesome game" onChange={(e)=>{setPrice(Number(e.target.value))}}/>
-        </div>
-        <div className="input-box">
-          <label htmlFor="size" className="mb-[0.5rem]">
-            Supply 
-          </label>
-          <input id="size" type="text" placeholder="Digital Awesome game" onChange={(e)=>{setSupply(Number(e.target.value))}} />
+                <button className="submit-button">Submit</button>
+            </div>
         </div>
 
-        <button className="submit-button" onClick={ handleClick}>Submit</button>
-      </div>
-    </div>
-  );
+    );
 }

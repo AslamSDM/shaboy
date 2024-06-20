@@ -7,7 +7,8 @@ import "~~/styles/createForm.css";
 import "~~/styles/emulator.css";
 import "~~/styles/homepage.css";
 import "~~/styles/BannerArea.css"
-import '~~/node_modules/sal.js/dist/sal.css'
+import "~~/styles/askai.css"
+import "~~/node_modules/sal.js/dist/sal.css"
 
 export const metadata: Metadata = {
   title: "Scaffold-Stark",
