@@ -8,8 +8,8 @@ import "~~/styles/emulator.css";
 
 
 export const metadata: Metadata = {
-  title: "Scaffold-Stark",
-  description: "Fast track your starknet journey",
+  title: "Shaboy",
+  description: "play Retro games on the blockchain",
   icons: "/logo.ico",
 };
 
