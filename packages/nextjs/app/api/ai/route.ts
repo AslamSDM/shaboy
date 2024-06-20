@@ -1,3 +1,4 @@
+import { runModel } from "~~/utils/replicate/runmodel"
 import { supabase } from "~~/utils/supabase"
 
 
@@ -10,6 +11,13 @@ export async function POST(req: Request, res: Response) {
     Response.json({ message: "User has no games", status: 400 })
     return
   }
+  const games = games_owned.data
+  const jsonout = await runModel(games, emotion)
+  if (!jsonout) {
+    Response.json({ message: "Error running model", status: 400 })
+    return
+  }
+  Response.json({ game: jsonout })
 
 
 }
