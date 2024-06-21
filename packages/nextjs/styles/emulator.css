@@ -30,36 +30,6 @@
     border-radius: 0;
 }
 
-.display-control {
-    position: fixed;
-    bottom: 40px;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    width: 30px;
-}
-
-.display-control-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #212638;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.display-control-icons:hover {
-    border: 3px solid #2e4089;
-}
-
-.display-control-icons svg {
-    width: 30px;
-    height: 30px;
-}
-
 .rom-loading > div> div::before {
     position: absolute;
     content: "Loading ...";

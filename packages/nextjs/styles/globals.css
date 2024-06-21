@@ -57,7 +57,3 @@ body::before {
   --submit-btn-bg: #00a3ff;
   --submit-btn-color: #fff;
 }
-
-.gameEmulator canvas {
-  width: 100%;
-}
