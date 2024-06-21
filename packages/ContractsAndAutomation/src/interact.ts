@@ -8,10 +8,27 @@ import {Updater_json} from './Updated_Json';
 import * as JSON5 from 'json5';
 
 
-
+const accounts=[
+  {
+    privateKey:"0x066ce4f5cfcb0e438c7a166ccf75b0de9afd0dea3547b5ae9832747d3f299370",
+    address:"0x04Dcd37623ebf6711CD0A694Fd905296586F9cD89e52aefFdeFE23612CdbB804"
+  },
+  {
+    privateKey:"0x07606e5e263dadaa505d0a5ee41d7cb69732cc5cdb0b1e44d327432cdcbd361f",
+    address:"0x03a696e70098885CAEB333458a0D77CDadc0e6CE5e3581617544FaA7Fb8BeBdd"
+  },
+  {
+    privateKey:"0x02a287cd921279a0ce82a34377b7628a21d3f8661746a94adf1d028097829844",
+    address:"0x01C97b772c6fFf0EEC3fD197D21E926A999e77C8cC8D1cfBE216a4D39aEF199d"
+  },
+  {
+    privateKey:"0x022c19376574847739db37f79db335f807d079368974acc1010698ab70422027",
+    address:"0x00a3eF13C5bEC03E5996fe3ce60D46905B63afadb2686759Cf325B1D01Cc6C62"
+  },
+]
 const privateKey0="0x066ce4f5cfcb0e438c7a166ccf75b0de9afd0dea3547b5ae9832747d3f299370"
 const account_address="0x04Dcd37623ebf6711CD0A694Fd905296586F9cD89e52aefFdeFE23612CdbB804"
-const provider = new RpcProvider({ nodeUrl: "https://starknet-sepolia.public.blastapi.io/rpc/v0_7"});
+const provider = new RpcProvider({ nodeUrl: "https://rpc.nethermind.io/sepolia-juno?apikey=0Yp6vozXA3H5Codc8VkS22XB1bkBzgV1G4Isr9yJi19ngmpJ"});
 const account0=new Account(provider,account_address,privateKey0)
 const addrContract="0x041a78e741e5af2fec34b695679bc6891742439f7afb8484ecd7766661ad02bf"
 
