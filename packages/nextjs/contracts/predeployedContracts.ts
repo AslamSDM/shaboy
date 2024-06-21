@@ -4,9 +4,6 @@
  */
 const universalEthAddress =
   "0x49D36570D4E46F48E99674BD3FCC84644DDD6B96F7C741B1562B82F9E004DC7";
-  const ShaboyStorageContractAddress ="0x06ae41e8faab299099c23da7d2375780fe2cfefd20189483ee9478b751d5caa2"
-  const ShaboySubscriptionContractAddress = "0x071417ac5a5dcd0cc3d8931ca7f257456828b9d3bd5215461ed1c474fb365363"
-  const UniversalDeployerContractAddress="0x041a78e741e5af2fec34b695679bc6891742439f7afb8484ecd7766661ad02bf"
 const preDeployedContracts = {
   devnet: {
     Eth: {
@@ -55,6 +52,33 @@ const preDeployedContracts = {
               state_mutability: "view",
             },
             {
+              name: "total_supply",
+              type: "function",
+              inputs: [],
+              outputs: [
+                {
+                  type: "core::integer::u256",
+                },
+              ],
+              state_mutability: "view",
+            },
+            {
+              name: "balance_of",
+              type: "function",
+              inputs: [
+                {
+                  name: "account",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
+              ],
+              outputs: [
+                {
+                  type: "core::integer::u256",
+                },
+              ],
+              state_mutability: "view",
+            },
+            {
               name: "allowance",
               type: "function",
               inputs: [
@@ -78,6 +102,30 @@ const preDeployedContracts = {
               name: "transfer",
               type: "function",
               inputs: [
+                {
+                  name: "recipient",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
+                {
+                  name: "amount",
+                  type: "core::integer::u256",
+                },
+              ],
+              outputs: [
+                {
+                  type: "core::bool",
+                },
+              ],
+              state_mutability: "external",
+            },
+            {
+              name: "transfer_from",
+              type: "function",
+              inputs: [
+                {
+                  name: "sender",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
                 {
                   name: "recipient",
                   type: "core::starknet::contract_address::ContractAddress",
@@ -215,6 +263,353 @@ const preDeployedContracts = {
         },
       ],
     },
+    ShaboyGames:{
+      abi: [
+        {
+            "type": "impl",
+            "name": "ExternalImplERC721",
+            "interface_name": "nftcontract::checkforworking::IERC721"
+        },
+        {
+            "type": "struct",
+            "name": "core::integer::u256",
+            "members": [
+                {
+                    "name": "low",
+                    "type": "core::integer::u128"
+                },
+                {
+                    "name": "high",
+                    "type": "core::integer::u128"
+                }
+            ]
+        },
+        {
+            "type": "interface",
+            "name": "nftcontract::checkforworking::IERC721",
+            "items": [
+                {
+                    "type": "function",
+                    "name": "name",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::felt252"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "symbol",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::felt252"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "balance_of",
+                    "inputs": [
+                        {
+                            "name": "account",
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "owner_of",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "get_counter_id",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "allowed_erc20_address",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "price_of_token_id",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "token_title",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::felt252"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "mint_multi",
+                    "inputs": [
+                        {
+                            "name": "token_name",
+                            "type": "core::felt252"
+                        },
+                        {
+                            "name": "supply",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "list",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        },
+                        {
+                            "name": "price",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "buy_nft",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        },
+                        {
+                            "name": "amount",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                }
+            ]
+        },
+        {
+            "type": "constructor",
+            "name": "constructor",
+            "inputs": [
+                {
+                    "name": "name",
+                    "type": "core::felt252"
+                },
+                {
+                    "name": "symbol",
+                    "type": "core::felt252"
+                },
+                {
+                    "name": "erc20_token_contract",
+                    "type": "core::starknet::contract_address::ContractAddress"
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "name": "nftcontract::checkforworking::ShaboyGames::Event",
+            "kind": "enum",
+            "variants": []
+        }
+    ],
+    address:"0x0295143c4af58c29088c0cbe87163f0c3f2dd7b1eb0877345f2f59b290aa4228"
+    },
+    ShaboySubscription:{
+      "address":"0x071417ac5a5dcd0cc3d8931ca7f257456828b9d3bd5215461ed1c474fb365363",
+      "abi": [
+        {
+            "type": "impl",
+            "name": "ShaboySubscription",
+            "interface_name": "nftcontract::subscription::IShaboyRegistry"
+        },
+        {
+            "type": "enum",
+            "name": "core::bool",
+            "variants": [
+                {
+                    "name": "False",
+                    "type": "()"
+                },
+                {
+                    "name": "True",
+                    "type": "()"
+                }
+            ]
+        },
+        {
+            "type": "interface",
+            "name": "nftcontract::subscription::IShaboyRegistry",
+            "items": [
+                {
+                    "type": "function",
+                    "name": "add_subscription",
+                    "inputs": [
+                        {
+                            "name": "user",
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "get_subscription",
+                    "inputs": [
+                        {
+                            "name": "address",
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::bool"
+                        }
+                    ],
+                    "state_mutability": "view"
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "name": "nftcontract::subscription::ShaboySubscription::Event",
+            "kind": "enum",
+            "variants": []
+        }
+    ]
+    },
+    ShaboyGamesMinterRegistry:{
+      "abi": [
+        {
+            "type": "impl",
+            "name": "ShaboyGamesMinterRegistry",
+            "interface_name": "nftcontract::storage::IShaboyRegistry"
+        },
+        {
+            "type": "struct",
+            "name": "core::integer::u256",
+            "members": [
+                {
+                    "name": "low",
+                    "type": "core::integer::u128"
+                },
+                {
+                    "name": "high",
+                    "type": "core::integer::u128"
+                }
+            ]
+        },
+        {
+            "type": "interface",
+            "name": "nftcontract::storage::IShaboyRegistry",
+            "items": [
+                {
+                    "type": "function",
+                    "name": "add_minter",
+                    "inputs": [
+                        {
+                            "name": "supply",
+                            "type": "core::integer::u256"
+                        },
+                        {
+                            "name": "minter",
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "get_minter",
+                    "inputs": [
+                        {
+                            "name": "supply",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "state_mutability": "view"
+                }
+            ]
+        },
+        {
+            "type": "constructor",
+            "name": "constructor",
+            "inputs": []
+        },
+        {
+            "type": "event",
+            "name": "nftcontract::storage::ShaboyGamesMinterRegistry::Event",
+            "kind": "enum",
+            "variants": []
+        }
+    ],
+    "address":"0x0189f950684dfb8833006c2c62d825a5f31fa30059dde2d7650a3e7a59f48c98"
+    }
   },
   sepolia: {
     Eth: {
@@ -474,122 +869,223 @@ const preDeployedContracts = {
         },
       ],
     },
-    ShaboyStorageContract: {
-      address: ShaboyStorageContractAddress,
+    ShaboyGames:{
       abi: [
         {
-          type: "impl",
-          name: "StoreArrayImpl",
-          interface_name:
-            "contracts::storageCairoArray::IShaboyStorageContract",
+            "type": "impl",
+            "name": "ExternalImplERC721",
+            "interface_name": "nftcontract::checkforworking::IERC721"
         },
         {
-          type: "interface",
-          name: "contracts::storageCairoArray::IShaboyStorageContract",
-          items: [
-            {
-              type: "function",
-              name: "seterc20",
-              inputs: [
+            "type": "struct",
+            "name": "core::integer::u256",
+            "members": [
                 {
-                  name: "ownerAddress",
-                  type: "core::starknet::contract_address::ContractAddress",
+                    "name": "low",
+                    "type": "core::integer::u128"
                 },
                 {
-                  name: "deployedContract",
-                  type: "core::starknet::contract_address::ContractAddress",
-                },
-              ],
-              outputs: [],
-              state_mutability: "external",
-            },
-            {
-              type: "function",
-              name: "seterc721",
-              inputs: [
-                {
-                  name: "ownerAddress",
-                  type: "core::starknet::contract_address::ContractAddress",
-                },
-                {
-                  name: "deployedContract",
-                  type: "core::starknet::contract_address::ContractAddress",
-                },
-              ],
-              outputs: [],
-              state_mutability: "external",
-            },
-            {
-              type: "function",
-              name: "geterc20",
-              inputs: [
-                {
-                  name: "walletForCheck",
-                  type: "core::starknet::contract_address::ContractAddress",
-                },
-              ],
-              outputs: [
-                {
-                  type: "core::array::Array::<core::starknet::contract_address::ContractAddress>",
-                },
-              ],
-              state_mutability: "view",
-            },
-            {
-              type: "function",
-              name: "geterc721",
-              inputs: [
-                {
-                  name: "walletForCheck",
-                  type: "core::starknet::contract_address::ContractAddress",
-                },
-              ],
-              outputs: [
-                {
-                  type: "core::array::Array::<core::starknet::contract_address::ContractAddress>",
-                },
-              ],
-              state_mutability: "view",
-            },
-            {
-              type: "function",
-              name: "getallerc20s",
-              inputs: [],
-              outputs: [
-                {
-                  type: "core::array::Array::<core::starknet::contract_address::ContractAddress>",
-                },
-              ],
-              state_mutability: "view",
-            },
-            {
-              type: "function",
-              name: "getallerc721s",
-              inputs: [],
-              outputs: [
-                {
-                  type: "core::array::Array::<core::starknet::contract_address::ContractAddress>",
-                },
-              ],
-              state_mutability: "view",
-            },
-          ],
+                    "name": "high",
+                    "type": "core::integer::u128"
+                }
+            ]
         },
         {
-          type: "event",
-          name: "contracts::storageCairoArray::ShaboyStorageContract::Event",
-          kind: "enum",
-          variants: [],
+            "type": "interface",
+            "name": "nftcontract::checkforworking::IERC721",
+            "items": [
+                {
+                    "type": "function",
+                    "name": "name",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::felt252"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "symbol",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::felt252"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "balance_of",
+                    "inputs": [
+                        {
+                            "name": "account",
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "owner_of",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "get_counter_id",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "allowed_erc20_address",
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "price_of_token_id",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "token_title",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::felt252"
+                        }
+                    ],
+                    "state_mutability": "view"
+                },
+                {
+                    "type": "function",
+                    "name": "mint_multi",
+                    "inputs": [
+                        {
+                            "name": "token_name",
+                            "type": "core::felt252"
+                        },
+                        {
+                            "name": "supply",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "list",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        },
+                        {
+                            "name": "price",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "buy_nft",
+                    "inputs": [
+                        {
+                            "name": "token_id",
+                            "type": "core::integer::u256"
+                        },
+                        {
+                            "name": "amount",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                }
+            ]
         },
-      ],
+        {
+            "type": "constructor",
+            "name": "constructor",
+            "inputs": [
+                {
+                    "name": "name",
+                    "type": "core::felt252"
+                },
+                {
+                    "name": "symbol",
+                    "type": "core::felt252"
+                },
+                {
+                    "name": "erc20_token_contract",
+                    "type": "core::starknet::contract_address::ContractAddress"
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "name": "nftcontract::checkforworking::ShaboyGames::Event",
+            "kind": "enum",
+            "variants": []
+        }
+    ],
+    address:"0x0295143c4af58c29088c0cbe87163f0c3f2dd7b1eb0877345f2f59b290aa4228"
     },
     ShaboySubscription:{
-      address:ShaboySubscriptionContractAddress,
+      "address":"0x071417ac5a5dcd0cc3d8931ca7f257456828b9d3bd5215461ed1c474fb365363",
       "abi": [
         {
             "type": "impl",
             "name": "ShaboySubscription",
-            "interface_name": "starknet_testing::subscription::IShaboyRegistry"
+            "interface_name": "nftcontract::subscription::IShaboyRegistry"
         },
         {
             "type": "enum",
@@ -607,7 +1103,7 @@ const preDeployedContracts = {
         },
         {
             "type": "interface",
-            "name": "starknet_testing::subscription::IShaboyRegistry",
+            "name": "nftcontract::subscription::IShaboyRegistry",
             "items": [
                 {
                     "type": "function",
@@ -641,84 +1137,86 @@ const preDeployedContracts = {
         },
         {
             "type": "event",
-            "name": "starknet_testing::subscription::ShaboySubscription::Event",
+            "name": "nftcontract::subscription::ShaboySubscription::Event",
             "kind": "enum",
             "variants": []
         }
     ]
     },
-    UniversalDeployer:{
-      address:UniversalDeployerContractAddress,
-      abi:[
+    ShaboyGamesMinterRegistry:{
+      "abi": [
         {
-          "data": [
-            {
-              "name": "address",
-              "type": "felt"
-            },
-            {
-              "name": "deployer",
-              "type": "felt"
-            },
-            {
-              "name": "unique",
-              "type": "felt"
-            },
-            {
-              "name": "classHash",
-              "type": "felt"
-            },
-            {
-              "name": "calldata_len",
-              "type": "felt"
-            },
-            {
-              "name": "calldata",
-              "type": "felt*"
-            },
-            {
-              "name": "salt",
-              "type": "felt"
-            }
-          ],
-          "keys": [],
-          "name": "ContractDeployed",
-          "type": "event"
+            "type": "impl",
+            "name": "ShaboyGamesMinterRegistry",
+            "interface_name": "nftcontract::storage::IShaboyRegistry"
         },
         {
-          "inputs": [
-            {
-              "name": "classHash",
-              "type": "felt"
-            },
-            {
-              "name": "salt",
-              "type": "felt"
-            },
-            {
-              "name": "unique",
-              "type": "felt"
-            },
-            {
-              "name": "calldata_len",
-              "type": "felt"
-            },
-            {
-              "name": "calldata",
-              "type": "felt*"
-            }
-          ],
-          "name": "deployContract",
-          "outputs": [
-            {
-              "name": "address",
-              "type": "felt"
-            }
-          ],
-          "type": "function"
+            "type": "struct",
+            "name": "core::integer::u256",
+            "members": [
+                {
+                    "name": "low",
+                    "type": "core::integer::u128"
+                },
+                {
+                    "name": "high",
+                    "type": "core::integer::u128"
+                }
+            ]
+        },
+        {
+            "type": "interface",
+            "name": "nftcontract::storage::IShaboyRegistry",
+            "items": [
+                {
+                    "type": "function",
+                    "name": "add_minter",
+                    "inputs": [
+                        {
+                            "name": "supply",
+                            "type": "core::integer::u256"
+                        },
+                        {
+                            "name": "minter",
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "outputs": [],
+                    "state_mutability": "external"
+                },
+                {
+                    "type": "function",
+                    "name": "get_minter",
+                    "inputs": [
+                        {
+                            "name": "supply",
+                            "type": "core::integer::u256"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "core::starknet::contract_address::ContractAddress"
+                        }
+                    ],
+                    "state_mutability": "view"
+                }
+            ]
+        },
+        {
+            "type": "constructor",
+            "name": "constructor",
+            "inputs": []
+        },
+        {
+            "type": "event",
+            "name": "nftcontract::storage::ShaboyGamesMinterRegistry::Event",
+            "kind": "enum",
+            "variants": []
         }
-      ]
-    }
+    ],
+    "address":"0x0189f950684dfb8833006c2c62d825a5f31fa30059dde2d7650a3e7a59f48c98"
+    },
+    
   },
 } as const;
 
