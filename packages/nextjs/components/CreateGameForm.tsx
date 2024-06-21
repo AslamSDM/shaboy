@@ -1,6 +1,8 @@
 "use client";
-
 export default function CreateGameForm() {
+
+
+
     return (
         <div className="createGame flex bg-yellow justify-center flex-col md:flex-row mx-[30px] my-[50px] md:my-[100px]">
             {/* UPLOAD FILE */}
