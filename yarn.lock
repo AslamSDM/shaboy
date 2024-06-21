@@ -7709,6 +7709,7 @@ __metadata:
   resolution: "ss-2@workspace:."
   dependencies:
     "@pinata/sdk": ^2.1.0
+    "@supabase/supabase-js": ^2.43.5
     axios: ^1.7.2
     daisyui: ^4.7.3
     husky: ^9.0.11

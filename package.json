@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@pinata/sdk": "^2.1.0",
+    "@supabase/supabase-js": "^2.43.5",
     "axios": "^1.7.2",
     "postcss": "^8.4.38"
   },
