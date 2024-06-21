@@ -1,12 +1,6 @@
 import axios from "axios";
-
-import { createClient } from "@supabase/supabase-js";
+import {supabase_marketplace} from "./../../../utils/supabase"
 import { error } from "console";
-
-const supabaseUrl = "https://mmrrmleeydqgkmkncqan.supabase.co";
-const supabasekey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tcnJtbGVleWRxZ2tta25jcWFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTg5ODMxODEsImV4cCI6MjAzNDU1OTE4MX0.4BokD3hAhtepArvEK6Wzosr0LSVsIrkX25uj4Y_R8x4";
-const supabase = createClient(supabaseUrl, supabasekey);
 
 
 const get_newData=(current_data:number[],token_id:number,method:string)=>{
@@ -23,7 +17,7 @@ const get_newData=(current_data:number[],token_id:number,method:string)=>{
 
 
 const updateSupabase = async (token_id: number,method:string) => {
-  let { data: Starhack, error } = await supabase
+  let { data: Starhack, error } = await supabase_marketplace
     .from("Starhack")
     .select("active_listings")
     .eq("id", 1);
@@ -35,7 +29,7 @@ const updateSupabase = async (token_id: number,method:string) => {
         const current_data= (Starhack[0]?.active_listings)
         const new_data=get_newData(current_data,token_id,method)
         console.log(typeof(new_data))
-        const {data,error}=await supabase.from("Starhack").update([{active_listings:new_data}]).eq("id",1)
+        const {data,error}=await supabase_marketplace.from("Starhack").update([{active_listings:new_data}]).eq("id",1)
         if (error) {
           console.log(error);
           return { error };
@@ -47,7 +41,7 @@ const updateSupabase = async (token_id: number,method:string) => {
 
 const get_activeListing = async()=>{
 
-  let { data: Starhack, error } = await supabase
+  let { data: Starhack, error } = await supabase_marketplace
     .from("Starhack")
     .select("active_listings")
     .eq("id", 1);
