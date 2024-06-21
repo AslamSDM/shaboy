@@ -4,9 +4,6 @@
  */
 const universalEthAddress =
   "0x49D36570D4E46F48E99674BD3FCC84644DDD6B96F7C741B1562B82F9E004DC7";
-  const ShaboyStorageContractAddress ="0x06ae41e8faab299099c23da7d2375780fe2cfefd20189483ee9478b751d5caa2"
-  const ShaboySubscriptionContractAddress = "0x071417ac5a5dcd0cc3d8931ca7f257456828b9d3bd5215461ed1c474fb365363"
-  const UniversalDeployerContractAddress="0x041a78e741e5af2fec34b695679bc6891742439f7afb8484ecd7766661ad02bf"
 const preDeployedContracts = {
   devnet: {
     Eth: {
