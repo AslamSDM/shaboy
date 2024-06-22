@@ -12,7 +12,8 @@ const MarketPlace = () => {
   const [price, setPrice] = useState(Number);
   const [token_id, setTokenId] = useState(Number);
   const [metadata, setMetadata] = useState<any[]>([]);
-  const connectedAddress = useAccount();
+  const {address:connectedAddress} = useAccount();
+
   const { writeAsync: list } = useScaffoldMultiWriteContract({
     calls: [
       {
@@ -28,7 +29,7 @@ const MarketPlace = () => {
       {
         contractName: "Eth",
         functionName: "approve",
-        args: [String(connectedAddress), price * 10 ** 18],
+        args: [(connectedAddress), price * 10 ** 18],
       },
       {
         contractName: "ShaboyGames",
@@ -39,15 +40,24 @@ const MarketPlace = () => {
   });
 
   const buy_nft = (token_id: number, price: number) => {
-    if (token_id && price && connectedAddress) setPrice(price);
-    setTokenId(token_id);
-    buy();
+    if (token_id && price && connectedAddress) {
+      setPrice(price);
+      setTokenId(token_id);
+      buy();
+    }
+
+
+
   };
 
   const list_nft = (token_id: number, price: number) => {
-    if (token_id && price && connectedAddress) setPrice(price);
-    setTokenId(token_id);
-    list();
+    if (token_id && price && connectedAddress) {
+      setPrice(price);
+      setTokenId(token_id);
+      list();
+    }
+
+
   };
 
 
@@ -84,6 +94,7 @@ const MarketPlace = () => {
                 key={i}
                 style={"sm:w-[45%] lg:w-[25%] xl:w-[20%]"}
                 animation={false}
+                handleClick={()=>buy_nft(product.token_id,product.price)}
               />
             );
           })}

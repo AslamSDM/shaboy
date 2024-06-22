@@ -30,6 +30,7 @@ const get_activeListing = async () => {
   let { data: Starhack, error } = await supabase
     .from("marketplace")
     .select("tokenid")
+  
   if (error) {
     console.log(error);
     return { error: error.message };
@@ -52,7 +53,16 @@ const get_activeListing = async () => {
     if (!Metadata || Metadata.length === 0) {
       console.log("Metadata not found for ID:", data[i]);
     } else {
-      dataReturn.push(Metadata[0]?.metadata);
+      const newData=(Metadata[0]?.metadata)
+      let {data:price,error}=await supabase.from("marketplace").select("price").eq("tokenid",data[i])
+      if (error) {
+        console.log(error);
+        return { error: error.message };
+      }
+      if(!price){return {error:"cant fetch price"}}
+      newData.token_id=data[i]
+      newData.price=price[0].price
+      dataReturn.push(newData);
     }
   }
   return dataReturn;
