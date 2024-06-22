@@ -11,10 +11,9 @@ import { useDeployedContractInfo } from "~~/hooks/scaffold-stark";
 // import { useAccount } from "@starknet-react/core";
 
 
-import { useState } from "react";
 
 export default function CreateGameForm() {
-
+  const [isChecked,setIsChecked]=useState<boolean>(false)
   const [gameFile, setGameFile] = useState<File | null>(null);
   const [gameImage, setGameImage] = useState<File | null>(null);
   const [gameName, setGameName] = useState("");

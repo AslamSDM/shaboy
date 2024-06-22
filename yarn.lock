@@ -1842,6 +1842,7 @@ __metadata:
     react-gbajs: ^1.0.4
     react-hot-toast: ^2.4.1
     replicate: ^0.30.2
+    sal.js: ^0.8.5
     starknet: 6.7.0
     starknet-dev: "npm:starknet@6.7.0"
     tailwindcss: ^3.3.0
@@ -7509,6 +7510,13 @@ __metadata:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
+  languageName: node
+  linkType: hard
+
+"sal.js@npm:^0.8.5":
+  version: 0.8.5
+  resolution: "sal.js@npm:0.8.5"
+  checksum: fee4d8c7cba80c0c3e79b17e3bc419a12e5cb171309d727bd9e5d303d58c1e853993a6aecfaa0d567ce2c6a713ae6687287578fdde053e86aa82e8118605ca25
   languageName: node
   linkType: hard
 

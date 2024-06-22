@@ -55,23 +55,35 @@ const get_activeListing = async () => {
     console.log(error);
     return { error };
   }
-  return Starhack[0]?.active_listings;
+  // return Starhack[0]?.active_listings;
+  const data = Starhack[0]?.active_listings;
+  const dataReturn:any[]=[]
+  for (let i=0;i<data.length;i++){
+    let {data:Metadata,error}=await supabase.from("Shaboy_Data").select("metadata").eq("id",data[i])
+    if(!Metadata || Metadata.length===0){
+     console.log(Error)}
+     else{
+    dataReturn.push(Metadata[0]?.metadata)
+     }
+  }
+  return dataReturn
 };
 
 export async function POST(req: Request) {
   const formdata = await req.formData();
   const token_id = Number(formdata.get("token_id"));
   const method = String(formdata.get("method"));
-  if (!method || !token_id) {
+  if (!method) {
     return Response.json({ error: "Invalid request" });
   }
   if (method == "get") {
     const listing = await get_activeListing();
-    if (listing.error) {
-      return Response.json(listing.error);
+    if (!listing) {
+      return Response.json({error:"Error getting metadata"});
     }
     return Response.json(listing);
   } else {
+    if(!token_id) return Response.json({error:"No token ID"})
     const update = await updateSupabase(token_id, method);
     if(!update){
       return Response.json({ error: "No data found" });

@@ -4,7 +4,8 @@ import ProductCard from "~~/components/common/ProductCard";
 import sal from "sal.js";
 import {useScaffoldReadContract} from "~~/hooks/scaffold-stark/useScaffoldReadContract"
 import { useScaffoldMultiWriteContract } from "~~/hooks/scaffold-stark/useScaffoldMultiWriteContract";
-
+import { useAccount } from "@starknet-react/core";
+import axios from "axios";
 const products = [
     {
         image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
@@ -54,7 +55,7 @@ const products = [
 const MarketPlace = () => {
     const [price,setPrice]=useState(Number)
     const [token_id,setTokenId]=useState(Number)
-
+    const connectedAddress = useAccount()
 const {writeAsync:list}=useScaffoldMultiWriteContract({
     calls:[
         {
@@ -70,6 +71,11 @@ const {writeAsync:list}=useScaffoldMultiWriteContract({
 const {writeAsync:buy}=useScaffoldMultiWriteContract({
     calls:[
         {
+            contractName:"Eth",
+            functionName:"approve",
+            args:[String(connectedAddress),price*10**18]
+        },
+        {
             contractName:"ShaboyGames",
             functionName:"buy_nft",
             args:[token_id,price*10**18]
@@ -79,7 +85,28 @@ const {writeAsync:buy}=useScaffoldMultiWriteContract({
 })
 
 const buy_nft=(token_id:number,price:number)=>{
-    list()
+    if(token_id && price && connectedAddress)
+        setPrice(price)
+        setTokenId(token_id)
+        buy()
+
+}
+
+const list_nft=(token_id:number,price:number)=>{
+    if(token_id && price && connectedAddress)
+        setPrice(price)
+        setTokenId(token_id)
+        list()
+
+}
+const get_allmeta_data=async(data:number[])=>{
+    
+}
+const get_active_listing=async()=>{
+    const res = await axios.post("/api/create", {
+        method:"get"
+      });
+
 }
 
     useEffect(()=>{
