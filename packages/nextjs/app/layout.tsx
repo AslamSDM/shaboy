@@ -10,9 +10,10 @@ import "~~/styles/homepage.css";
 import "~~/node_modules/sal.js/dist/sal.css"
 
 export const metadata: Metadata = {
-  title: "Scaffold-Stark",
-  description: "Fast track your starknet journey",
+  title: "Shaboy",
+  description: "play Retro games on the blockchain",
   icons: "/logo.ico",
+  
 };
 
 const ScaffoldStarkApp = ({ children }: { children: React.ReactNode }) => {
