@@ -28,15 +28,10 @@ export default function Page({ params: { slug } }: { params: Params }) {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ contract_address: address,gameid : slug }),
-
+                body: JSON.stringify({ userAddress: address,gameid : slug }),
             });
-            const data = await uri.json();
-            if (data.error) {
-                console.log(data.error);
-                return;
-            }
-            setGameURI(data.uri);
+            
+
         }
         fetchGameURI();
     }, [slug]);

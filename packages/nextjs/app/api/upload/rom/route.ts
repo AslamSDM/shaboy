@@ -43,7 +43,6 @@ export async function POST(req: Request) {
         name: name,
         description: description,
         image: image,
-        rom: filename,
         supply: supply,
         id : Number(gameId) + i
       });
