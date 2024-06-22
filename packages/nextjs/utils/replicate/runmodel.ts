@@ -21,7 +21,7 @@ export async function runModel(ownedgames: any[], emotion: string) {
     }
   );
   const jsonString = output.join('');
-  console.log(jsonString)
+  // console.log(jsonString)
   const start = jsonString.indexOf('{');
   const end = jsonString.lastIndexOf('}');
 
