@@ -20,12 +20,40 @@ const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id:
 const getSupabase = async (addr: string) => {
   const { data: Starhack, error } = await supabase
     .from("owners").select("holdings").eq("owner", addr);
-
-  if (Starhack) {
-    console.log(Starhack[0].holdings);
-    return { holdings: Starhack[0].holdings };
+  if (!Starhack || Starhack.length ==0) {
+    return { error:"something went wrong" };
   } else {
-    return { error: error.message };
+    const newdata =Starhack[0].holdings
+    let data:number[]=[]
+    if (newdata.length>12){
+      for(let i =0;i<12;i++){
+        let randI=Math.floor(Math.random() * newdata.length)
+        data.push(newdata[randI])
+      }
+
+    }
+    else{
+      data=newdata
+    }
+    const dataReturn: any[] = [];
+    for (let i = 0; i < data.length; i++) {
+      let { data: Metadata, error } = await supabase
+        .from("gamedata")
+        .select("metadata")
+        .eq("id", data[i]);
+      if (error) {
+        console.log(error);
+        return { error: error.message };
+      }
+      if (!Metadata || Metadata.length === 0) {
+        console.log("Metadata not found for ID:", data[i]);
+      } else {
+        const newData=(Metadata[0]?.metadata)
+        newData.token_id=data[i]
+        dataReturn.push(newData);
+      }
+    }
+    return dataReturn;
   }
 }
 

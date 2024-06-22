@@ -7,12 +7,11 @@ import { useScaffoldMultiWriteContract } from "~~/hooks/scaffold-stark/useScaffo
 import { useAccount } from "@starknet-react/core";
 import axios from "axios";
 
-
 const MarketPlace = () => {
   const [price, setPrice] = useState(Number);
   const [token_id, setTokenId] = useState(Number);
   const [metadata, setMetadata] = useState<any[]>([]);
-  const {address:connectedAddress} = useAccount();
+  const { address: connectedAddress } = useAccount();
 
   const { writeAsync: list } = useScaffoldMultiWriteContract({
     calls: [
@@ -29,7 +28,7 @@ const MarketPlace = () => {
       {
         contractName: "Eth",
         functionName: "approve",
-        args: [(connectedAddress), price * 10 ** 18],
+        args: [connectedAddress, price * 10 ** 18],
       },
       {
         contractName: "ShaboyGames",
@@ -39,46 +38,50 @@ const MarketPlace = () => {
     ],
   });
 
-  const buy_nft = (token_id: number, price: number) => {
+  const buy_nft = async (
+    token_id: number,
+    price: number,
+    seller_addr: string
+  ) => {
     if (token_id && price && connectedAddress) {
       setPrice(price);
       setTokenId(token_id);
       buy();
     }
-
-
-
+    const buyer_addr = connectedAddress;
+    const method = "update"
+    await axios.post("/api/create/update_owner", {
+      seller_addr,
+      token_id,
+      buyer_addr,
+      method
+    });
   };
 
-  const list_nft = (token_id: number, price: number) => {
+  const list_nft = async (token_id: number, price: number) => {
     if (token_id && price && connectedAddress) {
       setPrice(price);
       setTokenId(token_id);
       list();
     }
-
-
+    await axios.post("/api/create")
   };
-
 
   useEffect(() => {
     const get_new_listing = async () => {
-        const newform = new FormData();
-        newform.append("method", "get");
-    
-        const res = await axios.post(
-          "/api/create",
-            newform
-        );
-        if (res.data) {
-            console.log("xxxxxxxxxxxx",res.data)
-          setMetadata(res.data);
-        } else console.log("ERROR");
-      };
-    
+      const newform = new FormData();
+      newform.append("method", "get");
+
+      const res = await axios.post("/api/create", newform);
+      if (res.data) {
+        console.log("xxxxxxxxxxxx", res.data);
+        setMetadata(res.data);
+      } else console.log("ERROR");
+    };
+
     sal();
     get_new_listing();
-  },[]);
+  }, []);
 
   return (
     <div className="flex flex-col min-h-[100vh] p-[50px]">
@@ -94,7 +97,9 @@ const MarketPlace = () => {
                 key={i}
                 style={"sm:w-[45%] lg:w-[25%] xl:w-[20%]"}
                 animation={false}
-                handleClick={()=>buy_nft(product.token_id,product.price)}
+                handleClick={() =>
+                  buy_nft(product.token_id, product.price, product.seller)
+                }
               />
             );
           })}

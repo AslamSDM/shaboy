@@ -59,9 +59,16 @@ const get_activeListing = async () => {
         console.log(error);
         return { error: error.message };
       }
+      let {data:seller,error:errro2}=await supabase.from("marketplace").select("seller").eq("tokenid",data[i])
+      if (errro2) {
+        console.log(errro2);
+        return { error: errro2.message };
+      }
       if(!price){return {error:"cant fetch price"}}
+      if(!seller)return {error:"cant find seller"}
       newData.token_id=data[i]
       newData.price=price[0].price
+      newData.seller=seller[0].seller
       dataReturn.push(newData);
     }
   }
