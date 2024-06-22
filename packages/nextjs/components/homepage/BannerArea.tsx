@@ -1,3 +1,5 @@
+import ShaboyPlusModal from "../ShaboyPlusModal";
+
 const data = {
     title: "Discover Digital Art, Collect and Sell Your Specific NFTs.",
     description: "Partner with one of the world’s largest retailers to showcase your brand and products.",
