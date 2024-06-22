@@ -1,46 +1,35 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase";
+import { error } from "console";
 
-const get_newData = (current_data: number[], token_id: number, method: string) => {
-  let new_data = current_data;
-  if (method === "add") {
-    new_data.push(token_id);
-  } else if (method === "remove") {
-    new_data = new_data.filter((item) => item !== token_id);
-  }
-  return new_data;
-};
 
-const updateSupabase = async (token_id: number, method: string) => {
-  let { data: Starhack, error } = await supabase
-    .from("Starhack")
-    .select("active_listings")
-    .eq("id", 1);
-  if (error) {
-    console.log(error);
-    return { error };
+
+const updateSupabase = async (token_id: number, method: string, seller_address: string, price: number) => {
+  try {
+    await supabase
+      .from("marketplace")
+      .select("tokenid")
+    if (method == "add") {
+      await supabase
+        .from("marketplace")
+        .insert([{ seller: seller_address, price: price, tokenid: token_id }])
+    }
+    if (method == "remove") {
+      await supabase
+        .from("marketplace")
+        .delete().eq("tokenid", token_id)
+    }
+    return {error:null}
+  } catch (e) {
+    return {error:e}
+
   }
-  if (!Starhack || Starhack.length === 0) {
-    return { error: "No data found" };
-  }
-  const current_data = Starhack[0]?.active_listings;
-  const new_data = get_newData(current_data, token_id, method);
-  const { data, error: error1 } = await supabase
-    .from("Starhack")
-    .update({ active_listings: new_data })
-    .eq("id", 1);
-  if (error1) {
-    console.log(error1);
-    return { error: error1.message };
-  }
-  return data;
 };
 
 const get_activeListing = async () => {
   let { data: Starhack, error } = await supabase
-    .from("Starhack")
-    .select("active_listings")
-    .eq("id", 1);
+    .from("marketplace")
+    .select("tokenid")
   if (error) {
     console.log(error);
     return { error: error.message };
@@ -48,8 +37,7 @@ const get_activeListing = async () => {
   if (!Starhack || Starhack.length === 0) {
     return { error: "No data found" };
   }
-
-  const data = Starhack[0]?.active_listings;
+  const data = Starhack.map(obj=>obj.tokenid)
   const dataReturn: any[] = [];
 
   for (let i = 0; i < data.length; i++) {
@@ -74,6 +62,8 @@ export async function POST(req: Request, res: Response) {
   const formdata = await req.formData();
   const token_id = Number(formdata.get("token_id"));
   const method = String(formdata.get("method"));
+  const seller_address = String(formdata.get("seller_address"))
+  const price = Number(formdata.get("price"))
 
   if (!method) {
     return Response.json({ error: "Invalid request: method is required" });
@@ -87,8 +77,8 @@ export async function POST(req: Request, res: Response) {
     }
     return Response.json(listing);
   } else {
-    if (!token_id) return Response.json({ error: "No token ID provided" });
-    const update = await updateSupabase(token_id, method);
+    if (!token_id || !seller_address || !price) return Response.json({ error: "No token ID provided" });
+    const update = await updateSupabase(token_id, method, seller_address, price);
     if (update?.error) {
       return Response.json({ error: update.error });
     }

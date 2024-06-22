@@ -132,7 +132,7 @@ const MarketPlace = () => {
                 product={product}
                 key={i}
                 style={"sm:w-[45%] lg:w-[25%] xl:w-[20%]"}
-                animation={true}
+                animation={false}
               />
             );
           })}
