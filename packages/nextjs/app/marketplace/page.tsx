@@ -6,56 +6,7 @@ import { useScaffoldReadContract } from "~~/hooks/scaffold-stark/useScaffoldRead
 import { useScaffoldMultiWriteContract } from "~~/hooks/scaffold-stark/useScaffoldMultiWriteContract";
 import { useAccount } from "@starknet-react/core";
 import axios from "axios";
-const products = [
-  {
-    image:
-      "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82,
-  },
-  {
-    image:
-      "https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/qobt2OWZZCY7DrqtE5EyGuAbfMVrGYmTK2CeUJJM-w700-q75.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82,
-  },
-  {
-    image:
-      "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82,
-  },
-  {
-    image:
-      "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82,
-  },
-  {
-    image:
-      "https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/qobt2OWZZCY7DrqtE5EyGuAbfMVrGYmTK2CeUJJM-w700-q75.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82,
-  },
-  {
-    image:
-      "https://i.guim.co.uk/img/media/7c2ab1a3e60e445caf0a4d3de302591e830e8f7f/0_0_3800_2280/master/3800.jpg?width=480&dpr=1&s=none",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82,
-  },
-];
+
 
 const MarketPlace = () => {
   const [price, setPrice] = useState(Number);
@@ -101,7 +52,7 @@ const MarketPlace = () => {
 
 
   useEffect(() => {
-    const get_active_listing = async () => {
+    const get_new_listing = async () => {
         const newform = new FormData();
         newform.append("method", "get");
     
@@ -116,7 +67,7 @@ const MarketPlace = () => {
       };
     
     sal();
-    get_active_listing();
+    get_new_listing();
   },[]);
 
   return (

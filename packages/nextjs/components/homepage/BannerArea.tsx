@@ -1,9 +1,38 @@
-const data = {
-    title: "Discover Digital Art, Collect and Sell Your Specific NFTs.",
-    description: "Partner with one of the world’s largest retailers to showcase your brand and products.",
+const data = [{
+    title: "Welcome to the world of SHABOY. The ultimate gaming platform",
+    description: "Join us in revolutionalizing the web3 gaming landscape.",
     button: "Play Now",
-    image: "https://img.freepik.com/free-vector/joystick-game-sport-technology_138676-2045.jpg?t=st=1718720325~exp=1718723925~hmac=d70fd16b1ae7e47f19d6d40918252b7980d3bcd9d65fc1af9c86f898b44d482b&w=740"
-}
+    image: "https://www.etsy.com/uk/market/arcade_vector_art"
+},
+{
+    title: "BUILD+TRADE+PLAY+EARN=SHABOY",
+    description: "We are the worlds first build, trade and play to earn platform ",
+    button: "Profile",
+    image: "https://www.etsy.com/uk/market/arcade_vector_art"
+
+},
+{
+    title: "Something that you havent seen before",
+    description: "Web2 developers can build web3 games hassle free without learning blockchain through Shaboy abstraction. This welcomes 15 million web2 devs to web3",
+    button: "Create a game",
+    image: "https://www.etsy.com/uk/market/arcade_vector_art"
+
+},
+{
+    title: "Join us in revolutionalizing the web3 gaming landscape",
+    description: "Explore our platform to, Buy games play and earn. If you are a game developer, checkout our create games page",
+    button: "Goto marketplace",
+    image: "https://www.etsy.com/uk/market/arcade_vector_art"
+
+},
+{
+    title: "Dont know what to play? SHABOY AI will help you",
+    description: "SHABOY AI is a cutting edge AI chat bot which helps you  by suggesting games depending on your mood and previous gaming history",
+    button: "Shaboy AI",
+    image: "https://www.etsy.com/uk/market/arcade_vector_art"
+
+},
+]
 
 const BannerArea = () => {
     return (
