@@ -1,15 +1,16 @@
 import { supabase } from "~~/utils/supabase";
 import axios from "axios";
+
 const cdnurl = process.env.BUNNYCDN_HOSTNAME as string;
 const ACCESS_KEY = process.env.BUNNYCDN_API_KEY as string;
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const contract_address = url.searchParams.get("address");
+  const userAddress = url.searchParams.get("address");
   const game = await supabase
     .from("gamedata")
     .select("*")
-    .eq("contract_address", contract_address);
+    .eq("userAddress", userAddress);
   if (game.error) {
     return Response.json({ error: game.error });
   }
@@ -22,23 +23,29 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
     const requst = await req.json();
-    const contract_address = requst.contract_address;
+    const userAddress = requst.userAddress;
+    const gameId = requst.gameId;
 
-  if (!(contract_address instanceof String)) {
+  if (!(userAddress instanceof String)) {
     return Response.json({ error: "Invalid input" });
   }
-  const game = await supabase
-    .from("gamedata")
+  const ownedgames = await supabase
+    .from("ownedgames")
     .select("*")
-    .eq("contract_address", contract_address);
-  if (game.error) {
-    return Response.json({ error: game.error });
+    .eq("userAddress", userAddress);
+  if (ownedgames.error) {
+    return Response.json({ error: ownedgames.error });
   }
-  if (game.data.length === 0) {
-    return Response.json({ error: "Game not found" });
+  if (ownedgames.data.length === 0 || !ownedgames.data.some((game) => game.gameId == gameId)){
+        return Response.json({ error: "You dont own the game" });
   }
+  // todo : check if the game is owned in sc 
+
+
+
+  
   const rom = await axios.get(
-    `https://${cdnurl}/roms/${game.data[0].contract_address}.gba`,
+    `https://${cdnurl}/roms/${gameId}.gba`,
     {
       responseType: "arraybuffer",
       headers: {

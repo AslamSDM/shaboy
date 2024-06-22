@@ -4,7 +4,7 @@ const fs = require('fs');
 const cors = require('cors');
 const multer = require('multer');
 const app = express();
-const port = 3001
+const port = 9898;
 app.use(cors())
 // Load games and calculate ranges
 const games = require('./games.json');
