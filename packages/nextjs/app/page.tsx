@@ -1,10 +1,17 @@
-
-import type { NextPage } from "next";
+"use client";
 import BannerArea from "~~/components/homepage/BannerArea";
 import NewGames from "~~/components/homepage/NewItems";
-import { useDeployedContractInfo} from "~~/hooks/scaffold-stark";
-const Home: NextPage = () => {
-  const {data}=useDeployedContractInfo("ShaboyGames")
+
+import sal from "sal.js";
+import { useEffect } from "react";
+
+
+const Home = () => {
+
+  useEffect(()=>{
+    sal();
+  });
+
   return (
     <>
       <BannerArea />

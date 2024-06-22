@@ -1,15 +1,15 @@
 import axios from "axios";
 import { error } from "console";
 
-import { supabase_marketplace } from "~~/utils/supabase";
+import { supabase } from "~~/utils/supabase";
 
 const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id: number) => {
   try {
-    const { data: SellerListNP } = await supabase_marketplace.from("owners").select('holdings').eq('owner', seller_addr);
-    const { data: BuyerListNP } = await supabase_marketplace.from("owners").select('holdings').eq('owner', buyer_addr);
+    const { data: SellerListNP } = await supabase.from("owners").select('holdings').eq('owner', seller_addr);
+    const { data: BuyerListNP } = await supabase.from("owners").select('holdings').eq('owner', buyer_addr);
     if (SellerListNP && BuyerListNP) {
-      await supabase_marketplace.from("owners").update([{ holdings: BuyerListNP[0]?.holdings?.concat(token_id) }]).eq("owner", buyer_addr);
-      await supabase_marketplace.from("owners").update([{ holdings: SellerListNP[0]?.holdings?.filter((item: number) => item !== token_id) }]).eq("owner", seller_addr);
+      await supabase.from("owners").update([{ holdings: BuyerListNP[0]?.holdings?.concat(token_id) }]).eq("owner", buyer_addr);
+      await supabase.from("owners").update([{ holdings: SellerListNP[0]?.holdings?.filter((item: number) => item !== token_id) }]).eq("owner", seller_addr);
       return { success: true };
     }
   } catch (e) {
@@ -18,7 +18,7 @@ const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id:
 }
 
 const getSupabase = async (addr: string) => {
-  const { data: Starhack, error } = await supabase_marketplace
+  const { data: Starhack, error } = await supabase
     .from("owners").select("holdings").eq("owner", addr);
 
   if (Starhack) {
