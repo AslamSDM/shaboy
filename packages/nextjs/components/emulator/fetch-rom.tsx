@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useContext, useMemo, useState, FunctionComponent, SetStateAction, Dispatch } from 'react';
+import React, { useContext, useMemo, FunctionComponent, SetStateAction, Dispatch } from 'react';
 import { GbaContext } from 'react-gbajs';
 
-type Props = { setRomLoaded: Dispatch<SetStateAction<boolean>> }
+type Props = { 
+    setRomLoaded: Dispatch<SetStateAction<boolean>>,
+    gbaURI: string
+ }
 
-const FetchROM: FunctionComponent<Props> = ({setRomLoaded}) => {
+const FetchROM: FunctionComponent<Props> = ({setRomLoaded, gbaURI}) => {
     const {
         play: playGba,
     } = useContext(GbaContext);
@@ -20,7 +23,8 @@ const FetchROM: FunctionComponent<Props> = ({setRomLoaded}) => {
     }
 
     const load = async () => {
-        const grom = await getGameRom("http://localhost:3000/mario.gba");
+        console.log(gbaURI);
+        const grom = await getGameRom(gbaURI);
         if (!grom) {
             throw new Error("fetched ROM is NULL or undefined")
         } else {
@@ -31,7 +35,7 @@ const FetchROM: FunctionComponent<Props> = ({setRomLoaded}) => {
 
     useMemo(() => {
         load();
-    }, []);
+    },[]);
 
     return (
         <>

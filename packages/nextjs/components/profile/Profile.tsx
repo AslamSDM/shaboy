@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ProductCard from "../homepage/ProductCard";
+import ProductCard from "../common/ProductCard";
 
 type Imagearray = {
     image: string,

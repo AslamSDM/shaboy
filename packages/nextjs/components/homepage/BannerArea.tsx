@@ -7,11 +7,11 @@ const data = {
 
 const BannerArea = () => {
     return (
-        <div className="hero flex justify-center items-center py-[45px] md:py-[80px] px-[20px] lg:px-[0px] pb-[80px]">
-            <div className="hero-wrapper flex flex-col-reverse md:flex-row md:max-w[90%] lg:max-w-[1140px] px-[16px]">
+        <div className="flex justify-center items-center py-[45px] md:py-[80px] px-[20px] lg:px-[0px] pb-[80px]">
+            <div className="flex flex-col-reverse md:flex-row md:max-w[90%] lg:max-w-[1140px] px-[16px]">
                 <div className="content md:w-[60%] sm:px-[50px]">
                     <h2
-                        className="title pt-[25px] w-[90%] lg:max-w-[90%] text-[2.25em] font-normal"
+                        className="pt-[25px] w-[90%] lg:max-w-[90%] text-[2.25em] font-normal leading-[1.2em]"
                         data-sal-delay="200"
                         data-sal="slide-up"
                         data-sal-duration="800"
@@ -19,7 +19,7 @@ const BannerArea = () => {
                         {data.title}
                     </h2>
                     <p
-                        className="description pb-[30px] lg:max-w-[70%]"
+                        className="pb-[30px] lg:max-w-[70%] text-[22px] text-[#ababab]"
                         data-sal-delay="300"
                         data-sal="slide-up"
                         data-sal-duration="800"
@@ -29,7 +29,7 @@ const BannerArea = () => {
                     </p>
                     <a 
                         href="" 
-                        className="hero-btn mt-[20px] px-[34px] py-[15px] min-w-[160px] bg-[#00a3ff]"
+                        className="mt-[20px] px-[34px] py-[15px] min-w-[160px] bg-[#00a3ff] rounded-[4px] hover:bg-[#005384]"
                         data-sal-delay="400"
                         data-sal="slide-up"
                         data-sal-duration="800"
@@ -37,7 +37,7 @@ const BannerArea = () => {
                         {data.button}
                     </a>
                 </div>
-                <div className="banner md:pl-[7%] lg:px-[3%] sm:px-[50px]">
+                <div className="md:pl-[7%] lg:px-[3%] sm:px-[50px]">
                     <div className="image">
                         <img src={data.image} className="max-h-[80vh] w-full" alt="shaboy" />
                     </div>
