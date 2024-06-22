@@ -115,6 +115,8 @@ const launcherc20 = async(supply:Number,name:String,symbol:String,addr:String)=>
       // //update supabase
       const fileup: any = await uploadFile(gameFile, gameName);
 
+      await axios.post("api/create/update_owner",{})
+
     }
     setLoading(false)
   }
