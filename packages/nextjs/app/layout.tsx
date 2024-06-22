@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { ScaffoldStarkAppWithProviders } from "~~/components/ScaffoldStarkAppWithProviders";
-import "~~/styles/globals.css";
 import { ThemeProvider } from "~~/components/ThemeProvider";
+
+import "~~/styles/globals.css";
+import "~~/styles/emulator.css";
+import "~~/styles/askai.css"
+import "~~/styles/createForm.css";
+import "~~/styles/homepage.css";
+import "~~/node_modules/sal.js/dist/sal.css"
 
 export const metadata: Metadata = {
   title: "Scaffold-Stark",
