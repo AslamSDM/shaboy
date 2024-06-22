@@ -29,7 +29,7 @@ export async function POST(req: Request) {
   const buffer = Buffer.from(await file.arrayBuffer());
 
   const filename = name + ".gba"
-  const url = `https://storage.bunnycdn.com/shaboy/roms/${filename}`;
+  const url = `https://storage.bunnycdn.com/shaboygames/roms/${filename}`;
   try {
     const req = await axios.put(url, buffer, {
       headers: {
@@ -43,7 +43,6 @@ export async function POST(req: Request) {
         name: name,
         description: description,
         image: image,
-        rom: filename,
         supply: supply,
         id : Number(gameId) + i
       });

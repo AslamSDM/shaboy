@@ -1,5 +1,6 @@
 "use client";
 import { useAccount } from '@starknet-react/core';
+import axios from 'axios';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from "react";
 
@@ -15,32 +16,19 @@ export default function Page({ params: { slug } }: { params: Params }) {
     // First check the auth of address to play game
     const [auth, setAuth] = useState(false);
     const [gameURI, setGameURI] = useState<string | null>(null);
-    const {address} = useAccount();
+    const [grombuff, setGrombuff] = useState<Uint8Array | null>(null);
+    const {address,status} = useAccount();
+
+    // console.log(slug);
     useEffect(() => {
+        console.log(slug);
         if (slug === 'mario') setGameURI('http://localhost:3000/mario.gba');
         // token id to cdn 
-        if (!Number.isNaN(Number(slug))) {
-            return;
-        }
-        async function fetchGameURI() {
-            const uri = await fetch(`http://localhost:3000/api/load/${slug}`,{
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ contract_address: address,gameid : slug }),
+        if (!address) return;
+        
 
-            });
-            const data = await uri.json();
-            if (data.error) {
-                console.log(data.error);
-                return;
-            }
-            setGameURI(data.uri);
-        }
-        fetchGameURI();
-    }, [slug]);
-
+            setGameURI("/api/load?gameId="+slug);
+    }, [slug,address]);
     return (
         <>  
             {!gameURI && "No Such Game"}

@@ -1,12 +1,11 @@
 
 pnpm lock.yaml
-
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-
+.env
 # testing
 /coverage
 
