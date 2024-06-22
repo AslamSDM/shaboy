@@ -42,6 +42,8 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
 };
+
+
 export default config;
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -55,49 +57,50 @@ module.exports = {
   // DaisyUI theme colors
   daisyui: {
     themes: [
-      {
-        light: {
-          primary: "#93BBFB",
-          "primary-content": "#2A3655",
-          secondary: "#DAE8FF",
-          "secondary-content": "#212638",
-          accent: "#93BBFB",
-          "accent-content": "#212638",
-          neutral: "#212638",
-          "neutral-content": "#ffffff",
-          "base-100": "#ffffff",
-          "base-200": "#f4f8ff",
-          "base-300": "#DAE8FF",
-          "base-content": "#212638",
-          info: "#93BBFB",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
+      // {
+      //   light: {
+      //     primary: "#93BBFB",
+      //     "primary-content": "#2A3655",
+      //     secondary: "#DAE8FF",
+      //     "secondary-content": "#212638",
+      //     accent: "#93BBFB",
+      //     "accent-content": "#212638",
+      //     neutral: "#212638",
+      //     "neutral-content": "#ffffff",
+      //     "base-100": "#ffffff",
+      //     "base-200": "#f4f8ff",
+      //     "base-300": "#DAE8FF",
+      //     "base-content": "#212638",
+      //     info: "#93BBFB",
+      //     success: "#34EEB6",
+      //     warning: "#FFCF72",
+      //     error: "#FF8863",
 
-          "--rounded-btn": "9999rem",
+      //     "--rounded-btn": "9999rem",
 
-          ".tooltip": {
-            "--tooltip-tail": "6px",
-          },
-          ".link": {
-            textUnderlineOffset: "2px",
-          },
-          ".link:hover": {
-            opacity: "80%",
-          },
-        },
-      },
+      //     ".tooltip": {
+      //       "--tooltip-tail": "6px",
+      //     },
+      //     ".link": {
+      //       textUnderlineOffset: "2px",
+      //     },
+      //     ".link:hover": {
+      //       opacity: "80%",
+      //     },
+      //   },
+      // },
       {
         dark: {
           primary: "#212638",
           "primary-content": "#DAE8FF",
-          secondary: "#323f61",
-          "secondary-content": "#F9FBFF",
+          secondary: "oklch(0.272348 0.034323 272.018)",
+          "secondary-content": "#000000",
           accent: "#4969A6",
           "accent-content": "#F9FBFF",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
-          "base-100": "#385183",
+          // "base-100": "#13131d", // Background Color
+          "base-100": "#0b0b10",
           "base-200": "#2A3655",
           "base-300": "#212638",
           "base-content": "#F9FBFF",
