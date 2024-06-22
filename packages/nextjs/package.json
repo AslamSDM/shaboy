@@ -37,6 +37,7 @@
     "react-gbajs": "^1.0.4",
     "react-hot-toast": "^2.4.1",
     "replicate": "^0.30.2",
+    "sal.js": "^0.8.5",
     "starknet": "5.25.0",
     "starknet-dev": "npm:starknet@6.7.0",
     "type-fest": "^4.6.0",
