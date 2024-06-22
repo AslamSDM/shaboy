@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { useOutsideClick } from "~~/hooks/scaffold-stark";
 import { CustomConnectButton } from "~~/components/scaffold-stark/CustomConnectButton";
+import ShaboyPlusModal from "./ShaboyPlusModal";
 // import { FaucetButton } from "~~/components/scaffold-stark/FaucetButton";
 
 type HeaderMenuLink = {

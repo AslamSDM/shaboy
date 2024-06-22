@@ -1,9 +1,8 @@
 "use client";
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
 import ProductCard from "~~/components/common/ProductCard";
 import sal from "sal.js";
-import {useScaffoldReadContract} from "~~/hooks/scaffold-stark/useScaffoldReadContract"
-import { useScaffoldMultiWriteContract } from "~~/hooks/scaffold-stark/useScaffoldMultiWriteContract";
+
 
 const products = [
     {
@@ -52,35 +51,6 @@ const products = [
 
 
 const MarketPlace = () => {
-    const [price,setPrice]=useState(Number)
-    const [token_id,setTokenId]=useState(Number)
-
-const {writeAsync:list}=useScaffoldMultiWriteContract({
-    calls:[
-        {
-            contractName:"ShaboyGames",
-            functionName:"list",
-            args:[token_id,price*10**18]
-        }
-    ]
-
-})
-
-
-const {writeAsync:buy}=useScaffoldMultiWriteContract({
-    calls:[
-        {
-            contractName:"ShaboyGames",
-            functionName:"buy_nft",
-            args:[token_id,price*10**18]
-        }
-    ]
-
-})
-
-const buy_nft=(token_id:number,price:number)=>{
-    list()
-}
 
     useEffect(()=>{
         sal();
