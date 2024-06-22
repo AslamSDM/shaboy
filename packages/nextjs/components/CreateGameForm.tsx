@@ -11,6 +11,8 @@ import { useDeployedContractInfo } from "~~/hooks/scaffold-stark";
 // import { useAccount } from "@starknet-react/core";
 
 
+import { useState } from "react";
+
 export default function CreateGameForm() {
 
   const [gameFile, setGameFile] = useState<File | null>(null);
@@ -130,6 +132,7 @@ const launcherc20 = async(supply:Number,name:String,symbol:String,addr:String)=>
                 Game NFT Image
               </label>
               <input id="gameImage" type="file" onChange={(e) => { setGameImage(e.target.files?.[0] ?? null) }}></input>
+
             </div>
             <div className="filex-input">
               <label htmlFor="game" className="mb-[0.5rem] block">
@@ -154,9 +157,21 @@ const launcherc20 = async(supply:Number,name:String,symbol:String,addr:String)=>
                     <label htmlFor="price" className="mb-[0.5rem]">Item Price</label>
                     <input id="price" type="text" placeholder="Digital Awesome game" />
                 </div>
-                <div className="input-box">
-                    <label htmlFor="size" className="mb-[0.5rem]">Size</label>
-                    <input id="size" type="text" placeholder="Digital Awesome game" />
+                <div className="input-box flex items-center">
+                    <input id="token" type="checkbox" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
+                    <label htmlFor="token" className="ml-[10px]">Do you want to deploy token ?</label>
+                </div>
+                <div className={`input-box ${isChecked ? 'flex flex-col' : 'hidden'}`}>
+                    <label htmlFor="token-name" className="mb-[0.5rem]">Token Name</label>
+                    <input id="token-name" type="text" placeholder="Tether" />
+                </div>
+                <div className={`input-box ${isChecked ? 'flex flex-col' : 'hidden'}`}>
+                    <label htmlFor="token-symbol" className="mb-[0.5rem]">Token Symbol</label>
+                    <input id="token-symbol" type="text" placeholder="USDT" />
+                </div>
+                <div className={`input-box ${isChecked ? 'flex flex-col' : 'hidden'}`}>
+                    <label htmlFor="total-supply" className="mb-[0.5rem]">Token Supply</label>
+                    <input id="total-supply" type="text" placeholder="1000000" />
                 </div>
 
                 <button className="submit-button">Submit</button>
