@@ -16,6 +16,7 @@ import {
 
 type Props = {
     gbaURI: string
+    // grombuff: Uint8Array | null
 }
 
 
