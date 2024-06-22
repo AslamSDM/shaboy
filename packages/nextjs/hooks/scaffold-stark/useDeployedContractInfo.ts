@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState, useMemo } from "react";
 import { useTargetNetwork } from "./useTargetNetwork";
 import { useIsMounted } from "usehooks-ts";

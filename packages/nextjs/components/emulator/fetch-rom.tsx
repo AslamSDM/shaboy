@@ -13,14 +13,14 @@ const FetchROM: FunctionComponent<Props> = ({setRomLoaded, gbaURI}) => {
         play: playGba,
     } = useContext(GbaContext);
 
-    const getGameRom = async (url: string): Promise<Uint8Array> => {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Failed fetching ROM')
-        }
-        const buffer = await response.arrayBuffer();
-        return new Uint8Array(buffer)
+  const getGameRom = async (url: string): Promise<Uint8Array> => {
+    const response = await fetch(url);
+    const buffer = await response.arrayBuffer();
+    if (!response.ok) {
+      throw new Error('Failed fetching ROM')
     }
+    return new Uint8Array(buffer)
+  }
 
     const load = async () => {
         console.log(gbaURI);
@@ -37,11 +37,11 @@ const FetchROM: FunctionComponent<Props> = ({setRomLoaded, gbaURI}) => {
         load();
     },[]);
 
-    return (
-        <>
-            {/* {!loaded && <p>Loading ...</p>} */}
-        </>
-    );
+  return (
+    <>
+      {/* {!loaded && <p>Loading ...</p>} */}
+    </>
+  );
 }
 
 export default FetchROM;
