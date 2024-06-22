@@ -3,4 +3,7 @@ packages/*/node_modules
 local-devnet
 .yarn
 
+!.yarn
 !.yarnrc
+
+.yarn/*
