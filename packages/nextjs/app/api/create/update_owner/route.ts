@@ -18,7 +18,7 @@ const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id:
 }
 
 const getSupabase = async (addr: string,tab="1") => {
-  if(tab == 1){
+  if(tab == "1"){
   const { data: Starhack, error } = await supabase
     .from("ownedgames").select("*").eq("userAddress", addr);
 
