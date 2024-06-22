@@ -1,13 +1,7 @@
-import axios from "axios";
+import { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase";
-import { error } from "console";
-import { u } from "@starknet-react/core/dist/index-79NvzQC9";
 
-const get_newData = (
-  current_data: number[],
-  token_id: number,
-  method: string
-) => {
+const get_newData = (current_data: number[], token_id: number, method: string) => {
   let new_data = current_data;
   if (method === "add") {
     new_data.push(token_id);
@@ -31,14 +25,13 @@ const updateSupabase = async (token_id: number, method: string) => {
   }
   const current_data = Starhack[0]?.active_listings;
   const new_data = get_newData(current_data, token_id, method);
-  console.log(typeof new_data);
   const { data, error: error1 } = await supabase
     .from("Starhack")
-    .update([{ active_listings: new_data }])
+    .update({ active_listings: new_data })
     .eq("id", 1);
   if (error1) {
-    console.log(error);
-    return { error };
+    console.log(error1);
+    return { error: error1.message };
   }
   return data;
 };
@@ -48,50 +41,57 @@ const get_activeListing = async () => {
     .from("Starhack")
     .select("active_listings")
     .eq("id", 1);
+  if (error) {
+    console.log(error);
+    return { error: error.message };
+  }
   if (!Starhack || Starhack.length === 0) {
     return { error: "No data found" };
   }
-  if (error) {
-    console.log(error);
-    return { error };
-  }
-  // return Starhack[0]?.active_listings;
+
   const data = Starhack[0]?.active_listings;
-  const dataReturn:any[]=[]
-  for (let i=0;i<data.length;i++){
-    let {data:Metadata,error}=await supabase.from("Shaboy_Data").select("metadata").eq("id",data[i])
-    if(!Metadata || Metadata.length===0){
-     console.log(Error)}
-     else{
-    dataReturn.push(Metadata[0]?.metadata)
-     }
+  const dataReturn: any[] = [];
+
+  for (let i = 0; i < data.length; i++) {
+    let { data: Metadata, error } = await supabase
+      .from("gamedata")
+      .select("metadata")
+      .eq("id", data[i]);
+    if (error) {
+      console.log(error);
+      return { error: error.message };
+    }
+    if (!Metadata || Metadata.length === 0) {
+      console.log("Metadata not found for ID:", data[i]);
+    } else {
+      dataReturn.push(Metadata[0]?.metadata);
+    }
   }
-  return dataReturn
+  return dataReturn;
 };
 
-export async function POST(req: Request) {
+export async function POST(req: Request, res: Response) {
   const formdata = await req.formData();
   const token_id = Number(formdata.get("token_id"));
   const method = String(formdata.get("method"));
+
   if (!method) {
-    return Response.json({ error: "Invalid request" });
+    return Response.json({ error: "Invalid request: method is required" });
   }
-  if (method == "get") {
+
+  if (method === "get") {
     const listing = await get_activeListing();
+    console.log(listing)
     if (!listing) {
-      return Response.json({error:"Error getting metadata"});
+      return Response.json({ error: "error" });
     }
     return Response.json(listing);
   } else {
-    if(!token_id) return Response.json({error:"No token ID"})
+    if (!token_id) return Response.json({ error: "No token ID provided" });
     const update = await updateSupabase(token_id, method);
-    if(!update){
-      return Response.json({ error: "No data found" });
+    if (update?.error) {
+      return Response.json({ error: update.error });
     }
-    if (update.error ) {
-      return Response.json(update.error);
-    }
-    const res = update;
-    return Response.json(res);
+    return Response.json(update);
   }
 }
