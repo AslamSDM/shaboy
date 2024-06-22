@@ -1,19 +1,20 @@
 use starknet::ContractAddress;
+
 #[starknet::interface]
 trait IERC721<T> {
-    fn name(self: @T,token_id:u256) -> felt252;
-    fn symbol(self: @T,token_id:u256) -> felt252;
+    fn name(self: @T) -> felt252;
+    fn symbol(self: @T) -> felt252;
     fn balance_of(self: @T, account: ContractAddress) -> u256;
     fn owner_of(self: @T, token_id: u256) -> ContractAddress;
     fn get_counter_id(self: @T) -> u256;
     fn allowed_erc20_address(self: @T) -> ContractAddress;
     fn price_of_token_id(self: @T, token_id: u256) -> u256;
     fn token_title(self: @T, token_id: u256) -> felt252;
-    fn mint(ref self: T, token_name: felt252,recipient:ContractAddress);
-    fn list(ref self:T,token_id:u256,price:u256);
+    fn mint_multi(ref self: T, token_name: felt252, supply: u256);
+    fn list(ref self: T, token_id: u256, price: u256);
     fn buy_nft(ref self: T, token_id: u256, amount: u256);
-    fn mint_multiple(ref self:T,supply:u256,token_name:felt252,recipient:ContractAddress);
 }
+
 
 #[starknet::interface]
 trait IERC20<TState> {
@@ -21,18 +22,20 @@ trait IERC20<TState> {
     fn transfer_from(
         ref self: TState, sender: ContractAddress, recipient: ContractAddress, amount: u256
     ) -> bool;
+    fn approve(ref self:TState,to:ContractAddress,token_id:u256);
 }
 
+
 #[starknet::contract]
-mod ERC721 {
+mod ShaboyGames {
     use core::zeroable::Zeroable;
     use super::{ContractAddress, IERC721, IERC20, IERC20Dispatcher, IERC20DispatcherTrait};
-    use starknet::{ get_contract_address,get_caller_address};
+    use starknet::{get_caller_address, get_contract_address};
 
     #[storage]
     struct Storage {
-        ERC721_name:LegacyMap <u256,felt252>,
-        ERC721_symbol:LegacyMap <u256,felt252>,
+        ERC721_name: felt252,
+        ERC721_symbol: felt252,
         ERC721_owners: LegacyMap<u256, ContractAddress>,
         ERC721_balances: LegacyMap<ContractAddress, u256>,
         ERC721_token_prices: LegacyMap<u256, u256>,
@@ -44,46 +47,35 @@ mod ERC721 {
     #[constructor]
     fn constructor(
         ref self: ContractState,
-        erc20_token_contract: ContractAddress,
+        name: felt252,
+        symbol: felt252,
+        erc20_token_contract: ContractAddress
     ) {
-        self.ERC20_token_contract.write(erc20_token_contract);
+        self.ERC721_name.write(name);
+        self.ERC721_symbol.write(symbol);
+        self
+            .ERC20_token_contract
+            .write(erc20_token_contract);
         self.ERC721_id_counter.write(1);
     }
 
     #[abi(embed_v0)]
     impl ExternalImplERC721 of IERC721<ContractState> {
-        fn name(self: @ContractState,token_id:u256) -> felt252 {
-            self.ERC721_name.read(token_id)
-        }
-        fn mint_multiple(ref self:ContractState,supply:u256,token_name:felt252,recipient:ContractAddress){
-            let mut count :u256 =0;
-            loop{
-                if count < supply {
-                    self.mint(token_name,recipient);
-                    count=count+1;
-                }
-                else {break;}
-            }
+        fn name(self: @ContractState) -> felt252 {
+            self.ERC721_name.read()
         }
 
-        fn symbol(self: @ContractState,token_id:u256) -> felt252 {
-            self.ERC721_symbol.read(token_id)
+        fn symbol(self: @ContractState) -> felt252 {
+            self.ERC721_symbol.read()
         }
 
         fn balance_of(self: @ContractState, account: ContractAddress) -> u256 {
             assert(!account.is_zero(), 'INVALID_ACCOUNT');
             self.ERC721_balances.read(account)
         }
-
         fn owner_of(self: @ContractState, token_id: u256) -> ContractAddress {
             self._owner_of(token_id)
         }
-
-        fn list(ref self:ContractState,token_id:u256,price:u256){
-            assert(self._exists(token_id), 'INVALID_TOKEN_ID');
-            self._list(token_id,price);
-        }
-
         fn token_title(self: @ContractState, token_id: u256) -> felt252 {
             self.ERC721_token_name.read(token_id)
         }
@@ -91,23 +83,29 @@ mod ERC721 {
         fn get_counter_id(self: @ContractState) -> u256 {
             self.ERC721_id_counter.read()
         }
-
         fn allowed_erc20_address(self: @ContractState) -> ContractAddress {
             self.ERC20_token_contract.read()
         }
-
         fn price_of_token_id(self: @ContractState, token_id: u256) -> u256 {
             self.ERC721_token_prices.read(token_id)
         }
-
-        fn mint(
-            ref self: ContractState, token_name: felt252, recipient:ContractAddress
-        ) {
-            
-            let caller: ContractAddress = recipient;
-            self._mint_internal(caller, token_name);
+        fn mint_multi(ref self:ContractState, token_name: felt252, supply: u256) {
+            let caller: ContractAddress = get_caller_address();
+            let mut count = 0;
+            loop {
+                if count < supply {
+                    self._mint_multi(caller, token_name);
+                    count = count + 1;
+                }
+                else{
+                    break;
+                }
+            }
         }
-
+        fn list(ref self:ContractState,token_id:u256,price:u256){
+            assert(!price.is_zero(), 'ZERO_PRICE');
+            self.ERC721_token_prices.write(token_id,price);
+        }
         fn buy_nft(ref self: ContractState, token_id: u256, amount: u256) {
             assert(self._exists(token_id), 'INVALID_TOKEN_ID');
             assert(amount == self.ERC721_token_prices.read(token_id), 'INSUFFICIENT_FUNDS');
@@ -119,7 +117,6 @@ mod ERC721 {
             self._buy_nft(caller, token_id, amount);
         }
     }
-
     #[generate_trait]
     impl InternalImpl of InternalTrait {
         fn _owner_of(self: @ContractState, token_id: u256) -> ContractAddress {
@@ -153,32 +150,15 @@ mod ERC721 {
             self.ERC721_balances.write(to, self.ERC721_balances.read(to) + 1);
             self.ERC721_owners.write(token_id, to);
         }
-
-        fn _burn(ref self: ContractState, token_id: u256) {
-            let owner = self._owner_of(token_id);
-
-            self.ERC721_balances.write(owner, self.ERC721_balances.read(owner) - 1);
-            self.ERC721_owners.write(token_id, Zeroable::zero());
-        }
-
         fn _current_counter(self: @ContractState) -> u256 {
             self.ERC721_id_counter.read()
         }
 
-        fn _mint_internal(
-            ref self: ContractState,
-            owner: ContractAddress,
-            token_name: felt252
-        ) {
+        fn _mint_multi(ref self: ContractState, owner: ContractAddress, token_name: felt252) {
             let current_token_id = self._current_counter();
             self._mint(owner, current_token_id);
-            self.ERC721_id_counter.write(current_token_id + 1);
             self.ERC721_token_name.write(current_token_id, token_name);
-            
-        }
-        fn _list(ref self:ContractState,token_id:u256,price:u256){
-            assert(!price.is_zero(), 'ZERO_PRICE');
-            self.ERC721_token_prices.write(token_id, price);
+            self.ERC721_id_counter.write(current_token_id + 1);
         }
 
         fn _buy_nft(
