@@ -28,7 +28,8 @@
     "@pinata/sdk": "^2.1.0",
     "@supabase/supabase-js": "^2.43.5",
     "axios": "^1.7.2",
-    "postcss": "^8.4.38"
+    "postcss": "^8.4.38",
+    "starknet": "6.7.0"
   },
   "devDependencies": {
     "daisyui": "^4.7.3",
