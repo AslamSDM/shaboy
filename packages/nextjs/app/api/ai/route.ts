@@ -15,7 +15,7 @@ export async function POST(req: Request, res: Response) {
   }
   const games = games_owned.data
   const gameids = games.map((game) => game.game_id)
-
+  console.log(gameids)
   const ownedgames = await supabase.from("gamedata").select("*").in("id", gameids)
   if (!ownedgames?.data || ownedgames?.data.length === 0) {
     return Response.json({ message: "No games found", status: 400 })
