@@ -3,6 +3,7 @@ import ProductCard from "../common/ProductCard";
 import { useAccount } from "@starknet-react/core";
 import axios from "axios";
 import { t } from "@starknet-react/core/dist/index-79NvzQC9";
+import { set } from "nprogress";
 type Imagearray = {
     image: string,
     url: string,
@@ -49,25 +50,25 @@ type Imagearray = {
 //     },
 // ]
 
-const onsale = [
-    {
-        image: "https://i.guim.co.uk/img/media/7c2ab1a3e60e445caf0a4d3de302591e830e8f7f/0_0_3800_2280/master/3800.jpg?width=480&dpr=1&s=none",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    }
-]
+// const onsale = [
+//     {
+//         image: "https://i.guim.co.uk/img/media/7c2ab1a3e60e445caf0a4d3de302591e830e8f7f/0_0_3800_2280/master/3800.jpg?width=480&dpr=1&s=none",
+//         url: "#",
+//         name: "Preatent",
+//         price: "0.244 WETH",
+//         likes: 82
+//     }
+// ]
 
-const created = [
-    {
-        image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    }
-]
+// const created = [
+//     {
+//         image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
+//         url: "#",
+//         name: "Preatent",
+//         price: "0.244 WETH",
+//         likes: 82
+//     }
+// ]
 
 const ProfilePage = () => {
     const [tab, setTab] = useState<Number>(1);
@@ -91,6 +92,7 @@ const ProfilePage = () => {
             }else if(tab == 3){
                 setCreated(res.data);
             }
+            setList(res.data);
         }
         getOwnedGames();
     },[tab, address])

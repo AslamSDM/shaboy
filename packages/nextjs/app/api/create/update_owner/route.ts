@@ -62,7 +62,7 @@ export async function POST(req: Request) {
   const token_id = Number(formdata.get("token_id"));
   const addr = String(formdata.get("addr")) ? String(formdata.get("addr")) : "";
   const method = String(formdata.get("method"));
-  const tab = Number(formdata.get("tab"));
+  const tab = String(formdata.get("tab"));
   console.log(buyer_addr, seller_addr, token_id, addr, method);
   if (!method) return new Response(JSON.stringify({ error: "Method not provided" }), { status: 400 });
 
@@ -72,7 +72,7 @@ export async function POST(req: Request) {
   }
 
   if (method === 'get') {
-    const result = await getSupabase(addr,tab);
+    const result = await getSupabase(addr,tab??"1");
     return new Response(JSON.stringify(result), { status: 200 });
   }
 
