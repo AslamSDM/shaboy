@@ -2,8 +2,9 @@ import { FunctionComponent } from "react";
 
 type Props = {
     product: Card,
-    style: string,
-    animation: Boolean
+    style: string | "",
+    animation: Boolean | false,
+    handleClick?: () => void
 }
 
 type Card = {
@@ -14,13 +15,14 @@ type Card = {
     likes: Number
 }
 
-const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) => {
+const ProductCard: FunctionComponent<Props> = ({ product, style, animation, handleClick }) => {
     return (
         <div
             className={`product-card ${style}`}
             data-sal-delay={`${animation && "150"}`}
             data-sal={`${animation && "slide-up"}`}
             data-sal-duration={`${animation && "800"}`}
+            onClick={handleClick}
         >
             <div className="product-card-wrapper">
                 <div className="card-thumbnail">

@@ -9,6 +9,11 @@ type Imagearray = {
     likes: Number
 }
 
+type Game = {
+    name: string,
+    description: string
+}
+
 const owned = [
     {
         image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
@@ -71,11 +76,13 @@ const ProfilePage = () => {
     const [tab, setTab] = useState<Number>(1);
     const [list, setList] = useState<Imagearray[]>(owned);
 
-    const handleClick = (t:Number) => {
+    const [] = useState();
+
+    const handleClick = (t: Number) => {
         setTab(t);
-        if(t == 1) setList(owned);
-        if(t == 2) setList(ownsale);
-        if(t == 3) setList(created);
+        if (t == 1) setList(owned);
+        if (t == 2) setList(ownsale);
+        if (t == 3) setList(created);
     }
 
     return (
@@ -101,7 +108,7 @@ const ProfilePage = () => {
                     {
                         list.map((product, i) => {
                             return (
-                                <ProductCard key={i} product={product} style={'sm:w-[45%] lg:w-[25%] xl:w-[20%]'} animation={false}/>
+                                <ProductCard key={i} product={product} style={'sm:w-[45%] lg:w-[25%] xl:w-[20%]'} animation={false} />
                             )
                         })
                     }
