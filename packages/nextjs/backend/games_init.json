@@ -1,0 +1,3734 @@
+[
+    {
+        "name": "Fantastic 4 - Flame On",
+        "supply": 16,
+        "init": 0,
+        "end": 15
+    },
+    {
+        "name": "Sega Smash Pack",
+        "supply": 43,
+        "init": 16,
+        "end": 58
+    },
+    {
+        "name": "Pokemon Mystery Dungeon - Red Rescue Team",
+        "supply": 48,
+        "init": 59,
+        "end": 106
+    },
+    {
+        "name": "Wade Hixton's Counter Punch",
+        "supply": 22,
+        "init": 107,
+        "end": 128
+    },
+    {
+        "name": "Ice Age 2 - The Meltdown",
+        "supply": 35,
+        "init": 129,
+        "end": 163
+    },
+    {
+        "name": "Lizzie McGuire - On the Go!",
+        "supply": 18,
+        "init": 164,
+        "end": 181
+    },
+    {
+        "name": "Van Helsing",
+        "supply": 31,
+        "init": 182,
+        "end": 212
+    },
+    {
+        "name": "Backyard Hockey",
+        "supply": 30,
+        "init": 213,
+        "end": 242
+    },
+    {
+        "name": "Super Bubble Pop",
+        "supply": 32,
+        "init": 243,
+        "end": 274
+    },
+    {
+        "name": "Monster Force",
+        "supply": 41,
+        "init": 275,
+        "end": 315
+    },
+    {
+        "name": "Crash Bandicoot 2 - N-Tranced",
+        "supply": 50,
+        "init": 316,
+        "end": 365
+    },
+    {
+        "name": "Disney's Lilo & Stitch 2 - Haemsterviel Havoc",
+        "supply": 16,
+        "init": 366,
+        "end": 381
+    },
+    {
+        "name": "Nicktoons - Battle for Volcano Island",
+        "supply": 21,
+        "init": 382,
+        "end": 402
+    },
+    {
+        "name": "Marble Madness & Klax",
+        "supply": 29,
+        "init": 403,
+        "end": 431
+    },
+    {
+        "name": "Backyard Skateboarding",
+        "supply": 46,
+        "init": 432,
+        "end": 477
+    },
+    {
+        "name": "SpongeBob SquarePants - SuperSponge",
+        "supply": 27,
+        "init": 478,
+        "end": 504
+    },
+    {
+        "name": "Camp Lazlo - Leaky Lake Games",
+        "supply": 32,
+        "init": 505,
+        "end": 536
+    },
+    {
+        "name": "Teenage Mutant Ninja Turtles - Volume 1",
+        "supply": 37,
+        "init": 537,
+        "end": 573
+    },
+    {
+        "name": "King of Fighters EX2, The - Howling Blood",
+        "supply": 48,
+        "init": 574,
+        "end": 621
+    },
+    {
+        "name": "Backyard Sports Football 2007",
+        "supply": 15,
+        "init": 622,
+        "end": 636
+    },
+    {
+        "name": "An American Tail - Fievel's Gold Rush",
+        "supply": 38,
+        "init": 637,
+        "end": 674
+    },
+    {
+        "name": "Trollz - Hair Affair!",
+        "supply": 21,
+        "init": 675,
+        "end": 695
+    },
+    {
+        "name": "Scooby-Doo! and The Cyber Chase",
+        "supply": 20,
+        "init": 696,
+        "end": 715
+    },
+    {
+        "name": "Megaman Battle Network 6",
+        "supply": 13,
+        "init": 716,
+        "end": 728
+    },
+    {
+        "name": "Babar to The Rescue",
+        "supply": 15,
+        "init": 729,
+        "end": 743
+    },
+    {
+        "name": "Woody Woodpecker in Crazy Castle 5",
+        "supply": 35,
+        "init": 744,
+        "end": 778
+    },
+    {
+        "name": "Evergirl",
+        "supply": 34,
+        "init": 779,
+        "end": 812
+    },
+    {
+        "name": "Shifting Gears - Road Trip",
+        "supply": 25,
+        "init": 813,
+        "end": 837
+    },
+    {
+        "name": "Strawberry Shortcake - Summertime Adventure",
+        "supply": 13,
+        "init": 838,
+        "end": 850
+    },
+    {
+        "name": "V.I.P.",
+        "supply": 17,
+        "init": 851,
+        "end": 867
+    },
+    {
+        "name": "March of the Penguins",
+        "supply": 31,
+        "init": 868,
+        "end": 898
+    },
+    {
+        "name": "Tales of Phantasia",
+        "supply": 10,
+        "init": 899,
+        "end": 908
+    },
+    {
+        "name": "LEGO Bionicle - The Game",
+        "supply": 18,
+        "init": 909,
+        "end": 926
+    },
+    {
+        "name": "Terminator 3 - Rise of The Machines",
+        "supply": 22,
+        "init": 927,
+        "end": 948
+    },
+    {
+        "name": "Star Wars - Flight of the Falcon",
+        "supply": 20,
+        "init": 949,
+        "end": 968
+    },
+    {
+        "name": "SpongeBob SquarePants - Volume 3",
+        "supply": 27,
+        "init": 969,
+        "end": 995
+    },
+    {
+        "name": "Hey Arnold! The Movie",
+        "supply": 29,
+        "init": 996,
+        "end": 1024
+    },
+    {
+        "name": "Barnyard",
+        "supply": 48,
+        "init": 1025,
+        "end": 1072
+    },
+    {
+        "name": "Peter Pan - The Motion Picture Event",
+        "supply": 44,
+        "init": 1073,
+        "end": 1116
+    },
+    {
+        "name": "Fear Factor Unleashed",
+        "supply": 32,
+        "init": 1117,
+        "end": 1148
+    },
+    {
+        "name": "Catz",
+        "supply": 30,
+        "init": 1149,
+        "end": 1178
+    },
+    {
+        "name": "Medabots",
+        "supply": 49,
+        "init": 1179,
+        "end": 1227
+    },
+    {
+        "name": "Mario Tennis Advance - Power Tour",
+        "supply": 39,
+        "init": 1228,
+        "end": 1266
+    },
+    {
+        "name": "Adventures of Jimmy Neutron Boy Genius vs. Jimmy Negatron, The",
+        "supply": 42,
+        "init": 1267,
+        "end": 1308
+    },
+    {
+        "name": "Shonen Jump's - Shaman King - Master of Spirits 2",
+        "supply": 13,
+        "init": 1309,
+        "end": 1321
+    },
+    {
+        "name": "Dragon Ball Z - The Collectible Card Game",
+        "supply": 22,
+        "init": 1322,
+        "end": 1343
+    },
+    {
+        "name": "Dead to Rights",
+        "supply": 30,
+        "init": 1344,
+        "end": 1373
+    },
+    {
+        "name": "Cartoon Network Collection - Volume 2",
+        "supply": 43,
+        "init": 1374,
+        "end": 1416
+    },
+    {
+        "name": "Nicktoons Racing",
+        "supply": 24,
+        "init": 1417,
+        "end": 1440
+    },
+    {
+        "name": "Megaman Zero 2",
+        "supply": 13,
+        "init": 1441,
+        "end": 1453
+    },
+    {
+        "name": "Pokemon - Volume 4",
+        "supply": 10,
+        "init": 1454,
+        "end": 1463
+    },
+    {
+        "name": "Phil of the Future",
+        "supply": 20,
+        "init": 1464,
+        "end": 1483
+    },
+    {
+        "name": "Rayman 10th Anniversary - Rayman Advance & Rayman 3",
+        "supply": 17,
+        "init": 1484,
+        "end": 1500
+    },
+    {
+        "name": "Dora the Explorer - Super Star Adventures!",
+        "supply": 45,
+        "init": 1501,
+        "end": 1545
+    },
+    {
+        "name": "Matchbox Missions",
+        "supply": 11,
+        "init": 1546,
+        "end": 1556
+    },
+    {
+        "name": "Megaman Zero",
+        "supply": 44,
+        "init": 1557,
+        "end": 1600
+    },
+    {
+        "name": "Desert Strike Advance",
+        "supply": 10,
+        "init": 1601,
+        "end": 1610
+    },
+    {
+        "name": "Spyro - Attack of the Rhynocs",
+        "supply": 38,
+        "init": 1611,
+        "end": 1648
+    },
+    {
+        "name": "Yu-Gi-Oh! - GX Duel Academy",
+        "supply": 13,
+        "init": 1649,
+        "end": 1661
+    },
+    {
+        "name": "Ultimate Brain Games",
+        "supply": 17,
+        "init": 1662,
+        "end": 1678
+    },
+    {
+        "name": "Shrek - Hassle at the Castle",
+        "supply": 21,
+        "init": 1679,
+        "end": 1699
+    },
+    {
+        "name": "Tiny Toon Adventures - Wacky Stackers",
+        "supply": 25,
+        "init": 1700,
+        "end": 1724
+    },
+    {
+        "name": "Amazing Virtual Sea-Monkeys, The",
+        "supply": 30,
+        "init": 1725,
+        "end": 1754
+    },
+    {
+        "name": "Whac-a-Mole",
+        "supply": 31,
+        "init": 1755,
+        "end": 1785
+    },
+    {
+        "name": "Backyard Baseball",
+        "supply": 29,
+        "init": 1786,
+        "end": 1814
+    },
+    {
+        "name": "Digimon - Battle Spirit",
+        "supply": 45,
+        "init": 1815,
+        "end": 1859
+    },
+    {
+        "name": "Cartoon Network Collection - Special Edition",
+        "supply": 38,
+        "init": 1860,
+        "end": 1897
+    },
+    {
+        "name": "Tak - The Great Juju Challenge",
+        "supply": 46,
+        "init": 1898,
+        "end": 1943
+    },
+    {
+        "name": "Classic NES Series - Donkey Kong",
+        "supply": 26,
+        "init": 1944,
+        "end": 1969
+    },
+    {
+        "name": "Multiboot Six Pack #1",
+        "supply": 29,
+        "init": 1970,
+        "end": 1998
+    },
+    {
+        "name": "GT Advance 3 - Pro Concept Racing",
+        "supply": 21,
+        "init": 1999,
+        "end": 2019
+    },
+    {
+        "name": "NFL Blitz 2002",
+        "supply": 34,
+        "init": 2020,
+        "end": 2053
+    },
+    {
+        "name": "Monster Trucks",
+        "supply": 19,
+        "init": 2054,
+        "end": 2072
+    },
+    {
+        "name": "Donkey Kong Country 3",
+        "supply": 31,
+        "init": 2073,
+        "end": 2103
+    },
+    {
+        "name": "Hot Wheels - Stunt Track Challenge",
+        "supply": 43,
+        "init": 2104,
+        "end": 2146
+    },
+    {
+        "name": "Dr. Mario & Puzzle League",
+        "supply": 29,
+        "init": 2147,
+        "end": 2175
+    },
+    {
+        "name": "It's Mr. Pants",
+        "supply": 47,
+        "init": 2176,
+        "end": 2222
+    },
+    {
+        "name": "NFL Blitz 2003",
+        "supply": 27,
+        "init": 2223,
+        "end": 2249
+    },
+    {
+        "name": "Lost Vikings, The",
+        "supply": 25,
+        "init": 2250,
+        "end": 2274
+    },
+    {
+        "name": "Let's Ride! - Sunshine Stables",
+        "supply": 24,
+        "init": 2275,
+        "end": 2298
+    },
+    {
+        "name": "Cartoon Network - Block Party",
+        "supply": 23,
+        "init": 2299,
+        "end": 2321
+    },
+    {
+        "name": "BattleBots - Beyond the Battlebox",
+        "supply": 41,
+        "init": 2322,
+        "end": 2362
+    },
+    {
+        "name": "Beyblade G-Revolution",
+        "supply": 18,
+        "init": 2363,
+        "end": 2380
+    },
+    {
+        "name": "WTA Tour Tennis",
+        "supply": 26,
+        "init": 2381,
+        "end": 2406
+    },
+    {
+        "name": "Powerpuff Girls, The - Him and Seek",
+        "supply": 22,
+        "init": 2407,
+        "end": 2428
+    },
+    {
+        "name": "Disney's Lilo & Stitch",
+        "supply": 48,
+        "init": 2429,
+        "end": 2476
+    },
+    {
+        "name": "Ultimate Winter Games",
+        "supply": 36,
+        "init": 2477,
+        "end": 2512
+    },
+    {
+        "name": "Let's Ride! - Dreamer",
+        "supply": 32,
+        "init": 2513,
+        "end": 2544
+    },
+    {
+        "name": "Stadium Games",
+        "supply": 48,
+        "init": 2545,
+        "end": 2592
+    },
+    {
+        "name": "Disney Channel Collection - Volume 1",
+        "supply": 29,
+        "init": 2593,
+        "end": 2621
+    },
+    {
+        "name": "Deal or No Deal",
+        "supply": 45,
+        "init": 2622,
+        "end": 2666
+    },
+    {
+        "name": "Guilty Gear X - Advance Edition",
+        "supply": 38,
+        "init": 2667,
+        "end": 2704
+    },
+    {
+        "name": "Around the World in 80 Days",
+        "supply": 30,
+        "init": 2705,
+        "end": 2734
+    },
+    {
+        "name": "Pinball of The Dead, The",
+        "supply": 26,
+        "init": 2735,
+        "end": 2760
+    },
+    {
+        "name": "World Poker Tour",
+        "supply": 19,
+        "init": 2761,
+        "end": 2779
+    },
+    {
+        "name": "Sims 2, The - Pets",
+        "supply": 48,
+        "init": 2780,
+        "end": 2827
+    },
+    {
+        "name": "Monster Truck Madness",
+        "supply": 39,
+        "init": 2828,
+        "end": 2866
+    },
+    {
+        "name": "Sigma Star Saga",
+        "supply": 26,
+        "init": 2867,
+        "end": 2892
+    },
+    {
+        "name": "WarioWare Inc.",
+        "supply": 24,
+        "init": 2893,
+        "end": 2916
+    },
+    {
+        "name": "Monster Trucks - Mayhem",
+        "supply": 23,
+        "init": 2917,
+        "end": 2939
+    },
+    {
+        "name": "Robopon 2",
+        "supply": 17,
+        "init": 2940,
+        "end": 2956
+    },
+    {
+        "name": "Kingdom Hearts - Chain of Memories",
+        "supply": 30,
+        "init": 2957,
+        "end": 2986
+    },
+    {
+        "name": "Megaman Battle Network 5",
+        "supply": 50,
+        "init": 2987,
+        "end": 3036
+    },
+    {
+        "name": "Top Gear Rally",
+        "supply": 34,
+        "init": 3037,
+        "end": 3070
+    },
+    {
+        "name": "Masters of the Universe - He-man Power of Grayskull",
+        "supply": 21,
+        "init": 3071,
+        "end": 3091
+    },
+    {
+        "name": "Megaman Zero 3",
+        "supply": 17,
+        "init": 3092,
+        "end": 3108
+    },
+    {
+        "name": "SSX 3",
+        "supply": 35,
+        "init": 3109,
+        "end": 3143
+    },
+    {
+        "name": "Beyblade VForce - Ultimate Blader Jam",
+        "supply": 20,
+        "init": 3144,
+        "end": 3163
+    },
+    {
+        "name": "Namco Museum 50th Anniversary",
+        "supply": 30,
+        "init": 3164,
+        "end": 3193
+    },
+    {
+        "name": "Super Collapse II",
+        "supply": 28,
+        "init": 3194,
+        "end": 3221
+    },
+    {
+        "name": "Madden NFL 2003",
+        "supply": 23,
+        "init": 3222,
+        "end": 3244
+    },
+    {
+        "name": "American Bass Challenge",
+        "supply": 33,
+        "init": 3245,
+        "end": 3277
+    },
+    {
+        "name": "Max Payne",
+        "supply": 30,
+        "init": 3278,
+        "end": 3307
+    },
+    {
+        "name": "Spyro Orange - The Cortex Conspiracy",
+        "supply": 14,
+        "init": 3308,
+        "end": 3321
+    },
+    {
+        "name": "Tonka - On the Job",
+        "supply": 48,
+        "init": 3322,
+        "end": 3369
+    },
+    {
+        "name": "Gumby vs. the Astrobots",
+        "supply": 34,
+        "init": 3370,
+        "end": 3403
+    },
+    {
+        "name": "Bratz - Forever Diamondz",
+        "supply": 31,
+        "init": 3404,
+        "end": 3434
+    },
+    {
+        "name": "Classic NES Series - Metroid",
+        "supply": 24,
+        "init": 3435,
+        "end": 3458
+    },
+    {
+        "name": "Smuggler's Run",
+        "supply": 16,
+        "init": 3459,
+        "end": 3474
+    },
+    {
+        "name": "Power Rangers - Time Force",
+        "supply": 19,
+        "init": 3475,
+        "end": 3493
+    },
+    {
+        "name": "ZatchBell! Electric Arena",
+        "supply": 45,
+        "init": 3494,
+        "end": 3538
+    },
+    {
+        "name": "Dr. Sudoku",
+        "supply": 34,
+        "init": 3539,
+        "end": 3572
+    },
+    {
+        "name": "Star Wars - Episode II - Attack of The Clones",
+        "supply": 36,
+        "init": 3573,
+        "end": 3608
+    },
+    {
+        "name": "Yu Yu Hakusho Tournament Tactics",
+        "supply": 36,
+        "init": 3609,
+        "end": 3644
+    },
+    {
+        "name": "Power Rangers - Dino Thunder",
+        "supply": 37,
+        "init": 3645,
+        "end": 3681
+    },
+    {
+        "name": "Naruto - Ninja Council",
+        "supply": 27,
+        "init": 3682,
+        "end": 3708
+    },
+    {
+        "name": "Muppet Pinball Mayhem",
+        "supply": 47,
+        "init": 3709,
+        "end": 3755
+    },
+    {
+        "name": "Pac-Man World",
+        "supply": 24,
+        "init": 3756,
+        "end": 3779
+    },
+    {
+        "name": "Advance Wars",
+        "supply": 50,
+        "init": 3780,
+        "end": 3829
+    },
+    {
+        "name": "Karnaaj Rally",
+        "supply": 12,
+        "init": 3830,
+        "end": 3841
+    },
+    {
+        "name": "Ed, Edd n Eddy - The Mis-Edventures",
+        "supply": 10,
+        "init": 3842,
+        "end": 3851
+    },
+    {
+        "name": "Risk, Battleship, Clue",
+        "supply": 41,
+        "init": 3852,
+        "end": 3892
+    },
+    {
+        "name": "X-Men 2 - Wolverine's Revenge",
+        "supply": 29,
+        "init": 3893,
+        "end": 3921
+    },
+    {
+        "name": "Spy Hunter",
+        "supply": 16,
+        "init": 3922,
+        "end": 3937
+    },
+    {
+        "name": "Mary-Kate and Ashley - Girls Night Out",
+        "supply": 19,
+        "init": 3938,
+        "end": 3956
+    },
+    {
+        "name": "Ace Combat Advance",
+        "supply": 28,
+        "init": 3957,
+        "end": 3984
+    },
+    {
+        "name": "Codename Kids Next Door - Volume 1",
+        "supply": 24,
+        "init": 3985,
+        "end": 4008
+    },
+    {
+        "name": "Super Army War",
+        "supply": 36,
+        "init": 4009,
+        "end": 4044
+    },
+    {
+        "name": "Classic NES Series - Excitebike",
+        "supply": 41,
+        "init": 4045,
+        "end": 4085
+    },
+    {
+        "name": "Madden NFL 2004",
+        "supply": 41,
+        "init": 4086,
+        "end": 4126
+    },
+    {
+        "name": "Baldur's Gate - Dark Alliance",
+        "supply": 35,
+        "init": 4127,
+        "end": 4161
+    },
+    {
+        "name": "V-Rally 3",
+        "supply": 48,
+        "init": 4162,
+        "end": 4209
+    },
+    {
+        "name": "Shamu's Deep Sea Adventures",
+        "supply": 33,
+        "init": 4210,
+        "end": 4242
+    },
+    {
+        "name": "Driv3r",
+        "supply": 28,
+        "init": 4243,
+        "end": 4270
+    },
+    {
+        "name": "Madden NFL 2002",
+        "supply": 11,
+        "init": 4271,
+        "end": 4281
+    },
+    {
+        "name": "Chicken Shoot 2",
+        "supply": 18,
+        "init": 4282,
+        "end": 4299
+    },
+    {
+        "name": "Hot Wheels - World Race",
+        "supply": 10,
+        "init": 4300,
+        "end": 4309
+    },
+    {
+        "name": "Pirates of the Caribbean - Dead Man's Chest",
+        "supply": 31,
+        "init": 4310,
+        "end": 4340
+    },
+    {
+        "name": "Island Xtreme Stunts",
+        "supply": 22,
+        "init": 4341,
+        "end": 4362
+    },
+    {
+        "name": "Barbie Horse Adventures",
+        "supply": 49,
+        "init": 4363,
+        "end": 4411
+    },
+    {
+        "name": "Kien",
+        "supply": 25,
+        "init": 4412,
+        "end": 4436
+    },
+    {
+        "name": "Yu-Gi-Oh! - Worldwide Edition",
+        "supply": 16,
+        "init": 4437,
+        "end": 4452
+    },
+    {
+        "name": "Yu-Gi-Oh! - Reshef of Destruction",
+        "supply": 18,
+        "init": 4453,
+        "end": 4470
+    },
+    {
+        "name": "Star Wars - Episode III - Revenge of the Sith",
+        "supply": 45,
+        "init": 4471,
+        "end": 4515
+    },
+    {
+        "name": "LEGO Star Wars II - The Original Trilogy",
+        "supply": 18,
+        "init": 4516,
+        "end": 4533
+    },
+    {
+        "name": "Mazes of Fate",
+        "supply": 49,
+        "init": 4534,
+        "end": 4582
+    },
+    {
+        "name": "Cartoon Network Collection - Volume 1",
+        "supply": 27,
+        "init": 4583,
+        "end": 4609
+    },
+    {
+        "name": "Yu Yu Hakusho - Spirit Detective",
+        "supply": 10,
+        "init": 4610,
+        "end": 4619
+    },
+    {
+        "name": "Mat Hoffman's Pro BMX",
+        "supply": 44,
+        "init": 4620,
+        "end": 4663
+    },
+    {
+        "name": "Gauntlet & Rampart",
+        "supply": 19,
+        "init": 4664,
+        "end": 4682
+    },
+    {
+        "name": "Disney Sports - Skateboarding",
+        "supply": 25,
+        "init": 4683,
+        "end": 4707
+    },
+    {
+        "name": "Dora the Explorer - Volume 1",
+        "supply": 34,
+        "init": 4708,
+        "end": 4741
+    },
+    {
+        "name": "Barbie Secret Agent",
+        "supply": 13,
+        "init": 4742,
+        "end": 4754
+    },
+    {
+        "name": "Army Men - Operation Green",
+        "supply": 16,
+        "init": 4755,
+        "end": 4770
+    },
+    {
+        "name": "Wings",
+        "supply": 24,
+        "init": 4771,
+        "end": 4794
+    },
+    {
+        "name": "Crazy Chase",
+        "supply": 26,
+        "init": 4795,
+        "end": 4820
+    },
+    {
+        "name": "SSX Tricky",
+        "supply": 34,
+        "init": 4821,
+        "end": 4854
+    },
+    {
+        "name": "Sabre Wulf",
+        "supply": 15,
+        "init": 4855,
+        "end": 4869
+    },
+    {
+        "name": "Curious George",
+        "supply": 41,
+        "init": 4870,
+        "end": 4910
+    },
+    {
+        "name": "Rebelstar - Tactical Command",
+        "supply": 45,
+        "init": 4911,
+        "end": 4955
+    },
+    {
+        "name": "Rock 'em Sock 'em Robots",
+        "supply": 42,
+        "init": 4956,
+        "end": 4997
+    },
+    {
+        "name": "Daredevil",
+        "supply": 38,
+        "init": 4998,
+        "end": 5035
+    },
+    {
+        "name": "Totally Spies!",
+        "supply": 20,
+        "init": 5036,
+        "end": 5055
+    },
+    {
+        "name": "Zoids Legacy",
+        "supply": 17,
+        "init": 5056,
+        "end": 5072
+    },
+    {
+        "name": "Top Gun - Combat Zones",
+        "supply": 37,
+        "init": 5073,
+        "end": 5109
+    },
+    {
+        "name": "Final Fantasy V Advance",
+        "supply": 27,
+        "init": 5110,
+        "end": 5136
+    },
+    {
+        "name": "Robots",
+        "supply": 33,
+        "init": 5137,
+        "end": 5169
+    },
+    {
+        "name": "SpongeBob SquarePants - Lights, Camera, Pants!",
+        "supply": 43,
+        "init": 5170,
+        "end": 5212
+    },
+    {
+        "name": "Crash Superpack - Crash Bandicoot 2 - N-Tranced & Crash Nitro Kart",
+        "supply": 21,
+        "init": 5213,
+        "end": 5233
+    },
+    {
+        "name": "Pac-Man Pinball Advance",
+        "supply": 34,
+        "init": 5234,
+        "end": 5267
+    },
+    {
+        "name": "Code Breaker",
+        "supply": 45,
+        "init": 5268,
+        "end": 5312
+    },
+    {
+        "name": "Marvel Ultimate Alliance",
+        "supply": 47,
+        "init": 5313,
+        "end": 5359
+    },
+    {
+        "name": "Disney's Herbie - Fully Loaded",
+        "supply": 23,
+        "init": 5360,
+        "end": 5382
+    },
+    {
+        "name": "Ozzy & Drix",
+        "supply": 42,
+        "init": 5383,
+        "end": 5424
+    },
+    {
+        "name": "Proud Family, The",
+        "supply": 15,
+        "init": 5425,
+        "end": 5439
+    },
+    {
+        "name": "Dogz - Fashion",
+        "supply": 19,
+        "init": 5440,
+        "end": 5458
+    },
+    {
+        "name": "NHL Hitz 2003",
+        "supply": 28,
+        "init": 5459,
+        "end": 5486
+    },
+    {
+        "name": "Virtua Tennis",
+        "supply": 36,
+        "init": 5487,
+        "end": 5522
+    },
+    {
+        "name": "Shrek - Super Slam",
+        "supply": 47,
+        "init": 5523,
+        "end": 5569
+    },
+    {
+        "name": "Dexter's Lab - Chess Challenge",
+        "supply": 17,
+        "init": 5570,
+        "end": 5586
+    },
+    {
+        "name": "Ripping Friends, The",
+        "supply": 13,
+        "init": 5587,
+        "end": 5599
+    },
+    {
+        "name": "Grand Theft Auto Advance",
+        "supply": 10,
+        "init": 5600,
+        "end": 5609
+    },
+    {
+        "name": "Yu-Gi-Oh! - Yugi vs. Joey - Volume 1",
+        "supply": 48,
+        "init": 5610,
+        "end": 5657
+    },
+    {
+        "name": "Barbie Diaries, The - High School Mystery",
+        "supply": 12,
+        "init": 5658,
+        "end": 5669
+    },
+    {
+        "name": "Mr. Driller 2",
+        "supply": 11,
+        "init": 5670,
+        "end": 5680
+    },
+    {
+        "name": "River City Ransom EX",
+        "supply": 31,
+        "init": 5681,
+        "end": 5711
+    },
+    {
+        "name": "Flushed Away",
+        "supply": 32,
+        "init": 5712,
+        "end": 5743
+    },
+    {
+        "name": "Gekido Advance - Kintaro's Revenge",
+        "supply": 23,
+        "init": 5744,
+        "end": 5766
+    },
+    {
+        "name": "Pokemon - Volume 3",
+        "supply": 15,
+        "init": 5767,
+        "end": 5781
+    },
+    {
+        "name": "Crushed Baseball",
+        "supply": 50,
+        "init": 5782,
+        "end": 5831
+    },
+    {
+        "name": "Lord of the Rings, The - The Fellowship of the Ring",
+        "supply": 33,
+        "init": 5832,
+        "end": 5864
+    },
+    {
+        "name": "I Spy Challenger",
+        "supply": 14,
+        "init": 5865,
+        "end": 5878
+    },
+    {
+        "name": "Tokyo Xtreme Racer Advance",
+        "supply": 19,
+        "init": 5879,
+        "end": 5897
+    },
+    {
+        "name": "International Karate Plus",
+        "supply": 49,
+        "init": 5898,
+        "end": 5946
+    },
+    {
+        "name": "All-Star Baseball 2003",
+        "supply": 32,
+        "init": 5947,
+        "end": 5978
+    },
+    {
+        "name": "Need for Speed - Porsche Unleashed",
+        "supply": 23,
+        "init": 5979,
+        "end": 6001
+    },
+    {
+        "name": "Agent Hugo - Roborumble",
+        "supply": 41,
+        "init": 6002,
+        "end": 6042
+    },
+    {
+        "name": "Super Duper Sumos",
+        "supply": 49,
+        "init": 6043,
+        "end": 6091
+    },
+    {
+        "name": "Megaman Zero 4",
+        "supply": 20,
+        "init": 6092,
+        "end": 6111
+    },
+    {
+        "name": "Super Robot Taisen - Original Generation",
+        "supply": 32,
+        "init": 6112,
+        "end": 6143
+    },
+    {
+        "name": "Strawberry Shortcake - Volume 1",
+        "supply": 25,
+        "init": 6144,
+        "end": 6168
+    },
+    {
+        "name": "Bruce Lee - Return of the Legend",
+        "supply": 31,
+        "init": 6169,
+        "end": 6199
+    },
+    {
+        "name": "Razor Freestyle Scooter",
+        "supply": 43,
+        "init": 6200,
+        "end": 6242
+    },
+    {
+        "name": "Backyard Baseball 2006",
+        "supply": 19,
+        "init": 6243,
+        "end": 6261
+    },
+    {
+        "name": "R-Type III",
+        "supply": 34,
+        "init": 6262,
+        "end": 6295
+    },
+    {
+        "name": "Avatar - The Last Airbender - The Burning Earth",
+        "supply": 46,
+        "init": 6296,
+        "end": 6341
+    },
+    {
+        "name": "Bookworm",
+        "supply": 47,
+        "init": 6342,
+        "end": 6388
+    },
+    {
+        "name": "Road Rash - Jailbreak",
+        "supply": 39,
+        "init": 6389,
+        "end": 6427
+    },
+    {
+        "name": "GBA Video - Proud Family, The Vol. 1",
+        "supply": 47,
+        "init": 6428,
+        "end": 6474
+    },
+    {
+        "name": "F1 2002",
+        "supply": 20,
+        "init": 6475,
+        "end": 6494
+    },
+    {
+        "name": "Battle B-Daman",
+        "supply": 49,
+        "init": 6495,
+        "end": 6543
+    },
+    {
+        "name": "SD Gundam Force",
+        "supply": 11,
+        "init": 6544,
+        "end": 6554
+    },
+    {
+        "name": "Kong - King of Atlantis",
+        "supply": 27,
+        "init": 6555,
+        "end": 6581
+    },
+    {
+        "name": "Barbie Superpack - Secret Agent & Groovy Games",
+        "supply": 49,
+        "init": 6582,
+        "end": 6630
+    },
+    {
+        "name": "Dragon Tales - Dragon Adventures",
+        "supply": 11,
+        "init": 6631,
+        "end": 6641
+    },
+    {
+        "name": "Disney Sports - American Football",
+        "supply": 15,
+        "init": 6642,
+        "end": 6656
+    },
+    {
+        "name": "X-Bladez - Inline Skater",
+        "supply": 14,
+        "init": 6657,
+        "end": 6670
+    },
+    {
+        "name": "Nintendogs + Super Mario 64 DS - Trainer Expansion for NDS",
+        "supply": 46,
+        "init": 6671,
+        "end": 6716
+    },
+    {
+        "name": "Little League Baseball 2002",
+        "supply": 42,
+        "init": 6717,
+        "end": 6758
+    },
+    {
+        "name": "Disney's Magical Quest 3 Starring Mickey & Donald",
+        "supply": 27,
+        "init": 6759,
+        "end": 6785
+    },
+    {
+        "name": "007 - Everything or Nothing",
+        "supply": 27,
+        "init": 6786,
+        "end": 6812
+    },
+    {
+        "name": "Super Hornet FA 18F",
+        "supply": 14,
+        "init": 6813,
+        "end": 6826
+    },
+    {
+        "name": "Disney's Extreme Skate Adventure",
+        "supply": 43,
+        "init": 6827,
+        "end": 6869
+    },
+    {
+        "name": "Hi Hi Puffy AmiYumi - Kaznapped!",
+        "supply": 13,
+        "init": 6870,
+        "end": 6882
+    },
+    {
+        "name": "WinX Club",
+        "supply": 26,
+        "init": 6883,
+        "end": 6908
+    },
+    {
+        "name": "Sky Dancers - They Magically Fly!",
+        "supply": 21,
+        "init": 6909,
+        "end": 6929
+    },
+    {
+        "name": "Rave Master Special Attack Force",
+        "supply": 21,
+        "init": 6930,
+        "end": 6950
+    },
+    {
+        "name": "ATV - Thunder Ridge Riders",
+        "supply": 22,
+        "init": 6951,
+        "end": 6972
+    },
+    {
+        "name": "Tower SP, The",
+        "supply": 39,
+        "init": 6973,
+        "end": 7011
+    },
+    {
+        "name": "Disney's Finding Nemo",
+        "supply": 20,
+        "init": 7012,
+        "end": 7031
+    },
+    {
+        "name": "Crash Bandicoot Purple - Ripto's Rampage",
+        "supply": 15,
+        "init": 7032,
+        "end": 7046
+    },
+    {
+        "name": "Sonic The Hedgehog - Genesis",
+        "supply": 48,
+        "init": 7047,
+        "end": 7094
+    },
+    {
+        "name": "Tony Hawk's Underground",
+        "supply": 29,
+        "init": 7095,
+        "end": 7123
+    },
+    {
+        "name": "Classic NES Series - The Legend of Zelda",
+        "supply": 33,
+        "init": 7124,
+        "end": 7156
+    },
+    {
+        "name": "Banjo Pilot",
+        "supply": 41,
+        "init": 7157,
+        "end": 7197
+    },
+    {
+        "name": "Backyard Basketball",
+        "supply": 25,
+        "init": 7198,
+        "end": 7222
+    },
+    {
+        "name": "Classic NES Series - Pac-Man",
+        "supply": 49,
+        "init": 7223,
+        "end": 7271
+    },
+    {
+        "name": "Ant Bully, The",
+        "supply": 46,
+        "init": 7272,
+        "end": 7317
+    },
+    {
+        "name": "Bratz - Rock Angelz",
+        "supply": 49,
+        "init": 7318,
+        "end": 7366
+    },
+    {
+        "name": "Minority Report - Everybody Runs",
+        "supply": 41,
+        "init": 7367,
+        "end": 7407
+    },
+    {
+        "name": "Archer Maclean's 3D Pool",
+        "supply": 34,
+        "init": 7408,
+        "end": 7441
+    },
+    {
+        "name": "Capcom Classics - Mini Mix",
+        "supply": 50,
+        "init": 7442,
+        "end": 7491
+    },
+    {
+        "name": "Metal Slug Advance",
+        "supply": 27,
+        "init": 7492,
+        "end": 7518
+    },
+    {
+        "name": "Rapala Pro Fishing",
+        "supply": 36,
+        "init": 7519,
+        "end": 7554
+    },
+    {
+        "name": "Gunstar Super Heroes",
+        "supply": 10,
+        "init": 7555,
+        "end": 7564
+    },
+    {
+        "name": "World Championship Poker",
+        "supply": 29,
+        "init": 7565,
+        "end": 7593
+    },
+    {
+        "name": "Monopoly",
+        "supply": 27,
+        "init": 7594,
+        "end": 7620
+    },
+    {
+        "name": "ATV - Quad Power Racing",
+        "supply": 44,
+        "init": 7621,
+        "end": 7664
+    },
+    {
+        "name": "Yggdra Union - We'll Never Fight Alone",
+        "supply": 18,
+        "init": 7665,
+        "end": 7682
+    },
+    {
+        "name": "Danny Phantom - Urban Jungle",
+        "supply": 16,
+        "init": 7683,
+        "end": 7698
+    },
+    {
+        "name": "Thunderbirds",
+        "supply": 18,
+        "init": 7699,
+        "end": 7716
+    },
+    {
+        "name": "Doom II",
+        "supply": 25,
+        "init": 7717,
+        "end": 7741
+    },
+    {
+        "name": "Nicktoons Collection - Volume 1",
+        "supply": 28,
+        "init": 7742,
+        "end": 7769
+    },
+    {
+        "name": "Dragon Ball GT - Transformation",
+        "supply": 18,
+        "init": 7770,
+        "end": 7787
+    },
+    {
+        "name": "Classic NES Series - Ice Climber",
+        "supply": 38,
+        "init": 7788,
+        "end": 7825
+    },
+    {
+        "name": "Pinball Tycoon",
+        "supply": 33,
+        "init": 7826,
+        "end": 7858
+    },
+    {
+        "name": "Cubix - Robots for Everyone - Clash 'n Bash",
+        "supply": 15,
+        "init": 7859,
+        "end": 7873
+    },
+    {
+        "name": "E.T. The Extra-Terrestrial",
+        "supply": 46,
+        "init": 7874,
+        "end": 7919
+    },
+    {
+        "name": "Ultimate Spider-Man",
+        "supply": 35,
+        "init": 7920,
+        "end": 7954
+    },
+    {
+        "name": "Galidor - Defenders of the Outer Dimension",
+        "supply": 36,
+        "init": 7955,
+        "end": 7990
+    },
+    {
+        "name": "Nickelodeon Vol. 1 - GBA 4-Pack",
+        "supply": 13,
+        "init": 7991,
+        "end": 8003
+    },
+    {
+        "name": "Disney's Magical Quest",
+        "supply": 29,
+        "init": 8004,
+        "end": 8032
+    },
+    {
+        "name": "Action Man - Robot Atack",
+        "supply": 46,
+        "init": 8033,
+        "end": 8078
+    },
+    {
+        "name": "World Tennis Stars",
+        "supply": 31,
+        "init": 8079,
+        "end": 8109
+    },
+    {
+        "name": "Dragon Ball Z - Buu's Fury",
+        "supply": 13,
+        "init": 8110,
+        "end": 8122
+    },
+    {
+        "name": "Games Explosion",
+        "supply": 27,
+        "init": 8123,
+        "end": 8149
+    },
+    {
+        "name": "Monster Jam - Maximum Destruction",
+        "supply": 20,
+        "init": 8150,
+        "end": 8169
+    },
+    {
+        "name": "Nicktoons Collection - Volume 2",
+        "supply": 26,
+        "init": 8170,
+        "end": 8195
+    },
+    {
+        "name": "Duel Masters - Kaijudo Showdown",
+        "supply": 11,
+        "init": 8196,
+        "end": 8206
+    },
+    {
+        "name": "Nicktoons - Attack of the Toybots",
+        "supply": 43,
+        "init": 8207,
+        "end": 8249
+    },
+    {
+        "name": "Dr. Seuss' Green Eggs and Ham",
+        "supply": 13,
+        "init": 8250,
+        "end": 8262
+    },
+    {
+        "name": "Need for Speed - Carbon - Own the City",
+        "supply": 25,
+        "init": 8263,
+        "end": 8287
+    },
+    {
+        "name": "Donkey Kong Country 2",
+        "supply": 28,
+        "init": 8288,
+        "end": 8315
+    },
+    {
+        "name": "Britney's Dance Beat",
+        "supply": 49,
+        "init": 8316,
+        "end": 8364
+    },
+    {
+        "name": "Barbie Groovy Games",
+        "supply": 29,
+        "init": 8365,
+        "end": 8393
+    },
+    {
+        "name": "Street Jam Basketball",
+        "supply": 12,
+        "init": 8394,
+        "end": 8405
+    },
+    {
+        "name": "Board Game Classics",
+        "supply": 45,
+        "init": 8406,
+        "end": 8450
+    },
+    {
+        "name": "Mat Hoffman's Pro BMX 2",
+        "supply": 48,
+        "init": 8451,
+        "end": 8498
+    },
+    {
+        "name": "Madden NFL 07",
+        "supply": 17,
+        "init": 8499,
+        "end": 8515
+    },
+    {
+        "name": "Cruis'n Velocity",
+        "supply": 25,
+        "init": 8516,
+        "end": 8540
+    },
+    {
+        "name": "Harlem Globetrotters - World Tour",
+        "supply": 47,
+        "init": 8541,
+        "end": 8587
+    },
+    {
+        "name": "SpongeBob SquarePants - The Movie",
+        "supply": 36,
+        "init": 8588,
+        "end": 8623
+    },
+    {
+        "name": "Ultimate Arcade Games",
+        "supply": 19,
+        "init": 8624,
+        "end": 8642
+    },
+    {
+        "name": "Family Feud",
+        "supply": 31,
+        "init": 8643,
+        "end": 8673
+    },
+    {
+        "name": "Quad Desert Fury",
+        "supply": 25,
+        "init": 8674,
+        "end": 8698
+    },
+    {
+        "name": "Pokemon - Volume 2",
+        "supply": 26,
+        "init": 8699,
+        "end": 8724
+    },
+    {
+        "name": "Avatar - The Last Airbender",
+        "supply": 30,
+        "init": 8725,
+        "end": 8754
+    },
+    {
+        "name": "Disney's Treasure Planet",
+        "supply": 38,
+        "init": 8755,
+        "end": 8792
+    },
+    {
+        "name": "Final Fantasy I & II - Dawn of Souls",
+        "supply": 24,
+        "init": 8793,
+        "end": 8816
+    },
+    {
+        "name": "Racing Gears Advance",
+        "supply": 35,
+        "init": 8817,
+        "end": 8851
+    },
+    {
+        "name": "Strawberry Shortcake - Sweet Dreams",
+        "supply": 25,
+        "init": 8852,
+        "end": 8876
+    },
+    {
+        "name": "Princess Natasha",
+        "supply": 27,
+        "init": 8877,
+        "end": 8903
+    },
+    {
+        "name": "XS Moto",
+        "supply": 12,
+        "init": 8904,
+        "end": 8915
+    },
+    {
+        "name": "Disney's Kim Possible 3 - Team Possible",
+        "supply": 48,
+        "init": 8916,
+        "end": 8963
+    },
+    {
+        "name": "Gem Smashers",
+        "supply": 17,
+        "init": 8964,
+        "end": 8980
+    },
+    {
+        "name": "Ultimate Card Games",
+        "supply": 28,
+        "init": 8981,
+        "end": 9008
+    },
+    {
+        "name": "Power Rangers - Wild Force",
+        "supply": 38,
+        "init": 9009,
+        "end": 9046
+    },
+    {
+        "name": "F-14 Tomcat",
+        "supply": 39,
+        "init": 9047,
+        "end": 9085
+    },
+    {
+        "name": "American Idol",
+        "supply": 17,
+        "init": 9086,
+        "end": 9102
+    },
+    {
+        "name": "Incredibles, The",
+        "supply": 30,
+        "init": 9103,
+        "end": 9132
+    },
+    {
+        "name": "Rugrats - Castle Capers",
+        "supply": 37,
+        "init": 9133,
+        "end": 9169
+    },
+    {
+        "name": "Nicktoons Collection - Volume 3",
+        "supply": 23,
+        "init": 9170,
+        "end": 9192
+    },
+    {
+        "name": "Arctic Tale",
+        "supply": 47,
+        "init": 9193,
+        "end": 9239
+    },
+    {
+        "name": "Berenstain Bears and the Spooky Old Tree, The",
+        "supply": 48,
+        "init": 9240,
+        "end": 9287
+    },
+    {
+        "name": "Disney's Little Einstein",
+        "supply": 10,
+        "init": 9288,
+        "end": 9297
+    },
+    {
+        "name": "Shonen Jump's - Shaman King - Legacy of the Spirits",
+        "supply": 42,
+        "init": 9298,
+        "end": 9339
+    },
+    {
+        "name": "Animaniacs - Lights, Camera, Action!",
+        "supply": 19,
+        "init": 9340,
+        "end": 9358
+    },
+    {
+        "name": "All-Star Baseball 2004",
+        "supply": 32,
+        "init": 9359,
+        "end": 9390
+    },
+    {
+        "name": "Adventures of Jimmy Neutron Boy Genius, The - Jet Fusion",
+        "supply": 19,
+        "init": 9391,
+        "end": 9409
+    },
+    {
+        "name": "Barbie - The Princess and the Pauper",
+        "supply": 37,
+        "init": 9410,
+        "end": 9446
+    },
+    {
+        "name": "Star Wars - Jedi Power Battles",
+        "supply": 10,
+        "init": 9447,
+        "end": 9456
+    },
+    {
+        "name": "Defender of The Crown",
+        "supply": 38,
+        "init": 9457,
+        "end": 9494
+    },
+    {
+        "name": "Juka and the Monophonic Menace",
+        "supply": 44,
+        "init": 9495,
+        "end": 9538
+    },
+    {
+        "name": "Hot Wheels - All Out",
+        "supply": 40,
+        "init": 9539,
+        "end": 9578
+    },
+    {
+        "name": "SpongeBob SquarePants - Creature from the Krusty Krab",
+        "supply": 43,
+        "init": 9579,
+        "end": 9621
+    },
+    {
+        "name": "Hobbit, The",
+        "supply": 38,
+        "init": 9622,
+        "end": 9659
+    },
+    {
+        "name": "Dragon Ball GT - Volume 1",
+        "supply": 10,
+        "init": 9660,
+        "end": 9669
+    },
+    {
+        "name": "Mario Pinball Land",
+        "supply": 40,
+        "init": 9670,
+        "end": 9709
+    },
+    {
+        "name": "Hello Kitty - Happy Party Pals",
+        "supply": 44,
+        "init": 9710,
+        "end": 9753
+    },
+    {
+        "name": "Fairly Odd Parents!, The - Breakin' da Rules",
+        "supply": 32,
+        "init": 9754,
+        "end": 9785
+    },
+    {
+        "name": "Super Ghouls 'N Ghosts",
+        "supply": 23,
+        "init": 9786,
+        "end": 9808
+    },
+    {
+        "name": "Unfabulous",
+        "supply": 50,
+        "init": 9809,
+        "end": 9858
+    },
+    {
+        "name": "Major League Baseball 2007",
+        "supply": 33,
+        "init": 9859,
+        "end": 9891
+    },
+    {
+        "name": "Disney's Brother Bear",
+        "supply": 25,
+        "init": 9892,
+        "end": 9916
+    },
+    {
+        "name": "Riviera - The Promised Land",
+        "supply": 27,
+        "init": 9917,
+        "end": 9943
+    },
+    {
+        "name": "Rayman - Hoodlum's Revenge",
+        "supply": 35,
+        "init": 9944,
+        "end": 9978
+    },
+    {
+        "name": "Disney Sports - Basketball",
+        "supply": 18,
+        "init": 9979,
+        "end": 9996
+    },
+    {
+        "name": "Classic NES Series - Bomberman",
+        "supply": 17,
+        "init": 9997,
+        "end": 10013
+    },
+    {
+        "name": "Popeye - Rush for Spinach",
+        "supply": 40,
+        "init": 10014,
+        "end": 10053
+    },
+    {
+        "name": "Shrek - Smash 'n Crash Racing",
+        "supply": 12,
+        "init": 10054,
+        "end": 10065
+    },
+    {
+        "name": "Disney's That's SO Raven",
+        "supply": 36,
+        "init": 10066,
+        "end": 10101
+    },
+    {
+        "name": "Justice League Heroes - The Flash",
+        "supply": 49,
+        "init": 10102,
+        "end": 10150
+    },
+    {
+        "name": "Adventures of Jimmy Neutron Boy Genius, The - Volume 1",
+        "supply": 31,
+        "init": 10151,
+        "end": 10181
+    },
+    {
+        "name": "Double Dragon Advance",
+        "supply": 32,
+        "init": 10182,
+        "end": 10213
+    },
+    {
+        "name": "Ninja Five-0",
+        "supply": 45,
+        "init": 10214,
+        "end": 10258
+    },
+    {
+        "name": "Crash Nitro Kart",
+        "supply": 50,
+        "init": 10259,
+        "end": 10308
+    },
+    {
+        "name": "Crazy Taxi - Catch a Ride",
+        "supply": 36,
+        "init": 10309,
+        "end": 10344
+    },
+    {
+        "name": "Kelly Slater's Pro Surfer",
+        "supply": 50,
+        "init": 10345,
+        "end": 10394
+    },
+    {
+        "name": "Space Invaders",
+        "supply": 41,
+        "init": 10395,
+        "end": 10435
+    },
+    {
+        "name": "Legend of Spyro, The - A New Beginning",
+        "supply": 38,
+        "init": 10436,
+        "end": 10473
+    },
+    {
+        "name": "Winx Club - Quest for the Codex",
+        "supply": 20,
+        "init": 10474,
+        "end": 10493
+    },
+    {
+        "name": "Soccer Kid",
+        "supply": 40,
+        "init": 10494,
+        "end": 10533
+    },
+    {
+        "name": "Spider-Man - Battle for New York",
+        "supply": 23,
+        "init": 10534,
+        "end": 10556
+    },
+    {
+        "name": "Duel Masters - Shadow of the Code",
+        "supply": 19,
+        "init": 10557,
+        "end": 10575
+    },
+    {
+        "name": "Meet the Robinsons",
+        "supply": 28,
+        "init": 10576,
+        "end": 10603
+    },
+    {
+        "name": "Backyard Sports Baseball 2007",
+        "supply": 31,
+        "init": 10604,
+        "end": 10634
+    },
+    {
+        "name": "Invincible Iron Man, The",
+        "supply": 18,
+        "init": 10635,
+        "end": 10652
+    },
+    {
+        "name": "M&M's - Break' Em (V1.1)",
+        "supply": 43,
+        "init": 10653,
+        "end": 10695
+    },
+    {
+        "name": "KerPlunk!, Toss Across, and TipIt",
+        "supply": 19,
+        "init": 10696,
+        "end": 10714
+    },
+    {
+        "name": "Rugrats - All Grown Up! - Volume 1",
+        "supply": 49,
+        "init": 10715,
+        "end": 10763
+    },
+    {
+        "name": "Shonen Jump's - Shaman King - Master of Spirits",
+        "supply": 21,
+        "init": 10764,
+        "end": 10784
+    },
+    {
+        "name": "Fire Emblem - The Sacred Stones",
+        "supply": 38,
+        "init": 10785,
+        "end": 10822
+    },
+    {
+        "name": "Cabela's Big Game Hunter - 2005 Adventures",
+        "supply": 40,
+        "init": 10823,
+        "end": 10862
+    },
+    {
+        "name": "Ultimate Puzzle Games",
+        "supply": 13,
+        "init": 10863,
+        "end": 10875
+    },
+    {
+        "name": "Dogz",
+        "supply": 25,
+        "init": 10876,
+        "end": 10900
+    },
+    {
+        "name": "Yoshi Topsy-Turvy",
+        "supply": 16,
+        "init": 10901,
+        "end": 10916
+    },
+    {
+        "name": "Pitfall - The Lost Expedition",
+        "supply": 26,
+        "init": 10917,
+        "end": 10942
+    },
+    {
+        "name": "Shining Soul II",
+        "supply": 28,
+        "init": 10943,
+        "end": 10970
+    },
+    {
+        "name": "Simpsons, The - Road Rage",
+        "supply": 13,
+        "init": 10971,
+        "end": 10983
+    },
+    {
+        "name": "Over the Hedge - Hammy Goes Nuts",
+        "supply": 35,
+        "init": 10984,
+        "end": 11018
+    },
+    {
+        "name": "Wild Thornberrys, The - Chimp Chase",
+        "supply": 35,
+        "init": 11019,
+        "end": 11053
+    },
+    {
+        "name": "Rock N' Roll Racing",
+        "supply": 47,
+        "init": 11054,
+        "end": 11100
+    },
+    {
+        "name": "Godzilla Domination",
+        "supply": 45,
+        "init": 11101,
+        "end": 11145
+    },
+    {
+        "name": "Astro Boy - Omega Factor",
+        "supply": 22,
+        "init": 11146,
+        "end": 11167
+    },
+    {
+        "name": "Caesar's Palace Advance",
+        "supply": 16,
+        "init": 11168,
+        "end": 11183
+    },
+    {
+        "name": "Turbo Turtle Adventure",
+        "supply": 33,
+        "init": 11184,
+        "end": 11216
+    },
+    {
+        "name": "Megaman Battle Network 4",
+        "supply": 24,
+        "init": 11217,
+        "end": 11240
+    },
+    {
+        "name": "Madagascar",
+        "supply": 48,
+        "init": 11241,
+        "end": 11288
+    },
+    {
+        "name": "Butt-Ugly Martians - B.K.M. Battles",
+        "supply": 38,
+        "init": 11289,
+        "end": 11326
+    },
+    {
+        "name": "Bratz - The Movie",
+        "supply": 21,
+        "init": 11327,
+        "end": 11347
+    },
+    {
+        "name": "ESPN X-Games Skateboarding",
+        "supply": 41,
+        "init": 11348,
+        "end": 11388
+    },
+    {
+        "name": "Ratatouille",
+        "supply": 39,
+        "init": 11389,
+        "end": 11427
+    },
+    {
+        "name": "Monster Rancher Advanced 2",
+        "supply": 13,
+        "init": 11428,
+        "end": 11440
+    },
+    {
+        "name": "DK - King of Swing",
+        "supply": 49,
+        "init": 11441,
+        "end": 11489
+    },
+    {
+        "name": "Super Robot Monkey Team - Volume 1",
+        "supply": 24,
+        "init": 11490,
+        "end": 11513
+    },
+    {
+        "name": "Shonen Jump's - One Piece",
+        "supply": 50,
+        "init": 11514,
+        "end": 11563
+    },
+    {
+        "name": "Dora the Explorer - Super Spies",
+        "supply": 15,
+        "init": 11564,
+        "end": 11578
+    },
+    {
+        "name": "Silent Scope",
+        "supply": 13,
+        "init": 11579,
+        "end": 11591
+    },
+    {
+        "name": "Atari Anniversary Advance",
+        "supply": 45,
+        "init": 11592,
+        "end": 11636
+    },
+    {
+        "name": "Justice League Chronicles",
+        "supply": 16,
+        "init": 11637,
+        "end": 11652
+    },
+    {
+        "name": "Dragon Ball Z - Supersonic Warriors",
+        "supply": 16,
+        "init": 11653,
+        "end": 11668
+    },
+    {
+        "name": "Sum of All Fears, The",
+        "supply": 23,
+        "init": 11669,
+        "end": 11691
+    },
+    {
+        "name": "Incredible Hulk, The",
+        "supply": 12,
+        "init": 11692,
+        "end": 11703
+    },
+    {
+        "name": "Dave Mirra Freestyle BMX 3",
+        "supply": 34,
+        "init": 11704,
+        "end": 11737
+    },
+    {
+        "name": "Mario & Luigi - Superstar Saga",
+        "supply": 26,
+        "init": 11738,
+        "end": 11763
+    },
+    {
+        "name": "Dungeons and Dragons - Eye of the Beholder",
+        "supply": 35,
+        "init": 11764,
+        "end": 11798
+    },
+    {
+        "name": "Disney's Kim Possible 2 - Drakken's Demise",
+        "supply": 23,
+        "init": 11799,
+        "end": 11821
+    },
+    {
+        "name": "Cartoon Network Collection - Limited Edition",
+        "supply": 11,
+        "init": 11822,
+        "end": 11832
+    },
+    {
+        "name": "Bionicle - Maze of Shadows",
+        "supply": 11,
+        "init": 11833,
+        "end": 11843
+    },
+    {
+        "name": "Sound of Thunder, A",
+        "supply": 39,
+        "init": 11844,
+        "end": 11882
+    },
+    {
+        "name": "My Little Pony Crystal Princess - The Runaway Rainbow",
+        "supply": 30,
+        "init": 11883,
+        "end": 11912
+    },
+    {
+        "name": "Sega Rally Championship",
+        "supply": 35,
+        "init": 11913,
+        "end": 11947
+    },
+    {
+        "name": "Paws and Claws - Pet Resort",
+        "supply": 44,
+        "init": 11948,
+        "end": 11991
+    },
+    {
+        "name": "Tony Hawk's Underground 2",
+        "supply": 22,
+        "init": 11992,
+        "end": 12013
+    },
+    {
+        "name": "Tringo",
+        "supply": 50,
+        "init": 12014,
+        "end": 12063
+    },
+    {
+        "name": "Ty the Tasmanian Tiger 3 - Night of the Quinkan",
+        "supply": 22,
+        "init": 12064,
+        "end": 12085
+    },
+    {
+        "name": "WarioWare - Twisted!",
+        "supply": 40,
+        "init": 12086,
+        "end": 12125
+    },
+    {
+        "name": "Petz Vet",
+        "supply": 10,
+        "init": 12126,
+        "end": 12135
+    },
+    {
+        "name": "Naruto - Ninja Council 2",
+        "supply": 28,
+        "init": 12136,
+        "end": 12163
+    },
+    {
+        "name": "Space Channel 5 - Ulala's Cosmic Attack",
+        "supply": 48,
+        "init": 12164,
+        "end": 12211
+    },
+    {
+        "name": "Backyard Sports Basketball 2007",
+        "supply": 22,
+        "init": 12212,
+        "end": 12233
+    },
+    {
+        "name": "Ultimate Beach Soccer",
+        "supply": 24,
+        "init": 12234,
+        "end": 12257
+    },
+    {
+        "name": "Tron 2.0 - Killer App",
+        "supply": 38,
+        "init": 12258,
+        "end": 12295
+    },
+    {
+        "name": "Boxing Fever",
+        "supply": 47,
+        "init": 12296,
+        "end": 12342
+    },
+    {
+        "name": "Pocket Dogs",
+        "supply": 32,
+        "init": 12343,
+        "end": 12374
+    },
+    {
+        "name": "Cartoon Network - Speedway",
+        "supply": 21,
+        "init": 12375,
+        "end": 12395
+    },
+    {
+        "name": "Mario Party Advance",
+        "supply": 18,
+        "init": 12396,
+        "end": 12413
+    },
+    {
+        "name": "Tony Hawk's American Sk8land",
+        "supply": 37,
+        "init": 12414,
+        "end": 12450
+    },
+    {
+        "name": "Summon Night",
+        "supply": 31,
+        "init": 12451,
+        "end": 12481
+    },
+    {
+        "name": "Urban Yeti",
+        "supply": 46,
+        "init": 12482,
+        "end": 12527
+    },
+    {
+        "name": "Final Fight One",
+        "supply": 36,
+        "init": 12528,
+        "end": 12563
+    },
+    {
+        "name": "Gauntlet - Dark Legacy",
+        "supply": 50,
+        "init": 12564,
+        "end": 12613
+    },
+    {
+        "name": "Connect Four, Perfection, Trouble",
+        "supply": 16,
+        "init": 12614,
+        "end": 12629
+    },
+    {
+        "name": "Sports Illustrated For Kids Baseball",
+        "supply": 13,
+        "init": 12630,
+        "end": 12642
+    },
+    {
+        "name": "Shining Force - Resurrection of the Dark Dragon",
+        "supply": 29,
+        "init": 12643,
+        "end": 12671
+    },
+    {
+        "name": "Chessmaster",
+        "supply": 21,
+        "init": 12672,
+        "end": 12692
+    },
+    {
+        "name": "Mortal Kombat Advance",
+        "supply": 49,
+        "init": 12693,
+        "end": 12741
+    },
+    {
+        "name": "Texas Hold'em Poker",
+        "supply": 50,
+        "init": 12742,
+        "end": 12791
+    },
+    {
+        "name": "E-reader Cards",
+        "supply": 20,
+        "init": 12792,
+        "end": 12811
+    },
+    {
+        "name": "Archer Maclean's Super Dropzone",
+        "supply": 13,
+        "init": 12812,
+        "end": 12824
+    },
+    {
+        "name": "Tony Hawk's Downhill Jam",
+        "supply": 44,
+        "init": 12825,
+        "end": 12868
+    },
+    {
+        "name": "Noddy - A Day in Toyland",
+        "supply": 12,
+        "init": 12869,
+        "end": 12880
+    },
+    {
+        "name": "Lemony Snicket's A Series of Unfortunate Events",
+        "supply": 40,
+        "init": 12881,
+        "end": 12920
+    },
+    {
+        "name": "Tak 2 - The Staff of Dreams",
+        "supply": 24,
+        "init": 12921,
+        "end": 12944
+    },
+    {
+        "name": "Scooby-Doo! 2 - Monsters Unleashed",
+        "supply": 41,
+        "init": 12945,
+        "end": 12985
+    },
+    {
+        "name": "Gremlins - Stripe vs. Gizmo",
+        "supply": 28,
+        "init": 12986,
+        "end": 13013
+    },
+    {
+        "name": "Classic NES Series - Xevious",
+        "supply": 36,
+        "init": 13014,
+        "end": 13049
+    },
+    {
+        "name": "Disney Princess - Royal Adventure",
+        "supply": 26,
+        "init": 13050,
+        "end": 13075
+    },
+    {
+        "name": "Earthworm Jim 2",
+        "supply": 14,
+        "init": 13076,
+        "end": 13089
+    },
+    {
+        "name": "Star Wars - The New Droid Army",
+        "supply": 39,
+        "init": 13090,
+        "end": 13128
+    },
+    {
+        "name": "Batman Begins",
+        "supply": 38,
+        "init": 13129,
+        "end": 13166
+    },
+    {
+        "name": "Shark Tale",
+        "supply": 35,
+        "init": 13167,
+        "end": 13201
+    },
+    {
+        "name": "Madden NFL 2005",
+        "supply": 28,
+        "init": 13202,
+        "end": 13229
+    },
+    {
+        "name": "Lizzie McGuire 2 - Lizzie Diaries",
+        "supply": 35,
+        "init": 13230,
+        "end": 13264
+    },
+    {
+        "name": "Pocket Professor Kwik Notes Vol. 1",
+        "supply": 42,
+        "init": 13265,
+        "end": 13306
+    },
+    {
+        "name": "SpongeBob SquarePants - Volume 2",
+        "supply": 10,
+        "init": 13307,
+        "end": 13316
+    },
+    {
+        "name": "Wild Thornberrys, The - The Movie",
+        "supply": 37,
+        "init": 13317,
+        "end": 13353
+    },
+    {
+        "name": "Legend of Zelda, The - The Minish Cap",
+        "supply": 26,
+        "init": 13354,
+        "end": 13379
+    },
+    {
+        "name": "Alex Rider - Stormbreaker",
+        "supply": 47,
+        "init": 13380,
+        "end": 13426
+    },
+    {
+        "name": "Teenage Mutant Ninja Turtles",
+        "supply": 19,
+        "init": 13427,
+        "end": 13445
+    },
+    {
+        "name": "Yu-Gi-Oh! Gamepack - The Sacred Cards & Reshef of Destruction",
+        "supply": 26,
+        "init": 13446,
+        "end": 13471
+    },
+    {
+        "name": "Cabbage Patch Kids - The Patch Puppy Rescue",
+        "supply": 22,
+        "init": 13472,
+        "end": 13493
+    },
+    {
+        "name": "Horsez",
+        "supply": 19,
+        "init": 13494,
+        "end": 13512
+    },
+    {
+        "name": "Madden NFL 06",
+        "supply": 37,
+        "init": 13513,
+        "end": 13549
+    },
+    {
+        "name": "Jurassic Park III - The DNA Factor",
+        "supply": 12,
+        "init": 13550,
+        "end": 13561
+    },
+    {
+        "name": "Spider-Man 2",
+        "supply": 50,
+        "init": 13562,
+        "end": 13611
+    },
+    {
+        "name": "Big Mutha Truckers",
+        "supply": 34,
+        "init": 13612,
+        "end": 13645
+    },
+    {
+        "name": "Yu-Gi-Oh! - Destiny Board Traveler",
+        "supply": 23,
+        "init": 13646,
+        "end": 13668
+    },
+    {
+        "name": "Tak and the Power of Juju",
+        "supply": 29,
+        "init": 13669,
+        "end": 13697
+    },
+    {
+        "name": "Mario Golf - Advance Tour",
+        "supply": 21,
+        "init": 13698,
+        "end": 13718
+    },
+    {
+        "name": "Alien Homonid",
+        "supply": 41,
+        "init": 13719,
+        "end": 13759
+    },
+    {
+        "name": "Monster Bass Fishing",
+        "supply": 30,
+        "init": 13760,
+        "end": 13789
+    },
+    {
+        "name": "Hot Wheels - Velocity X",
+        "supply": 41,
+        "init": 13790,
+        "end": 13830
+    },
+    {
+        "name": "Spyro 2 - Season of Flame",
+        "supply": 35,
+        "init": 13831,
+        "end": 13865
+    },
+    {
+        "name": "Pokemon - Emerald Version",
+        "supply": 22,
+        "init": 13866,
+        "end": 13887
+    },
+    {
+        "name": "Lizzie McGuire 3 - Homecoming Havoc",
+        "supply": 44,
+        "init": 13888,
+        "end": 13931
+    },
+    {
+        "name": "Disney's Peter Pan - Return to Neverland",
+        "supply": 36,
+        "init": 13932,
+        "end": 13967
+    },
+    {
+        "name": "Onimusha Tactics",
+        "supply": 41,
+        "init": 13968,
+        "end": 14008
+    },
+    {
+        "name": "Colin McRae Rally 2.0",
+        "supply": 30,
+        "init": 14009,
+        "end": 14038
+    },
+    {
+        "name": "Kill Switch",
+        "supply": 44,
+        "init": 14039,
+        "end": 14082
+    },
+    {
+        "name": "Atomic Betty",
+        "supply": 44,
+        "init": 14083,
+        "end": 14126
+    },
+    {
+        "name": "BattleBots - Design & Destroy",
+        "supply": 35,
+        "init": 14127,
+        "end": 14161
+    },
+    {
+        "name": "Totally Spies! 2 - Undercover",
+        "supply": 14,
+        "init": 14162,
+        "end": 14175
+    },
+    {
+        "name": "Over the Hedge",
+        "supply": 11,
+        "init": 14176,
+        "end": 14186
+    },
+    {
+        "name": "Ice Age",
+        "supply": 27,
+        "init": 14187,
+        "end": 14213
+    },
+    {
+        "name": "Codename Kids Next Door - Operation S.O.D.A.",
+        "supply": 36,
+        "init": 14214,
+        "end": 14249
+    },
+    {
+        "name": "Agassi Tennis Generation",
+        "supply": 37,
+        "init": 14250,
+        "end": 14286
+    },
+    {
+        "name": "Madagascar - Operation Penguin",
+        "supply": 40,
+        "init": 14287,
+        "end": 14326
+    },
+    {
+        "name": "Drill Dozer",
+        "supply": 37,
+        "init": 14327,
+        "end": 14363
+    },
+    {
+        "name": "Dragon Ball - Advanced Adventure",
+        "supply": 16,
+        "init": 14364,
+        "end": 14379
+    },
+    {
+        "name": "Atlantis - The Lost Empire",
+        "supply": 43,
+        "init": 14380,
+        "end": 14422
+    },
+    {
+        "name": "Megaman Battle Chip Challenge",
+        "supply": 28,
+        "init": 14423,
+        "end": 14450
+    },
+    {
+        "name": "Zapper",
+        "supply": 48,
+        "init": 14451,
+        "end": 14498
+    },
+    {
+        "name": "Barbie and The Magic of Pegasus",
+        "supply": 18,
+        "init": 14499,
+        "end": 14516
+    },
+    {
+        "name": "Aero the Acro-Bat - Rascal Rival Revenge",
+        "supply": 29,
+        "init": 14517,
+        "end": 14545
+    },
+    {
+        "name": "Hamtaro - Ham-Ham Heartbreak",
+        "supply": 15,
+        "init": 14546,
+        "end": 14560
+    },
+    {
+        "name": "Chicken Shoot",
+        "supply": 16,
+        "init": 14561,
+        "end": 14576
+    },
+    {
+        "name": "ZooCube",
+        "supply": 23,
+        "init": 14577,
+        "end": 14599
+    },
+    {
+        "name": "Ford Racing 3",
+        "supply": 10,
+        "init": 14600,
+        "end": 14609
+    },
+    {
+        "name": "Mary-Kate and Ashley - Sweet 16 - Licensed to Drive",
+        "supply": 36,
+        "init": 14610,
+        "end": 14645
+    },
+    {
+        "name": "Cartoon Network Collection - Premium Edition",
+        "supply": 33,
+        "init": 14646,
+        "end": 14678
+    },
+    {
+        "name": "X-Men - The Official Game",
+        "supply": 48,
+        "init": 14679,
+        "end": 14726
+    },
+    {
+        "name": "Classic NES Series - Super Mario Bros.",
+        "supply": 27,
+        "init": 14727,
+        "end": 14753
+    },
+    {
+        "name": "Pac-Man World 2",
+        "supply": 23,
+        "init": 14754,
+        "end": 14776
+    },
+    {
+        "name": "Pokemon - Volume 1",
+        "supply": 15,
+        "init": 14777,
+        "end": 14791
+    },
+    {
+        "name": "Oddworld - Munch's Oddysee",
+        "supply": 28,
+        "init": 14792,
+        "end": 14819
+    },
+    {
+        "name": "Jet Grind Radio",
+        "supply": 35,
+        "init": 14820,
+        "end": 14854
+    },
+    {
+        "name": "Barbie as The Island Princess",
+        "supply": 12,
+        "init": 14855,
+        "end": 14866
+    },
+    {
+        "name": "Sports Illustrated For Kids Football",
+        "supply": 31,
+        "init": 14867,
+        "end": 14897
+    },
+    {
+        "name": "Tony Hawk's Pro Skater 4",
+        "supply": 40,
+        "init": 14898,
+        "end": 14937
+    },
+    {
+        "name": "Activision Anthology",
+        "supply": 33,
+        "init": 14938,
+        "end": 14970
+    },
+    {
+        "name": "Killer 3D Pool",
+        "supply": 44,
+        "init": 14971,
+        "end": 15014
+    },
+    {
+        "name": "Pocky & Rocky with Becky",
+        "supply": 37,
+        "init": 15015,
+        "end": 15051
+    },
+    {
+        "name": "Teenage Mutant Ninja Turtles 2 - Battle Nexus",
+        "supply": 25,
+        "init": 15052,
+        "end": 15076
+    },
+    {
+        "name": "Super Puzzle Fighter II Turbo",
+        "supply": 20,
+        "init": 15077,
+        "end": 15096
+    },
+    {
+        "name": "Grim Adventures of Billy and Mandy, The",
+        "supply": 40,
+        "init": 15097,
+        "end": 15136
+    },
+    {
+        "name": "Game Shark GBA",
+        "supply": 27,
+        "init": 15137,
+        "end": 15163
+    },
+    {
+        "name": "Dual Blades",
+        "supply": 27,
+        "init": 15164,
+        "end": 15190
+    },
+    {
+        "name": "Ten Pin Alley 2",
+        "supply": 11,
+        "init": 15191,
+        "end": 15201
+    },
+    {
+        "name": "Duel Masters - Sempai Legends",
+        "supply": 50,
+        "init": 15202,
+        "end": 15251
+    },
+    {
+        "name": "Reign of Fire",
+        "supply": 19,
+        "init": 15252,
+        "end": 15270
+    },
+    {
+        "name": "Smashing Drive",
+        "supply": 17,
+        "init": 15271,
+        "end": 15287
+    },
+    {
+        "name": "VeggieTales - LarryBoy and the Bad Apple",
+        "supply": 46,
+        "init": 15288,
+        "end": 15333
+    },
+    {
+        "name": "Bratz",
+        "supply": 38,
+        "init": 15334,
+        "end": 15371
+    },
+    {
+        "name": "Spider-Man 3",
+        "supply": 18,
+        "init": 15372,
+        "end": 15389
+    },
+    {
+        "name": "Foster's Home for Imaginary Friends",
+        "supply": 48,
+        "init": 15390,
+        "end": 15437
+    },
+    {
+        "name": "Shrek the Third",
+        "supply": 49,
+        "init": 15438,
+        "end": 15486
+    },
+    {
+        "name": "Back to Stone",
+        "supply": 21,
+        "init": 15487,
+        "end": 15507
+    },
+    {
+        "name": "Cheetah Girls, The",
+        "supply": 27,
+        "init": 15508,
+        "end": 15534
+    },
+    {
+        "name": "Backyard Football 2006",
+        "supply": 29,
+        "init": 15535,
+        "end": 15563
+    },
+    {
+        "name": "Sudoku Fever",
+        "supply": 28,
+        "init": 15564,
+        "end": 15591
+    },
+    {
+        "name": "SpongeBob SquarePants - Revenge of The Flying Dutchman",
+        "supply": 32,
+        "init": 15592,
+        "end": 15623
+    },
+    {
+        "name": "Greg Hastings' Tournament Paintball Max'd",
+        "supply": 33,
+        "init": 15624,
+        "end": 15656
+    },
+    {
+        "name": "Battle B-Daman - Fire Spirits!",
+        "supply": 32,
+        "init": 15657,
+        "end": 15688
+    },
+    {
+        "name": "Extreme Ghostbusters - Code Ecto-1",
+        "supply": 12,
+        "init": 15689,
+        "end": 15700
+    },
+    {
+        "name": "F-Zero GP Legend",
+        "supply": 26,
+        "init": 15701,
+        "end": 15726
+    },
+    {
+        "name": "Fairly Odd Parents!, The - Shadow Showdown",
+        "supply": 44,
+        "init": 15727,
+        "end": 15770
+    },
+    {
+        "name": "Duke Nukem Advance",
+        "supply": 30,
+        "init": 15771,
+        "end": 15800
+    },
+    {
+        "name": "LEGO Drome Racers",
+        "supply": 38,
+        "init": 15801,
+        "end": 15838
+    },
+    {
+        "name": "Summon Night - Swordcraft Story 2",
+        "supply": 34,
+        "init": 15839,
+        "end": 15872
+    },
+    {
+        "name": "Defender",
+        "supply": 28,
+        "init": 15873,
+        "end": 15900
+    },
+    {
+        "name": "Fire Pro Wrestling 2",
+        "supply": 28,
+        "init": 15901,
+        "end": 15928
+    },
+    {
+        "name": "Disney's Finding Nemo - The Continuing Adventures",
+        "supply": 41,
+        "init": 15929,
+        "end": 15969
+    },
+    {
+        "name": "Kid's Cards",
+        "supply": 35,
+        "init": 15970,
+        "end": 16004
+    },
+    {
+        "name": "Incredibles, The - Rise of the Underminer",
+        "supply": 28,
+        "init": 16005,
+        "end": 16032
+    },
+    {
+        "name": "Mighty Beanz Pocket Puzzles",
+        "supply": 16,
+        "init": 16033,
+        "end": 16048
+    },
+    {
+        "name": "Adventures of Jimmy Neutron Boy Genius, The - Attack of the Twonkies",
+        "supply": 43,
+        "init": 16049,
+        "end": 16091
+    },
+    {
+        "name": "Yu-Gi-Oh! - Ultimate Masters 2006",
+        "supply": 23,
+        "init": 16092,
+        "end": 16114
+    },
+    {
+        "name": "Street Racing Syndicate",
+        "supply": 20,
+        "init": 16115,
+        "end": 16134
+    },
+    {
+        "name": "Fairly Odd Parents!, The - Volume 2",
+        "supply": 41,
+        "init": 16135,
+        "end": 16175
+    },
+    {
+        "name": "Top Gun Firestorm Advance",
+        "supply": 21,
+        "init": 16176,
+        "end": 16196
+    },
+    {
+        "name": "Nicktoons - Freeze Frame Frenzy",
+        "supply": 34,
+        "init": 16197,
+        "end": 16230
+    },
+    {
+        "name": "WWE - Survivor Series",
+        "supply": 17,
+        "init": 16231,
+        "end": 16247
+    },
+    {
+        "name": "Spy Kids Challenger",
+        "supply": 10,
+        "init": 16248,
+        "end": 16257
+    },
+    {
+        "name": "Rocket Power - Beach Bandits",
+        "supply": 14,
+        "init": 16258,
+        "end": 16271
+    },
+    {
+        "name": "Teen Titans",
+        "supply": 41,
+        "init": 16272,
+        "end": 16312
+    },
+    {
+        "name": "Boulder Dash EX",
+        "supply": 49,
+        "init": 16313,
+        "end": 16361
+    },
+    {
+        "name": "Tiny Toon Adventures - Scary Dreams",
+        "supply": 37,
+        "init": 16362,
+        "end": 16398
+    },
+    {
+        "name": "Dogz 2",
+        "supply": 38,
+        "init": 16399,
+        "end": 16436
+    },
+    {
+        "name": "Care Bears - The Care Quests",
+        "supply": 48,
+        "init": 16437,
+        "end": 16484
+    },
+    {
+        "name": "Uno Free Fall",
+        "supply": 39,
+        "init": 16485,
+        "end": 16523
+    },
+    {
+        "name": "Elf Bowling 1 & 2",
+        "supply": 36,
+        "init": 16524,
+        "end": 16559
+    },
+    {
+        "name": "Tiger Woods PGA Tour 2004",
+        "supply": 41,
+        "init": 16560,
+        "end": 16600
+    },
+    {
+        "name": "Ms. Pac-Man - Maze Madness",
+        "supply": 20,
+        "init": 16601,
+        "end": 16620
+    },
+    {
+        "name": "Scooby-Doo! - Mystery Mayhem",
+        "supply": 11,
+        "init": 16621,
+        "end": 16631
+    },
+    {
+        "name": "Matchbox Cross Town Heroes",
+        "supply": 22,
+        "init": 16632,
+        "end": 16653
+    },
+    {
+        "name": "Aggressive Inline",
+        "supply": 35,
+        "init": 16654,
+        "end": 16688
+    },
+    {
+        "name": "Ballistic - Ecks vs. Sever",
+        "supply": 15,
+        "init": 16689,
+        "end": 16703
+    },
+    {
+        "name": "Drake and Josh",
+        "supply": 15,
+        "init": 16704,
+        "end": 16718
+    },
+    {
+        "name": "Bionicle - Heroes",
+        "supply": 34,
+        "init": 16719,
+        "end": 16752
+    },
+    {
+        "name": "Bratz - Babyz",
+        "supply": 46,
+        "init": 16753,
+        "end": 16798
+    },
+    {
+        "name": "Sega Arcade Gallery",
+        "supply": 47,
+        "init": 16799,
+        "end": 16845
+    },
+    {
+        "name": "Charlotte's Web",
+        "supply": 13,
+        "init": 16846,
+        "end": 16858
+    },
+    {
+        "name": "Spy Kids 3-D - Game Over",
+        "supply": 47,
+        "init": 16859,
+        "end": 16905
+    },
+    {
+        "name": "Operation Armored Liberty",
+        "supply": 25,
+        "init": 16906,
+        "end": 16930
+    },
+    {
+        "name": "Classic NES Series - Zelda II - The Adventure of Link",
+        "supply": 31,
+        "init": 16931,
+        "end": 16961
+    },
+    {
+        "name": "Thunder Alley",
+        "supply": 18,
+        "init": 16962,
+        "end": 16979
+    },
+    {
+        "name": "Disney's That's SO Raven 2 - Supernatural Style",
+        "supply": 38,
+        "init": 16980,
+        "end": 17017
+    },
+    {
+        "name": "Wakeboarding Unleashed featuring Shaun Murray",
+        "supply": 16,
+        "init": 17018,
+        "end": 17033
+    },
+    {
+        "name": "Advance Guardian Heroes",
+        "supply": 17,
+        "init": 17034,
+        "end": 17050
+    },
+    {
+        "name": "Casper",
+        "supply": 24,
+        "init": 17051,
+        "end": 17074
+    },
+    {
+        "name": "Disney Sports - Snowboarding",
+        "supply": 30,
+        "init": 17075,
+        "end": 17104
+    },
+    {
+        "name": "WWF - Road to Wrestlemania",
+        "supply": 27,
+        "init": 17105,
+        "end": 17131
+    },
+    {
+        "name": "Danny Phantom - The Ultimate Enemy",
+        "supply": 45,
+        "init": 17132,
+        "end": 17176
+    },
+    {
+        "name": "Cartoon Network Collection - Platinum Edition",
+        "supply": 10,
+        "init": 17177,
+        "end": 17186
+    },
+    {
+        "name": "Knights' Kingdom",
+        "supply": 29,
+        "init": 17187,
+        "end": 17215
+    },
+    {
+        "name": "Spirits & Spells",
+        "supply": 11,
+        "init": 17216,
+        "end": 17226
+    },
+    {
+        "name": "NASCAR Heat 2002",
+        "supply": 49,
+        "init": 17227,
+        "end": 17275
+    },
+    {
+        "name": "Cabela's Big Game Hunter",
+        "supply": 47,
+        "init": 17276,
+        "end": 17322
+    },
+    {
+        "name": "Final Fantasy IV Advance",
+        "supply": 30,
+        "init": 17323,
+        "end": 17352
+    },
+    {
+        "name": "Bubble Bobble - Old & New",
+        "supply": 19,
+        "init": 17353,
+        "end": 17371
+    },
+    {
+        "name": "Barbie in The 12 Dancing Princesses",
+        "supply": 10,
+        "init": 17372,
+        "end": 17381
+    },
+    {
+        "name": "Robot Wars - Advanced Destruction",
+        "supply": 29,
+        "init": 17382,
+        "end": 17410
+    },
+    {
+        "name": "Rugrats - I Gotta Go Party",
+        "supply": 24,
+        "init": 17411,
+        "end": 17434
+    },
+    {
+        "name": "Snood 2 - Snoods on Vacation",
+        "supply": 19,
+        "init": 17435,
+        "end": 17453
+    },
+    {
+        "name": "LEGO Football Mania",
+        "supply": 45,
+        "init": 17454,
+        "end": 17498
+    },
+    {
+        "name": "Nicktoons Unite!",
+        "supply": 30,
+        "init": 17499,
+        "end": 17528
+    },
+    {
+        "name": "Dr. Seuss' The Cat in the Hat - Super Stoop",
+        "supply": 49,
+        "init": 17529,
+        "end": 17577
+    },
+    {
+        "name": "Disney's The Haunted Mansion",
+        "supply": 10,
+        "init": 17578,
+        "end": 17587
+    },
+    {
+        "name": "CIMA - The Enemy",
+        "supply": 23,
+        "init": 17588,
+        "end": 17610
+    },
+    {
+        "name": "Classic NES Series - Castlevania",
+        "supply": 22,
+        "init": 17611,
+        "end": 17632
+    },
+    {
+        "name": "Medabots AX",
+        "supply": 15,
+        "init": 17633,
+        "end": 17647
+    },
+    {
+        "name": "Harvest Moon - More Friends of Mineral Town",
+        "supply": 37,
+        "init": 17648,
+        "end": 17684
+    },
+    {
+        "name": "Klonoa 2 - Dream Champ Tournament",
+        "supply": 31,
+        "init": 17685,
+        "end": 17715
+    },
+    {
+        "name": "Fairly Odd Parents!, The - Volume 1",
+        "supply": 46,
+        "init": 17716,
+        "end": 17761
+    },
+    {
+        "name": "Street Fighter Alpha 3",
+        "supply": 14,
+        "init": 17762,
+        "end": 17775
+    },
+    {
+        "name": "Adventures of Mr. Bean Demo",
+        "supply": 36,
+        "init": 17776,
+        "end": 17811
+    },
+    {
+        "name": "Uno 52",
+        "supply": 33,
+        "init": 17812,
+        "end": 17844
+    },
+    {
+        "name": "Earthworm Jim",
+        "supply": 26,
+        "init": 17845,
+        "end": 17870
+    },
+    {
+        "name": "Fantastic 4",
+        "supply": 19,
+        "init": 17871,
+        "end": 17889
+    },
+    {
+        "name": "Scrabble Blast!",
+        "supply": 21,
+        "init": 17890,
+        "end": 17910
+    },
+    {
+        "name": "Polly Pocket - Super Splash Island",
+        "supply": 49,
+        "init": 17911,
+        "end": 17959
+    },
+    {
+        "name": "Hardcore Pinball",
+        "supply": 28,
+        "init": 17960,
+        "end": 17987
+    },
+    {
+        "name": "Final Fantasy VI Advance",
+        "supply": 49,
+        "init": 17988,
+        "end": 18036
+    },
+    {
+        "name": "Fairly Odd Parents!, The - Clash With The Anti-World",
+        "supply": 21,
+        "init": 18037,
+        "end": 18057
+    },
+    {
+        "name": "Driver 2 Advance",
+        "supply": 32,
+        "init": 18058,
+        "end": 18089
+    },
+    {
+        "name": "Blades of Thunder",
+        "supply": 26,
+        "init": 18090,
+        "end": 18115
+    },
+    {
+        "name": "Mobile Suit Gundam Seed - Battle Assault",
+        "supply": 16,
+        "init": 18116,
+        "end": 18131
+    },
+    {
+        "name": "Golden Nugget Casino",
+        "supply": 35,
+        "init": 18132,
+        "end": 18166
+    },
+    {
+        "name": "Disney Sports - Soccer",
+        "supply": 18,
+        "init": 18167,
+        "end": 18184
+    },
+    {
+        "name": "Revenge of Shinobi, The",
+        "supply": 37,
+        "init": 18185,
+        "end": 18221
+    },
+    {
+        "name": "Sonic X - Volume 1",
+        "supply": 35,
+        "init": 18222,
+        "end": 18256
+    },
+    {
+        "name": "Davis Cup",
+        "supply": 36,
+        "init": 18257,
+        "end": 18292
+    },
+    {
+        "name": "Megaman Battle Network 3",
+        "supply": 22,
+        "init": 18293,
+        "end": 18314
+    },
+    {
+        "name": "Kirby & The Amazing Mirror",
+        "supply": 50,
+        "init": 18315,
+        "end": 18364
+    },
+    {
+        "name": "Classic NES Series - Dr. Mario",
+        "supply": 20,
+        "init": 18365,
+        "end": 18384
+    },
+    {
+        "name": "Shaun Palmer's Pro Snowboarder",
+        "supply": 23,
+        "init": 18385,
+        "end": 18407
+    },
+    {
+        "name": "Dora's World Adventure",
+        "supply": 18,
+        "init": 18408,
+        "end": 18425
+    },
+    {
+        "name": "Santa Clause 3, The - The Escape Clause",
+        "supply": 22,
+        "init": 18426,
+        "end": 18447
+    },
+    {
+        "name": "BlackThorne",
+        "supply": 27,
+        "init": 18448,
+        "end": 18474
+    },
+    {
+        "name": "Tom and Jerry - Infurnal Escape",
+        "supply": 49,
+        "init": 18475,
+        "end": 18523
+    },
+    {
+        "name": "Strike Force Hydra",
+        "supply": 37,
+        "init": 18524,
+        "end": 18560
+    }
+]
