@@ -55,7 +55,7 @@ async function readFile(filePath) {
       }
 
       console.log(name.trim()+".gba");
-      const url = await cdnupload(fileBuffer,name.trim()+".gba" ); // Assuming cdnupload is accessible
+      const url = await cdnupload(fileBuffer,name.trim()); // Assuming cdnupload is accessible
       // urls.push(url);
     }
   }
