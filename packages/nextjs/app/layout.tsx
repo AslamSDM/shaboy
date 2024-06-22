@@ -6,7 +6,7 @@ import "~~/styles/globals.css";
 import "~~/styles/createForm.css";
 import "~~/styles/emulator.css";
 import "~~/styles/homepage.css";
-import "~~/styles/BannerArea.css"
+// import "~~/styles/BannerArea.css"
 import "~~/styles/askai.css"
 import "~~/node_modules/sal.js/dist/sal.css"
 
