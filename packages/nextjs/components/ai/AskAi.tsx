@@ -23,7 +23,7 @@ const AskAI = () => {
             userAddress: _user,
             emotion: _mood
         }
-        const res = await fetch('http://localhost:3000/api/ai', {
+        const res = await fetch('/api/ai', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

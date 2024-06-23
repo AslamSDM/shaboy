@@ -17,16 +17,42 @@ const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id:
   }
 }
 
-const getSupabase = async (addr: string) => {
+const getSupabase = async (addr: string,tab="1") => {
+  if(tab == "1"){
   const { data: Starhack, error } = await supabase
-    .from("owners").select("holdings").eq("owner", addr);
+
+    .from("ownedgames").select("*").eq("userAddress", addr);
 
   if (Starhack) {
-    console.log(Starhack[0].holdings);
-    return { holdings: Starhack[0].holdings };
+    const ownedgameid = Starhack.map((game:any) => game.game_id);
+    const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
+    return ownedgames.data;
+  }
+
+}else if(tab == "2"){
+  const { data: Starhack, error } = await supabase
+    .from("newlisting").select("*").eq("seller", addr);
+
+  if (Starhack) {
+    const ownedgameid = Starhack.map((game:any) => game.tokenid);
+    const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
+    return ownedgames.data;
   } else {
     return { error: error.message };
   }
+} else if(tab == "3"){
+  const { data: Starhack, error } = await supabase
+    .from("owners").select("*").eq("owner", addr);
+
+  if (Starhack) {
+    const ownedgameid = Starhack[0]?.mintings;
+    const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
+
+    return ownedgames.data;
+  } else {
+    return { error: error.message };
+  }
+}
 }
 
 export async function POST(req: Request) {
@@ -36,7 +62,7 @@ export async function POST(req: Request) {
   const token_id = Number(formdata.get("token_id"));
   const addr = String(formdata.get("addr")) ? String(formdata.get("addr")) : "";
   const method = String(formdata.get("method"));
-
+  const tab = String(formdata.get("tab"));
   if (!method) return new Response(JSON.stringify({ error: "Method not provided" }), { status: 400 });
 
   if (method === "update" && buyer_addr && seller_addr && token_id) {
@@ -45,7 +71,7 @@ export async function POST(req: Request) {
   }
 
   if (method === 'get') {
-    const result = await getSupabase(addr);
+    const result = await getSupabase(addr,tab??"1");
     return new Response(JSON.stringify(result), { status: 200 });
   }
 

@@ -58,6 +58,7 @@ const Main = ({ params: { slug } }: { params: Params }) => {
     return (
         <>
             {gameMetadata && <Game game={gameMetadata} />}
+
         </>
     )
 }

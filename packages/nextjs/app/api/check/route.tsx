@@ -1,4 +1,5 @@
 import { supabase } from "../../../utils/supabase";
+
 import { RpcProvider, Account, Contract } from "starknet";
 const provider = new RpcProvider({
   nodeUrl:
@@ -6,12 +7,14 @@ const provider = new RpcProvider({
 });
 
 const privateKey0 =
+
   "0x022c19376574847739db37f79db335f807d079368974acc1010698ab70422027";
 const account0Address: string =
   "0x00a3eF13C5bEC03E5996fe3ce60D46905B63afadb2686759Cf325B1D01Cc6C62";
 const account0 = new Account(provider, account0Address, privateKey0);
 const contractAddress =
   "0x0295143c4af58c29088c0cbe87163f0c3f2dd7b1eb0877345f2f59b290aa4228";
+
 
 function toHex(input: number | string): string {
   if (typeof input === "number") {
@@ -44,3 +47,4 @@ export async function POST(req: Request) {
 
   return new Response(JSON.stringify({ error: "Invalid request" }), { status: 400 });
 }
+
