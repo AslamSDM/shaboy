@@ -4,12 +4,14 @@ const data = [{
     title: "Welcome to the world of Shaboy. The ultimate gaming platform",
     description: "Join us in revolutionalizing the web3 gaming landscape.",
     button: "Play Now",
+    url: "/profile",
     image: "images/img1.png"
 },
 {
     title: "BUILD + TRADE + PLAY + EARN = SHABOY",
     description: "We are the worlds first build, trade and play to earn platform ",
     button: "Profile",
+    url: "/profile",
     image: "images/img2.png"
 
 },
@@ -17,6 +19,7 @@ const data = [{
     title: "Something that you havent seen before!",
     description: "Web2 developers can build web3 games hassle free without learning blockchain through Shaboy abstraction. This welcomes 15 million web2 devs to web3",
     button: "Create a game",
+    url: "/create",
     image: "images/img3.png"
 
 },
@@ -24,6 +27,7 @@ const data = [{
     title: "Join us in revolutionalizing the web3 gaming landscape",
     description: "Explore our platform to, Buy games play and earn. If you are a game developer, checkout our create games page",
     button: "Goto marketplace",
+    url: "/marketplace",
     image: "images/img4.png"
 
 },
@@ -31,6 +35,7 @@ const data = [{
     title: "Don't know what to play? Shaboy AI will help you",
     description: "SHABOY AI is a cutting edge AI chat bot which helps you  by suggesting games depending on your mood and previous gaming history",
     button: "Shaboy AI",
+    url: "/suggest-game",
     image: "images/img5.png"
 
 }]
@@ -64,7 +69,7 @@ const BannerArea = () => {
                             {data[count].description}
                         </p>
                         <a
-                            href=""
+                            href={data[count].url}
                             className="rounded-[4px] mt-[20px] px-[34px] py-[15px] min-w-[160px] bg-[#00a3ff] hover:bg-[#005384]"
                         >
                             {data[count].button}
