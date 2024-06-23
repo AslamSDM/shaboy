@@ -51,6 +51,7 @@ export async function GET(req: Request) {
 
   const link = new URL(req.url);
   const gameId = link.searchParams.get("gameId");
+  
   // const ownedgames = await supabase
   //   .from("ownedgames")
   //   .select("*")

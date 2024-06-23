@@ -49,7 +49,7 @@ export default function Page({ params: { slug } }: { params: Params }) {
       }
     }
     
-    checkOwnership();
+    // checkOwnership();
     if (!address) {
       toast.error("Please connect your wallet to continue");
     }
