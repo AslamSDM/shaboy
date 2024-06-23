@@ -37,7 +37,7 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) =>
                 <div className="card-thumbnail">
         
 
-                    <a href={"/play/"+product.id}>
+                    <a href="#">
                     {
                         image &&
                         <img className="product-image" src={image} alt="" />
