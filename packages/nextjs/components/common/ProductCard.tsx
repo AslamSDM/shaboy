@@ -19,7 +19,7 @@ type Card = {
 const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) => {
     const [image, setImage] = useState<string>("")
     const handleClick = (id:string | undefined) => {
-        redirect("/play/"+id)
+        redirect("/game/"+id)
     }
     useEffect(() => {
         if (product.image) {
