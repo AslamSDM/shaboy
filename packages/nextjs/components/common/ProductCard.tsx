@@ -31,7 +31,10 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,hand
 
                     <a href="#">
                     {/* <a href={product.image}> */}
+                    {
+                        product?.image &&
                         <img className="product-image" src={(product.image).replace("ipfs://","https://ipfs.io/ipfs/")} alt="" />
+                    }
 
                     </a>
                 </div>
