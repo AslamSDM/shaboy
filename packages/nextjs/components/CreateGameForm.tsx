@@ -19,6 +19,7 @@ export default function CreateGameForm() {
   const [gameName, setGameName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(Number);
+  const [isChecked, setIsChecked] = useState(false);
   const [supply, setSupply] = useState(Number);
   const [loading, setLoading] = useState(false)
   const [mintedNFTContractAddress, setContractAddress] = useState("")

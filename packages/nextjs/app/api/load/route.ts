@@ -67,7 +67,6 @@ export async function POST(req: Request) {
     },
   });
 
-  console.log(rom);
   const gamebuff= new Uint8Array(rom.data);
 
   console.log(gamebuff);
@@ -131,7 +130,6 @@ export async function GET(req: Request) {
 function bufferToBase64(buf: Uint8Array) {
   var binary = '';
   var bytes = new Uint8Array(buf);
-  console.log(bytes);
   var len = bytes.byteLength;
   for (var i = 0; i < len; i++) {
     binary += String.fromCharCode(bytes[i]);
