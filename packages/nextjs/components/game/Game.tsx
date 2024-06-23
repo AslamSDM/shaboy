@@ -1,16 +1,18 @@
 import { FunctionComponent, useEffect, useState } from "react"
 import ListNowModal from "./ListModal"
-
+import axios from "axios"
 import { useAccount, useNetwork } from "@starknet-react/core";
 import { useRouter } from "next/navigation";
-
-
+import {useScaffoldMultiWriteContract} from "~~/hooks/scaffold-stark/useScaffoldMultiWriteContract"
+import { id } from "ethers";
 type Game = {
     id: number,
     name: string,
     description: string,
     supply: number,
-    image: string
+    image: string,
+    price:number,
+    seller:string
 }
 
 type Props = {
@@ -18,18 +20,56 @@ type Props = {
 }
 
 const Game: FunctionComponent<Props> = ({ game }) => {
+    const formData=new FormData()
     const router = useRouter();
     const { address, status: walletConnectionStatus, chainId } = useAccount();
-    const [isBought, setIsBought] = useState(true);
-    const [loading, setLoading] = useState(false);
+    const [isBought, setIsBought] = useState(false);
+    const { address: connectedAddress } = useAccount();
 
-    const isOwnedByAddress = (addr: string, game_id: number) => {
-        
-    }
+
+  
+    const { writeAsync: buy } = useScaffoldMultiWriteContract({
+      calls: [
+        {
+          contractName: "Eth",
+          functionName: "approve",
+          args: [connectedAddress, game.price * 10 ** 18],
+        },
+        {
+          contractName: "ShaboyGames",
+          functionName: "buy_nft",
+          args: [game.id, game.price * 10 ** 18],
+        },
+      ],
+    });
+  
+    const buy_nft = async () => {
+      if (game.id && game.price && connectedAddress) {
+        buy();
+      }
+      formData.append("token_id", game.id.toString());
+      formData.append("seller_addr", game.seller.toString());
+      formData.append("buyer_addr",String(connectedAddress))
+      formData.append("method","update")
+      
+      await axios.post("/api/create/update_owner", formData);
+    };
+  
 
     useEffect(() => {
-        // if (walletConnectionStatus == 'connected' && address) 
-    }, [])
+        if (walletConnectionStatus == 'connected' && address) {
+            formData.append("addr",address)
+            formData.append("token_id",game?.id.toString())
+            const getOwner=async()=>{
+                const res=  (await (axios.post("/api/check",formData)))
+                console.log(res.data)
+                 setIsBought((res.data))
+            }
+            getOwner()
+        }
+
+           
+    }, [address])
 
     console.log(address, walletConnectionStatus, chainId)
 
@@ -51,7 +91,7 @@ const Game: FunctionComponent<Props> = ({ game }) => {
                 {
                     !isBought &&
                     <div className="pt-[20px]">
-                        <div className="flex justify-center py-[15px] w-full bg-[#3fbe1e] hover:bg-[#40942a] rounded-[10px] font-extrabold text-[1.2em] cursor-pointer">
+                        <div className="flex justify-center py-[15px] w-full bg-[#3fbe1e] hover:bg-[#40942a] rounded-[10px] font-extrabold text-[1.2em] cursor-pointer" onClick={buy_nft}>
                             Buy Now
                         </div>
                     </div>
@@ -82,7 +122,7 @@ const Game: FunctionComponent<Props> = ({ game }) => {
                         </div>
                     </div>
                 }
-                <ListNowModal />
+                <ListNowModal game={{connectedAddress:connectedAddress,id:game.id}} />
             </div>
 
         </div>
