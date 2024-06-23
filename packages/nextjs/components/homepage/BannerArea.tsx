@@ -36,7 +36,9 @@ const data = [{
 
 const BannerArea = () => {
     return (
-        <div className="flex justify-center items-center py-[45px] md:py-[80px] px-[20px] lg:px-[0px] pb-[80px]">
+        <>{
+        data.map((d) => {
+            <div className="flex justify-center items-center py-[45px] md:py-[80px] px-[20px] lg:px-[0px] pb-[80px]">
             <div className="flex flex-col-reverse md:flex-row md:max-w[90%] lg:max-w-[1140px] px-[16px]">
                 <div className="content md:w-[60%] sm:px-[50px]">
                     <h2
@@ -44,17 +46,17 @@ const BannerArea = () => {
                         data-sal-delay="200"
                         data-sal="slide-up"
                         data-sal-duration="800"
-                    >
-                        {data.title}
+                        >
+                        {d.title}
                     </h2>
                     <p
                         className="pb-[30px] lg:max-w-[70%] text-[22px] text-[#ababab]"
                         data-sal-delay="300"
                         data-sal="slide-up"
                         data-sal-duration="800"
-
-                    >
-                        {data.description}
+                        
+                        >
+                        {d.description}
                     </p>
                     <a 
                         href="" 
@@ -63,16 +65,19 @@ const BannerArea = () => {
                         data-sal="slide-up"
                         data-sal-duration="800"
                     >
-                        {data.button}
+                        {d.button}
                     </a>
                 </div>
                 <div className="md:pl-[7%] lg:px-[3%] sm:px-[50px]">
                     <div className="image">
-                        <img src={data.image} className="max-h-[80vh] w-full" alt="shaboy" />
+                        <img src={d.image} className="max-h-[80vh] w-full" alt="shaboy" />
                     </div>
                 </div>
             </div>
         </div>
+})}
+
+                        </>
     )
 }
 

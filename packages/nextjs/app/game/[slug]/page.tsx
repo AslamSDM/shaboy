@@ -13,7 +13,7 @@ const Main = ({ params: { slug } }: { params: Params })=> {
     // slug == 'mario'
     return(
         <>
-            {slug == "mario" ? <Game /> : "Game Not Found"}
+            {String(slug) == "mario" ? <Game /> : "Game Not Found"}
         </>
     )
 }
