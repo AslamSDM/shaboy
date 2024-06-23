@@ -63,6 +63,7 @@ export async function POST(req: Request) {
   const addr = String(formdata.get("addr")) ? String(formdata.get("addr")) : "";
   const method = String(formdata.get("method"));
   const tab = String(formdata.get("tab"));
+  console.log({ buyer_addr, seller_addr, token_id, addr, method, tab });
   if (!method) return new Response(JSON.stringify({ error: "Method not provided" }), { status: 400 });
 
   if (method === "update" && buyer_addr && seller_addr && token_id) {

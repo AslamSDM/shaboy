@@ -79,6 +79,7 @@ const ProfilePage = () => {
     const {address ,status} = useAccount();
     useEffect(() => {
         async function getOwnedGames(){
+            if(!address) return;
             const formdata = new FormData();
             formdata.append("addr", address??"");
             formdata.append("method", "get");
@@ -96,7 +97,7 @@ const ProfilePage = () => {
             setList(res.data);
         }
         getOwnedGames();
-    },[tab, address])
+    },[tab,address])
 
     const handleClick = (t:Number) => {
         setTab(t);
@@ -105,7 +106,6 @@ const ProfilePage = () => {
         if(t == 3) setList(created);
     }
     const shortenAddress = (address:string) => `${address.slice(0, 6)}...${address.slice(-4)}`;
-
     return (
         <div className="">
             <div className="banner-image w-full h-[200px] bg-no-repeat bg-cover bg-center bg-[url('https://www.rainbowit.net/html/nuron/assets/images/bg/bg-image-9.jpg')]"></div>
@@ -126,8 +126,8 @@ const ProfilePage = () => {
             </div>
             <div className="w-full flex">
                 <div className="w-full flex flex-col sm:flex-row py-[30px] md:py-[60px] gap-[2.25rem] px-[30px] sm:px-[60px] sm:flex-wrap">
-                    {
-                        list.map((product, i) => {
+                    {list &&
+                        list?.map((product, i) => {
                             return (
                                 
                                 <ProductCard key={i} product={product} style={'sm:w-[45%] lg:w-[25%] xl:w-[20%]'} animation={false}/>
