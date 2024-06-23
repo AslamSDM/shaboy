@@ -64,7 +64,7 @@ const MarketPlace = () => {
       setTokenId(token_id);
       list();
     }
-    await axios.post("/api/create")
+    await axios.post("/api/create",{token_id,price})
   };
 
   useEffect(() => {
