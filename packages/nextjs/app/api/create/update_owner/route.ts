@@ -21,17 +21,16 @@ const getSupabase = async (addr: string,tab="1") => {
   if(tab == "1"){
   const { data: Starhack, error } = await supabase
 
-    .from("ownedgames").select("*").eq("userAddress", addr);
-
+    .from("owners").select("holdings").eq("owner", addr);
   if (Starhack) {
-    const ownedgameid = Starhack.map((game:any) => game.game_id);
+    const ownedgameid = Starhack[0]?.holdings
     const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
     return ownedgames.data;
   }
 
 }else if(tab == "2"){
   const { data: Starhack, error } = await supabase
-    .from("newlisting").select("*").eq("seller", addr);
+    .from("marketplace").select("*").eq("seller", addr);
 
   if (Starhack) {
     const ownedgameid = Starhack.map((game:any) => game.tokenid);
@@ -45,7 +44,7 @@ const getSupabase = async (addr: string,tab="1") => {
     .from("owners").select("*").eq("owner", addr);
 
   if (Starhack) {
-    const ownedgameid = Starhack[0]?.mintings;
+    const ownedgameid = Starhack[0]?.minted;
     const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
 
     return ownedgames.data;
