@@ -27,40 +27,8 @@ const getSupabase = async (addr: string,tab="1") => {
     const ownedgameid = Starhack.map((game:any) => game.game_id);
     const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
     return ownedgames.data;
-
-  } else {
-    const newdata =Starhack[0].holdings
-    let data:number[]=[]
-    if (newdata.length>12){
-      for(let i =0;i<12;i++){
-        let randI=Math.floor(Math.random() * newdata.length)
-        data.push(newdata[randI])
-      }
-
-    }
-    else{
-      data=newdata
-    }
-    const dataReturn: any[] = [];
-    for (let i = 0; i < data.length; i++) {
-      let { data: Metadata, error } = await supabase
-        .from("gamedata")
-        .select("metadata")
-        .eq("id", data[i]);
-      if (error) {
-        console.log(error);
-        return { error: error.message };
-      }
-      if (!Metadata || Metadata.length === 0) {
-        console.log("Metadata not found for ID:", data[i]);
-      } else {
-        const newData=(Metadata[0]?.metadata)
-        newData.token_id=data[i]
-        dataReturn.push(newData);
-      }
-    }
-    return dataReturn;
   }
+
 }else if(tab == "2"){
   const { data: Starhack, error } = await supabase
     .from("newlisting").select("*").eq("seller", addr);
@@ -95,7 +63,6 @@ export async function POST(req: Request) {
   const addr = String(formdata.get("addr")) ? String(formdata.get("addr")) : "";
   const method = String(formdata.get("method"));
   const tab = String(formdata.get("tab"));
-  console.log(buyer_addr, seller_addr, token_id, addr, method);
   if (!method) return new Response(JSON.stringify({ error: "Method not provided" }), { status: 400 });
 
   if (method === "update" && buyer_addr && seller_addr && token_id) {
