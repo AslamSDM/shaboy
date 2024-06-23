@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 
 type Props = {
     product: any,
@@ -17,7 +17,12 @@ type Card = {
 
 
 const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,handleClick}) => {
-
+    const [image, setImage] = useState<string>("")
+    useEffect(() => {
+        if (product.image) {
+            setImage((product.image).replace("ipfs://","https://ipfs.io/ipfs/"))
+        }
+    },[product.image])
     return (
         <div onClick={handleClick}
             className={`product-card ${style}`}
@@ -32,8 +37,8 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,hand
                     <a href="#">
                     {/* <a href={product.image}> */}
                     {
-                        product?.image &&
-                        <img className="product-image" src={(product.image).replace("ipfs://","https://ipfs.io/ipfs/")} alt="" />
+                        image &&
+                        <img className="product-image" src={image} alt="" />
                     }
 
                     </a>
