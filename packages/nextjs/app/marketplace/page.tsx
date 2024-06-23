@@ -64,7 +64,7 @@ const MarketPlace = () => {
       setTokenId(token_id);
       list();
     }
-    await axios.post("/api/create")
+    await axios.post("/api/create",{token_id,price})
   };
 
   useEffect(() => {
@@ -97,9 +97,7 @@ const MarketPlace = () => {
                 key={i}
                 style={"sm:w-[45%] lg:w-[25%] xl:w-[20%]"}
                 animation={false}
-                handleClick={() =>
-                  buy_nft(product.token_id, product.price, product.seller)
-                }
+  
               />
             );
           })}

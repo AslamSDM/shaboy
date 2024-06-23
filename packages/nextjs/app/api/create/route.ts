@@ -66,7 +66,7 @@ const get_activeListing = async () => {
       }
       if(!price){return {error:"cant fetch price"}}
       if(!seller)return {error:"cant find seller"}
-      newData.token_id=data[i]
+      newData.id=data[i]
       newData.price=price[0].price
       newData.seller=seller[0].seller
       dataReturn.push(newData);

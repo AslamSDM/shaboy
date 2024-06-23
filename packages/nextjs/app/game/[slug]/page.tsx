@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import Game from "~~/components/game/Game";
 
@@ -11,24 +12,33 @@ type GameType = {
     name: string,
     description: string,
     supply: number,
-    image: string
+    image: string,
+    price:number,
+    seller:string
 }
 
 const Main = ({ params: { slug } }: { params: Params }) => {
-
+    const formData = new FormData()
     const [gameMetadata, setGameMetadata] = useState<GameType | null>(null);
+    const [price,setPrice]=useState()
 
     useEffect(() => {
         fetchGameData(slug)
+        fetchGamePrice(slug)
     }, [slug])
+const fetchGamePrice =async(id:number)=>{
+    formData.append("token_id",String(slug))
+    const response = await axios.post("/api/getprice",formData)
+    setPrice(response.data)
 
+}
     const fetchGameData = async (game_id: number) => {
         const data = {
             id: game_id
         }
 
         try {
-            const res = await fetch('http://localhost:3000/api/findGameFromID', {
+            const res = await fetch('/api/findGameFromID', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,6 +55,8 @@ const Main = ({ params: { slug } }: { params: Params }) => {
                 description:game.metadata.description,
                 image: `https://ipfs.io/ipfs/${game.metadata.image.replace('ipfs://', '')}`,
                 supply:game.metadata.supply,
+                price:price?price:0,
+                seller:game.metadata.seller
             }
 
             setGameMetadata(_game);

@@ -31,6 +31,8 @@ export default function Page({ params: { slug } }: { params: Params }) {
     console.log(slug);
     // if (slug === 'mario') setGameURI('http://localhost:3000/mario.gba');
     // token id to cdn
+
+    
     async function checkOwnership() {
       try {
         const res = await axios.post("/api/load", {
