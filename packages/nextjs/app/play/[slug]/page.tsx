@@ -53,7 +53,7 @@ export default function Page({ params: { slug } }: { params: Params }) {
     if (!address) {
       toast.error("Please connect your wallet to continue");
     }
-    if (!ownedGame) return;
+    // if (!ownedGame) return;
     setGameURI("/api/load?gameId=" + slug);
   }, [slug, address]);
   return (

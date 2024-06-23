@@ -30,7 +30,7 @@ export async function POST(req: Request) {
     return Response.json({ error: "Invalid request" });
   }
   const ownedgames = await supabase
-    .from("ownedgames")
+    .from("owners")
     .select("*")
     .eq("userAddress", userAddress);
   if (ownedgames.error) {
@@ -51,7 +51,7 @@ export async function GET(req: Request) {
 
   const link = new URL(req.url);
   const gameId = link.searchParams.get("gameId");
-  
+
   // const ownedgames = await supabase
   //   .from("ownedgames")
   //   .select("*")
