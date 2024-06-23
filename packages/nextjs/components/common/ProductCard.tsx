@@ -34,7 +34,7 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,hand
                 <div className="card-thumbnail">
         
 
-                    <a href="#">
+                    <a href={"/play"+product?.id}>
                     {/* <a href={product.image}> */}
                     {
                         image &&
