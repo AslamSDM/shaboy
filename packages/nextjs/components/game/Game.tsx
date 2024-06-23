@@ -2,6 +2,7 @@ import { FunctionComponent, useEffect, useState } from "react"
 import ListNowModal from "./ListModal"
 
 import { useAccount, useNetwork } from "@starknet-react/core";
+import { useRouter } from "next/navigation";
 
 
 type Game = {
@@ -17,7 +18,7 @@ type Props = {
 }
 
 const Game: FunctionComponent<Props> = ({ game }) => {
-
+    const router = useRouter();
     const { address, status: walletConnectionStatus, chainId } = useAccount();
     const [isBought, setIsBought] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -58,7 +59,10 @@ const Game: FunctionComponent<Props> = ({ game }) => {
                 {
                     isBought &&
                     <div className="pt-[20px]">
-                        <div className="flex justify-center py-[15px] w-full bg-[#3fbe1e] hover:bg-[#40942a] rounded-[10px] font-extrabold text-[1.2em] cursor-pointer">
+                        <div onClick={(e)=>{
+                            e.preventDefault();
+                            router.push(`/play/${game.id}`)
+                        }} className="flex justify-center py-[15px] w-full bg-[#3fbe1e] hover:bg-[#40942a] rounded-[10px] font-extrabold text-[1.2em] cursor-pointer">
                             Play Now
                         </div>
                     </div>

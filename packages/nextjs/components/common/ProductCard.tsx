@@ -1,4 +1,5 @@
-import { redirect } from "next/navigation";
+import { useAccount } from "@starknet-react/core";
+import { redirect, useRouter } from "next/navigation";
 import { FunctionComponent, useEffect, useState } from "react";
 
 type Props = {
@@ -18,16 +19,18 @@ type Card = {
 
 const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) => {
     const [image, setImage] = useState<string>("")
-    const handleClick = (id:string | undefined) => {
-        redirect("/game/"+id)
-    }
+    const {address, isConnected} = useAccount();
+    const router = useRouter();
     useEffect(() => {
-        if (product.image) {
-            setImage((product.image).replace("ipfs://","https://ipfs.io/ipfs/"))
+        if (product.metadata.image) {
+            setImage(`https://ipfs.io/ipfs/${product.metadata.image.replace('ipfs://', '')}`)
         }
-    },[product.image])
+    },[product.metadata.image])
     return (
-        <div onClick={handleClick(product?.id)}
+        <div onClick={(e)=>{
+            e.preventDefault();
+            router.push(`/game/${product.id}`)
+        }}
             className={`product-card ${style}`}
             data-sal-delay={`${animation && "150"}`}
             data-sal={`${animation && "slide-up"}`}
