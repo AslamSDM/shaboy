@@ -39,43 +39,12 @@ export async function POST(req: Request) {
 
   if (
     ownedgames.data.length === 0 ||
-    !ownedgames.data.some((game) => game.game_id == gameId)
+    !ownedgames.data.some((game:any) => game.game_id == gameId)
   ) {
-    return Response.json({ error: "You dont own the game" });
+    return Response.json({ data:false});
   }
-  // todo : check if the game is owned in sc
 
-  const gameDatas = await supabase
-    .from("gamedata")
-    .select("*")
-    .eq("id", gameId);
-  if (gameDatas.error) {
-    return Response.json({ error: gameDatas.error });
-  }
-  if (gameDatas.data.length === 0) {
-    return Response.json({ error: "Game not found" });
-  }
-  const gameData = gameDatas.data[0];
-  const metadata = gameData.metadata;
-  const url = `https://storage.bunnycdn.com/shaboygames/roms/${metadata.name}.gba`;
-  console.log(ACCESS_KEY);
-  const rom = await axios.get(url, {
-    responseType: "arraybuffer",
-    headers: {
-      AccessKey: ACCESS_KEY,
-      accept: '*/*'
-    },
-  });
-
-  const gamebuff= new Uint8Array(rom.data);
-
-  console.log(gamebuff);
-  const base64GameBuff = bufferToBase64(gamebuff);
-  
-  // Assuming Response.json is the way to send data
-  return Response.json({ data: base64GameBuff, contentType: 'application/json' });
-  // const cleanName = metadata.name.replace(/ /g, "%20"); 
-  // return Response.json({ url: `${cdnurl}/roms/${cleanName}.gba`});
+  return Response.json({ data: true });
 }
 
 export async function GET(req: Request) {
