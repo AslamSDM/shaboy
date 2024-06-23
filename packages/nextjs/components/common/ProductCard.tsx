@@ -1,10 +1,10 @@
+import { redirect } from "next/navigation";
 import { FunctionComponent, useEffect, useState } from "react";
 
 type Props = {
     product: any,
     style: string,
     animation: Boolean,
-    handleClick?:()=> void
 }
 
 type Card = {
@@ -16,15 +16,18 @@ type Card = {
 }
 
 
-const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,handleClick}) => {
+const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) => {
     const [image, setImage] = useState<string>("")
+    const handleClick = (id:string | undefined) => {
+        redirect("/play/"+id)
+    }
     useEffect(() => {
         if (product.image) {
             setImage((product.image).replace("ipfs://","https://ipfs.io/ipfs/"))
         }
     },[product.image])
     return (
-        <div onClick={handleClick}
+        <div onClick={handleClick(product?.id)}
             className={`product-card ${style}`}
             data-sal-delay={`${animation && "150"}`}
             data-sal={`${animation && "slide-up"}`}
