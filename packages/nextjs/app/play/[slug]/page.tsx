@@ -33,27 +33,21 @@ export default function Page({ params: { slug } }: { params: Params }) {
     // token id to cdn
 
     
-    async function checkOwnership() {
-      try {
-        const res = await axios.post("/api/load", {
-          userAddress: address,
-          gameId: slug,
-        });
-        if (res.data) {
-            console.log(res.data);
-          setOwnedGame(res.data);
-        }
-      } catch (error) {
-        console.log(error);
-        setOwnedGame(false);
-      }
-    }
+    const getOwner = async () => {
+      if(!address) return;
+      const formData = new FormData();
+      formData.append("addr", String(address));
+      formData.append("token_id", slug.toString());
+      const res = await axios.post("/api/check", formData);
+      console.log(res.data);
+      setOwnedGame(res.data);
+    };
     
-    // checkOwnership();
+    getOwner();
     if (!address) {
       toast.error("Please connect your wallet to continue");
     }
-    // if (!ownedGame) return;
+    if (!ownedGame) return;
     setGameURI("/api/load?gameId=" + slug);
   }, [slug, address]);
   return (
