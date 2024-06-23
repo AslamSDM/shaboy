@@ -41,6 +41,7 @@ const FetchROM: FunctionComponent<Props> = ({ setRomLoaded, gbaURI }) => {
   const getGameRom = async (url: string) => {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data)
     if (!response.ok) {
       throw new Error("Failed fetching ROM");
     }
