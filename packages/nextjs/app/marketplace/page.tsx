@@ -1,60 +1,87 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "~~/components/common/ProductCard";
 import sal from "sal.js";
-
-
-const products = [
-  {
-    image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82
-  },
-  {
-    image: "https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/qobt2OWZZCY7DrqtE5EyGuAbfMVrGYmTK2CeUJJM-w700-q75.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82
-  },
-  {
-    image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82
-  },
-  {
-    image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82
-  },
-  {
-    image: "https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/qobt2OWZZCY7DrqtE5EyGuAbfMVrGYmTK2CeUJJM-w700-q75.png",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82
-  },
-  {
-    image: "https://i.guim.co.uk/img/media/7c2ab1a3e60e445caf0a4d3de302591e830e8f7f/0_0_3800_2280/master/3800.jpg?width=480&dpr=1&s=none",
-    url: "#",
-    name: "Preatent",
-    price: "0.244 WETH",
-    likes: 82
-  }
-]
-
+import { useScaffoldReadContract } from "~~/hooks/scaffold-stark/useScaffoldReadContract";
+import { useScaffoldMultiWriteContract } from "~~/hooks/scaffold-stark/useScaffoldMultiWriteContract";
+import { useAccount } from "@starknet-react/core";
+import axios from "axios";
 
 const MarketPlace = () => {
+  const [price, setPrice] = useState(Number);
+  const [token_id, setTokenId] = useState(Number);
+  const [metadata, setMetadata] = useState<any[]>([]);
+  const { address: connectedAddress } = useAccount();
+
+  const { writeAsync: list } = useScaffoldMultiWriteContract({
+    calls: [
+      {
+        contractName: "ShaboyGames",
+        functionName: "list",
+        args: [token_id, price * 10 ** 18],
+      },
+    ],
+  });
+
+  const { writeAsync: buy } = useScaffoldMultiWriteContract({
+    calls: [
+      {
+        contractName: "Eth",
+        functionName: "approve",
+        args: [connectedAddress, price * 10 ** 18],
+      },
+      {
+        contractName: "ShaboyGames",
+        functionName: "buy_nft",
+        args: [token_id, price * 10 ** 18],
+      },
+    ],
+  });
+
+  const buy_nft = async (
+    token_id: number,
+    price: number,
+    seller_addr: string
+  ) => {
+    if (token_id && price && connectedAddress) {
+      setPrice(price);
+      setTokenId(token_id);
+      buy();
+    }
+    const buyer_addr = connectedAddress;
+    const method = "update"
+    await axios.post("/api/create/update_owner", {
+      seller_addr,
+      token_id,
+      buyer_addr,
+      method
+    });
+  };
+
+  const list_nft = async (token_id: number, price: number) => {
+    if (token_id && price && connectedAddress) {
+      setPrice(price);
+      setTokenId(token_id);
+      list();
+    }
+    await axios.post("/api/create")
+  };
 
   useEffect(() => {
+    const get_new_listing = async () => {
+      const newform = new FormData();
+      newform.append("method", "get");
+
+      const res = await axios.post("/api/create", newform);
+      if (res.data) {
+        console.log("xxxxxxxxxxxx", res.data);
+        setMetadata(res.data);
+      } else console.log("ERROR");
+    };
+
     sal();
-  });
+    get_new_listing();
+  }, []);
 
   return (
     <div className="flex flex-col min-h-[100vh] p-[50px]">
@@ -63,18 +90,23 @@ const MarketPlace = () => {
       </div>
       <div className="flex justify-center w-full">
         <div className="w-full flex flex-col sm:flex-row py-[30px] md:py-[60px] gap-[2.25rem] px-[30px] sm:px-[60px] sm:flex-wrap">
-          {
-            products.map((product, i) => {
-              return (
-
-                <ProductCard product={product} key={i} style={'sm:w-[45%] lg:w-[25%] xl:w-[20%]'} animation={true} />
-              )
-            })
-          }
+          {metadata.map((product, i) => {
+            return (
+              <ProductCard
+                product={product}
+                key={i}
+                style={"sm:w-[45%] lg:w-[25%] xl:w-[20%]"}
+                animation={false}
+                handleClick={() =>
+                  buy_nft(product.token_id, product.price, product.seller)
+                }
+              />
+            );
+          })}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default MarketPlace;
