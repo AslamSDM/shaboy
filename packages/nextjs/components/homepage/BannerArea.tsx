@@ -81,7 +81,8 @@ const BannerArea = () => {
                         {
                             data.map((e, i)=>{
                                 return(
-                                    <img id="BannerImage" src={e.image} className={`max-h-[80vh] w-full rounded-[10px] opacity-0 ${count == i ? 'fadeIn':'hidden'}`} alt="shaboy" />
+                                    
+                                    <img key={i} id="BannerImage" src={e.image} className={`max-h-[80vh] w-full rounded-[10px] opacity-0 ${count == i ? 'fadeIn':'hidden'}`} alt="shaboy" />
                                 )
                             })
                         }
