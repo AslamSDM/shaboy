@@ -22,10 +22,10 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) =>
     const {address, isConnected} = useAccount();
     const router = useRouter();
     useEffect(() => {
-        if (product.metadata.image) {
+        if (product?.metadata?.image) {
             setImage(`https://ipfs.io/ipfs/${product.metadata.image.replace('ipfs://', '')}`)
         }
-    },[product.metadata.image])
+    },[product?.metadata?.image])
     return (
         <div onClick={(e)=>{
             e.preventDefault();
