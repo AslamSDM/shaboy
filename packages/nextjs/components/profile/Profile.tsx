@@ -84,6 +84,7 @@ const ProfilePage = () => {
             formdata.append("method", "get");
             formdata.append("tab", tab.toString());
             const res = await axios.post("/api/create/update_owner", formdata);
+            console.log(res.data)
             if(res.data.error) return;
             if(tab == 1){
                 setOwned(res.data);

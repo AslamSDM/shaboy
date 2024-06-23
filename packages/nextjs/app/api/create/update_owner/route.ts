@@ -20,9 +20,10 @@ const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id:
 const getSupabase = async (addr: string,tab="1") => {
   if(tab == "1"){
   const { data: Starhack, error } = await supabase
-
     .from("owners").select("holdings").eq("owner", addr);
-  if (Starhack) {
+    console.log({addr})
+    console.log(Starhack)
+  if (Starhack && Starhack.length!=0) {
     const ownedgameid = Starhack[0]?.holdings
     const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
     return ownedgames.data;
@@ -68,7 +69,6 @@ export async function POST(req: Request) {
     const result = await updateSupabase(buyer_addr, seller_addr, token_id);
     return new Response(JSON.stringify(result), { status: 200 });
   }
-
   if (method === 'get') {
     const result = await getSupabase(addr,tab??"1");
     return new Response(JSON.stringify(result), { status: 200 });
