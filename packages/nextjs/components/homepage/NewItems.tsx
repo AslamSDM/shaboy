@@ -1,52 +1,26 @@
 import ProductCard from "../common/ProductCard"
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-
-const products = [
-    {
-        image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    },
-    {
-        image: "https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/qobt2OWZZCY7DrqtE5EyGuAbfMVrGYmTK2CeUJJM-w700-q75.png",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    },
-    {
-        image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    },
-    {
-        image: "https://static.javatpoint.com/top10-technologies/images/top-10-games-in-the-world1.png",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    },
-    {
-        image: "https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/qobt2OWZZCY7DrqtE5EyGuAbfMVrGYmTK2CeUJJM-w700-q75.png",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    },
-    {
-        image: "https://i.guim.co.uk/img/media/7c2ab1a3e60e445caf0a4d3de302591e830e8f7f/0_0_3800_2280/master/3800.jpg?width=480&dpr=1&s=none",
-        url: "#",
-        name: "Preatent",
-        price: "0.244 WETH",
-        likes: 82
-    }
-]
-
+import {useState,useEffect} from "react"
+import axios from "axios"
 export default function NewGames() {
+    const [metadata, setMetadata] = useState<any[]>([]);
+
+    useEffect(() => {
+        const get_active_listing = async () => {
+            const newform = new FormData();
+            newform.append("method", "get");
+        
+            const res = await axios.post(
+              "/api/create/newlisting",
+                newform
+            );
+            if (res.data) {
+                console.log("xxxxxxxxxxxx",res.data)
+              setMetadata(res.data);
+            } else console.log("ERROR");
+          };
+        get_active_listing();
+      },[]);
     return (
         <div className="w-full px-[20px]">
             <div className="px-[16px] sm:justify-center">
@@ -74,9 +48,9 @@ export default function NewGames() {
                     className="flex flex-col sm:flex-row py-[30px] md:py-[60px] gap-[2.25rem] px-[30px] sm:px-[60px] sm:flex-wrap"
                 >
                     {
-                        products.map((product, i) => {
+                        metadata.map((product, i) => {
                             return (
-                                <ProductCard key={i} product={product} style={'sm:w-[45%] lg:w-[25%] xl:w-[20%]'} animation={true} />
+                                <ProductCard key={i} product={product} style={'sm:w-[45%] lg:w-[25%] xl:w-[20%]'} animation={false} />
                             )
                         })
                     }

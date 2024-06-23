@@ -22,6 +22,7 @@ const ScaffoldStarkApp = ({ children }: { children: React.ReactNode }) => {
       <body>
         <ThemeProvider enableSystem>
           <ScaffoldStarkAppWithProviders>
+
             {children}
           </ScaffoldStarkAppWithProviders>
         </ThemeProvider>

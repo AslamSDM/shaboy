@@ -13,13 +13,12 @@ import { useDeployedContractInfo } from "~~/hooks/scaffold-stark";
 
 
 export default function CreateGameForm() {
-
+  const [isChecked,setIsChecked]=useState<boolean>(false)
   const [gameFile, setGameFile] = useState<File | null>(null);
   const [gameImage, setGameImage] = useState<File | null>(null);
   const [gameName, setGameName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(Number);
-  const [isChecked, setIsChecked] = useState(false);
   const [supply, setSupply] = useState(Number);
   const [loading, setLoading] = useState(false)
   const [mintedNFTContractAddress, setContractAddress] = useState("")
@@ -115,6 +114,8 @@ const launcherc20 = async(supply:Number,name:String,symbol:String,addr:String)=>
       // const mintNFTContract = useScaffoldMultiWriteContract("MintNFT")
       // //update supabase
       const fileup: any = await uploadFile(gameFile, gameName);
+
+      await axios.post("api/create/update_owner",{})
 
     }
     setLoading(false)

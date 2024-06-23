@@ -12,7 +12,6 @@ import { useScaffoldReadContract } from "~~/hooks/scaffold-stark/useScaffoldRead
 const ShaboyPlusModal = () => {
   const { address: connectedAddress } = useAccount();
   const [subscriptionStatus, setSubscriptionStatus] = useState<any>();
-  console.log(connectedAddress);
   const { writeAsync } = useScaffoldMultiWriteContract({
     calls: [
       {
@@ -38,7 +37,6 @@ const ShaboyPlusModal = () => {
   useEffect(() => {
     const fetchSubscriptionStatus = async () => {
       setSubscriptionStatus(totalCounter?.data);
-      console.log(totalCounter);
       setSubscriptionStatus(Boolean(totalCounter));
     };
 
@@ -48,7 +46,6 @@ const ShaboyPlusModal = () => {
   }, [connectedAddress, totalCounter.isLoading]);
 
   const handleClick = async () => {
-    console.log("inside handle click");
     await writeAsync();
   };
   return (
