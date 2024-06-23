@@ -15,7 +15,7 @@ export default function NewGames() {
                 newform
             );
             if (res.data) {
-                console.log("xxxxxxxxxxxx",res.data)
+                console.log(res.data);
               setMetadata(res.data);
             } else console.log("ERROR");
           };

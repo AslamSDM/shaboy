@@ -22,10 +22,14 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) =>
     const {address, isConnected} = useAccount();
     const router = useRouter();
     useEffect(() => {
+        if(!product) return;
+        if(product.image) {
+            setImage(`https://ipfs.io/ipfs/${product.image.replace('ipfs://', '')}`)
+        }
         if (product?.metadata?.image) {
             setImage(`https://ipfs.io/ipfs/${product.metadata.image.replace('ipfs://', '')}`)
         }
-    },[product?.metadata?.image])
+    },[product?.metadata?.image, product?.image])
     return (
         <div onClick={(e)=>{
             e.preventDefault();
@@ -49,9 +53,9 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) =>
                     </a>
                 </div>
                 <a className="product-details" href="">
-                    <span className="product-name">{product.name}</span>
+                    <span className="product-name">{product.name ?? product?.metadata?.name}</span>
                 </a>
-                <div className="product-price-like">
+               { product.price && <div className="product-price-like">
                    {product.price && <div className="price">{product.price}</div>}
                     {/* <div className="like">
                         <svg viewBox="0 0 17 16" fill="none" width={16} height={16} className="sc-bdnxRM sc-hKFxyN kBvkOu">
@@ -62,7 +66,7 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) =>
                         <span>{product.likes.toString()}</span>
                     </div> */}
 
-                </div>
+                </div>}
             </div>
         </div>
     );
