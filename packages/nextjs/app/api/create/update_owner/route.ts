@@ -20,18 +20,18 @@ const updateSupabase = async (buyer_addr: string, seller_addr: string, token_id:
 const getSupabase = async (addr: string,tab="1") => {
   if(tab == "1"){
   const { data: Starhack, error } = await supabase
-
-    .from("ownedgames").select("*").eq("userAddress", addr);
-
-  if (Starhack) {
-    const ownedgameid = Starhack.map((game:any) => game.game_id);
+    .from("owners").select("holdings").eq("owner", addr);
+    console.log({addr})
+    console.log(Starhack)
+  if (Starhack && Starhack.length!=0) {
+    const ownedgameid = Starhack[0]?.holdings
     const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
     return ownedgames.data;
   }
 
 }else if(tab == "2"){
   const { data: Starhack, error } = await supabase
-    .from("newlisting").select("*").eq("seller", addr);
+    .from("marketplace").select("*").eq("seller", addr);
 
   if (Starhack) {
     const ownedgameid = Starhack.map((game:any) => game.tokenid);
@@ -45,7 +45,7 @@ const getSupabase = async (addr: string,tab="1") => {
     .from("owners").select("*").eq("owner", addr);
 
   if (Starhack) {
-    const ownedgameid = Starhack[0]?.mintings;
+    const ownedgameid = Starhack[0]?.minted;
     const ownedgames = await supabase.from("gamedata").select("*").in("id", ownedgameid);
 
     return ownedgames.data;
@@ -63,13 +63,13 @@ export async function POST(req: Request) {
   const addr = String(formdata.get("addr")) ? String(formdata.get("addr")) : "";
   const method = String(formdata.get("method"));
   const tab = String(formdata.get("tab"));
+  console.log({ buyer_addr, seller_addr, token_id, addr, method, tab });
   if (!method) return new Response(JSON.stringify({ error: "Method not provided" }), { status: 400 });
 
   if (method === "update" && buyer_addr && seller_addr && token_id) {
     const result = await updateSupabase(buyer_addr, seller_addr, token_id);
     return new Response(JSON.stringify(result), { status: 200 });
   }
-
   if (method === 'get') {
     const result = await getSupabase(addr,tab??"1");
     return new Response(JSON.stringify(result), { status: 200 });

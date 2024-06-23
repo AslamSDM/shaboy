@@ -1,10 +1,11 @@
+import { useAccount } from "@starknet-react/core";
+import { redirect, useRouter } from "next/navigation";
 import { FunctionComponent, useEffect, useState } from "react";
 
 type Props = {
     product: any,
     style: string,
     animation: Boolean,
-    handleClick?:()=> void
 }
 
 type Card = {
@@ -16,15 +17,24 @@ type Card = {
 }
 
 
-const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,handleClick}) => {
+const ProductCard: FunctionComponent<Props> = ({ product, style, animation }) => {
     const [image, setImage] = useState<string>("")
+    const {address, isConnected} = useAccount();
+    const router = useRouter();
     useEffect(() => {
-        if (product.image) {
-            setImage((product.image).replace("ipfs://","https://ipfs.io/ipfs/"))
+        if(!product) return;
+        if(product.image) {
+            setImage(`https://ipfs.io/ipfs/${product.image.replace('ipfs://', '')}`)
         }
-    },[product.image])
+        if (product?.metadata?.image) {
+            setImage(`https://ipfs.io/ipfs/${product.metadata.image.replace('ipfs://', '')}`)
+        }
+    },[product?.metadata?.image, product?.image])
     return (
-        <div onClick={handleClick}
+        <div onClick={(e)=>{
+            e.preventDefault();
+            router.push(`/game/${product.id}`)
+        }}
             className={`product-card ${style}`}
             data-sal-delay={`${animation && "150"}`}
             data-sal={`${animation && "slide-up"}`}
@@ -34,8 +44,7 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,hand
                 <div className="card-thumbnail">
         
 
-                    <a href={"/play"+product?.id}>
-                    {/* <a href={product.image}> */}
+                    <a href="#">
                     {
                         image &&
                         <img className="product-image" src={image} alt="" />
@@ -44,9 +53,9 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,hand
                     </a>
                 </div>
                 <a className="product-details" href="">
-                    <span className="product-name">{product.name}</span>
+                    <span className="product-name">{product.name ?? product?.metadata?.name}</span>
                 </a>
-                <div className="product-price-like">
+               { product.price && <div className="product-price-like">
                    {product.price && <div className="price">{product.price}</div>}
                     {/* <div className="like">
                         <svg viewBox="0 0 17 16" fill="none" width={16} height={16} className="sc-bdnxRM sc-hKFxyN kBvkOu">
@@ -57,7 +66,7 @@ const ProductCard: FunctionComponent<Props> = ({ product, style, animation ,hand
                         <span>{product.likes.toString()}</span>
                     </div> */}
 
-                </div>
+                </div>}
             </div>
         </div>
     );
