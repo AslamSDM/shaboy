@@ -4,7 +4,6 @@
  */
 const universalEthAddress =
   "0x49D36570D4E46F48E99674BD3FCC84644DDD6B96F7C741B1562B82F9E004DC7";
-
 const preDeployedContracts = {
   devnet: {
     Eth: {
@@ -53,6 +52,33 @@ const preDeployedContracts = {
               state_mutability: "view",
             },
             {
+              name: "total_supply",
+              type: "function",
+              inputs: [],
+              outputs: [
+                {
+                  type: "core::integer::u256",
+                },
+              ],
+              state_mutability: "view",
+            },
+            {
+              name: "balance_of",
+              type: "function",
+              inputs: [
+                {
+                  name: "account",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
+              ],
+              outputs: [
+                {
+                  type: "core::integer::u256",
+                },
+              ],
+              state_mutability: "view",
+            },
+            {
               name: "allowance",
               type: "function",
               inputs: [
@@ -76,6 +102,30 @@ const preDeployedContracts = {
               name: "transfer",
               type: "function",
               inputs: [
+                {
+                  name: "recipient",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
+                {
+                  name: "amount",
+                  type: "core::integer::u256",
+                },
+              ],
+              outputs: [
+                {
+                  type: "core::bool",
+                },
+              ],
+              state_mutability: "external",
+            },
+            {
+              name: "transfer_from",
+              type: "function",
+              inputs: [
+                {
+                  name: "sender",
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
                 {
                   name: "recipient",
                   type: "core::starknet::contract_address::ContractAddress",
@@ -424,12 +474,12 @@ const preDeployedContracts = {
     address:"0x0295143c4af58c29088c0cbe87163f0c3f2dd7b1eb0877345f2f59b290aa4228"
     },
     ShaboySubscription:{
-      "address":"0x071417ac5a5dcd0cc3d8931ca7f257456828b9d3bd5215461ed1c474fb365363",
+      "address":"0x058ef05164a42914B6f0Bf7BB9d97A1e80F92c4113dc5F0b8E573B03aFbd22a6",
       "abi": [
         {
             "type": "impl",
             "name": "ShaboySubscription",
-            "interface_name": "nftcontract::subscription::IShaboyRegistry"
+            "interface_name": "contracts::subscription::IShaboyRegistry"
         },
         {
             "type": "enum",
@@ -447,7 +497,7 @@ const preDeployedContracts = {
         },
         {
             "type": "interface",
-            "name": "nftcontract::subscription::IShaboyRegistry",
+            "name": "contracts::subscription::IShaboyRegistry",
             "items": [
                 {
                     "type": "function",
@@ -480,8 +530,18 @@ const preDeployedContracts = {
             ]
         },
         {
+            "type": "constructor",
+            "name": "constructor",
+            "inputs": [
+                {
+                    "name": "erc20_token_contract",
+                    "type": "core::starknet::contract_address::ContractAddress"
+                }
+            ]
+        },
+        {
             "type": "event",
-            "name": "nftcontract::subscription::ShaboySubscription::Event",
+            "name": "contracts::subscription::ShaboySubscription::Event",
             "kind": "enum",
             "variants": []
         }
@@ -1030,12 +1090,12 @@ const preDeployedContracts = {
     address:"0x0295143c4af58c29088c0cbe87163f0c3f2dd7b1eb0877345f2f59b290aa4228"
     },
     ShaboySubscription:{
-      "address":"0x071417ac5a5dcd0cc3d8931ca7f257456828b9d3bd5215461ed1c474fb365363",
+      "address":"0x058ef05164a42914B6f0Bf7BB9d97A1e80F92c4113dc5F0b8E573B03aFbd22a6",
       "abi": [
         {
             "type": "impl",
             "name": "ShaboySubscription",
-            "interface_name": "nftcontract::subscription::IShaboyRegistry"
+            "interface_name": "contracts::subscription::IShaboyRegistry"
         },
         {
             "type": "enum",
@@ -1053,7 +1113,7 @@ const preDeployedContracts = {
         },
         {
             "type": "interface",
-            "name": "nftcontract::subscription::IShaboyRegistry",
+            "name": "contracts::subscription::IShaboyRegistry",
             "items": [
                 {
                     "type": "function",
@@ -1086,8 +1146,18 @@ const preDeployedContracts = {
             ]
         },
         {
+            "type": "constructor",
+            "name": "constructor",
+            "inputs": [
+                {
+                    "name": "erc20_token_contract",
+                    "type": "core::starknet::contract_address::ContractAddress"
+                }
+            ]
+        },
+        {
             "type": "event",
-            "name": "nftcontract::subscription::ShaboySubscription::Event",
+            "name": "contracts::subscription::ShaboySubscription::Event",
             "kind": "enum",
             "variants": []
         }
